@@ -1,0 +1,66 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class HeroGlows : MonoBehaviour, IHeroGlows
+{
+   #region VARIABLES
+
+   [SerializeField] private Image heroGlow = null;
+   
+   [SerializeField] private string redHexCode = "#FF1300";
+   [SerializeField] private string greenHexCode = "#BFFF84";
+   [SerializeField] private string yellowHexCode = "#FFE364";
+
+   #endregion
+
+   #region PROPERTIES
+
+   private Image HeroGlow => heroGlow;
+
+
+   #endregion
+
+   #region METHODS
+
+   public void ShowHeroGlow()
+   {
+      HeroGlow.enabled = true;
+   }
+   
+   public void HideHeroGlow()
+   {
+      HeroGlow.enabled = false;
+   }
+
+   public void SetColorRed()
+   {
+      //Check if hex code is valid - if not, default to white color
+      Color color = ColorUtility.TryParseHtmlString(redHexCode, out color) ? color : Color.white;
+        
+      // Set the image color
+      HeroGlow.color = color;
+   }
+   
+   public void SetColorGreen()
+   {
+      //Check if hex code is valid - if not, default to white color
+      Color color = ColorUtility.TryParseHtmlString(greenHexCode, out color) ? color : Color.white;
+        
+      // Set the image color
+      HeroGlow.color = color;
+   }
+   
+   public void SetColorYellow()
+   {
+      //Check if hex code is valid - if not, default to white color
+      Color color = ColorUtility.TryParseHtmlString(yellowHexCode, out color) ? color : Color.white;
+        
+      // Set the image color
+      HeroGlow.color = color;
+   }
+
+
+   #endregion
+}
