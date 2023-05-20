@@ -53,3 +53,6 @@ TagManager:
   - name: FightButton
     uniqueID: 3265169423
     locked: 0
+  - name: SkillTarget
+    uniqueID: 3182477279
+    locked: 0
