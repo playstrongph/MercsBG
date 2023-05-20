@@ -39,7 +39,11 @@ public class CombatButton : MonoBehaviour, ICombatButton
       //TEST
       Debug.Log("Combat Button Action");
       //Good practice to disable after first click
-      Button.interactable = false;
+      //Button.interactable = false;
+      
+      //Test method only
+      var x = Random.Range(0, 3);
+      ButtonImage.sprite = ButtonSprites[x];
    }
 
    public void SetButtonText(string text)

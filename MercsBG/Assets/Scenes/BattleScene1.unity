@@ -640,22 +640,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: CombatButton
       objectReference: {fileID: 0}
-    - target: {fileID: 5738151157823779983, guid: a724356cd210dba408f082d3be3da174,
-        type: 3}
-      propertyPath: button
-      value: 
-      objectReference: {fileID: 8539653718001000373}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a724356cd210dba408f082d3be3da174, type: 3}
---- !u!114 &8539653718001000373 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5738151157345329194, guid: a724356cd210dba408f082d3be3da174,
-    type: 3}
-  m_PrefabInstance: {fileID: 4116558189516537759}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
