@@ -11,6 +11,7 @@ public class CombatButton : MonoBehaviour, ICombatButton
    [SerializeField] private Image buttonImage = null;
    [SerializeField] private List<Sprite> buttonSprites = new List<Sprite>();
    [SerializeField] private TextMeshProUGUI buttonText = null;
+   [SerializeField] private Button button = null;
 
 
    #endregion
@@ -26,10 +27,20 @@ public class CombatButton : MonoBehaviour, ICombatButton
 
    private TextMeshProUGUI ButtonText => buttonText;
 
+   private Button Button => button;
+
 
    #endregion
 
    #region METHODS
+   
+   private void ButtonAction()
+   {
+      //TEST
+      Debug.Log("Combat Button Action");
+      //Good practice to disable after first click
+      Button.interactable = false;
+   }
 
    public void SetButtonText(string text)
    {
