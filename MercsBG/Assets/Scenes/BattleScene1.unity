@@ -209,6 +209,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43dba9ec6a3e53d468d7614839146e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillPanel: {fileID: 22281186}
+  frames:
+  - {fileID: -4169951247526096423, guid: 9109a2d18ef2de848a19c0a859fa7a3a, type: 3}
+  - {fileID: 3694721762729148751, guid: 9109a2d18ef2de848a19c0a859fa7a3a, type: 3}
+  - {fileID: 5666062333680803625, guid: 9109a2d18ef2de848a19c0a859fa7a3a, type: 3}
+  - {fileID: 8360394963262451685, guid: 9109a2d18ef2de848a19c0a859fa7a3a, type: 3}
 --- !u!224 &131481120 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3910777555636928486, guid: cf2583de8a8b3b34c8c0598416249747,
@@ -556,6 +562,7 @@ GameObject:
   - component: {fileID: 1160398366}
   - component: {fileID: 1160398368}
   - component: {fileID: 1160398367}
+  - component: {fileID: 1160398369}
   m_Layer: 0
   m_Name: FourSkillsPanel
   m_TagString: Untagged
@@ -620,6 +627,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160398365}
   m_CullTransparentMesh: 0
+--- !u!114 &1160398369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160398365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43dba9ec6a3e53d468d7614839146e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPanel: {fileID: 1160398367}
+  frames:
+  - {fileID: -6973323618985365075, guid: 55c9c5eed7bdd8c4f85017f9ffde35b7, type: 3}
+  - {fileID: -3189264307068337925, guid: 55c9c5eed7bdd8c4f85017f9ffde35b7, type: 3}
+  - {fileID: -7673932230332495453, guid: 55c9c5eed7bdd8c4f85017f9ffde35b7, type: 3}
+  - {fileID: -6400984294676459612, guid: 55c9c5eed7bdd8c4f85017f9ffde35b7, type: 3}
 --- !u!1 &1216592883
 GameObject:
   m_ObjectHideFlags: 0
