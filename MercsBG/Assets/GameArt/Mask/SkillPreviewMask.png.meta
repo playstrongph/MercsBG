@@ -1,0 +1,506 @@
+fileFormatVersion: 2
+guid: 571be29622ef74f418ce5f311575f0c1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1980243161914929349
+    second: Skill Ready
+  - first:
+      213: 6399996234943832161
+    second: Passive Skill
+  - first:
+      213: -5513825477243305779
+    second: Skill Not Ready
+  - first:
+      213: 1169852376635020879
+    second: Skill Frame and Masks_3
+  - first:
+      213: 8267624927069434252
+    second: Skill Frame and Masks_4
+  - first:
+      213: 5989307355999656378
+    second: Skill Frame and Masks_5
+  - first:
+      213: -9197700307226306038
+    second: Skill Frame and Masks_6
+  - first:
+      213: 2892013730226206403
+    second: Skill Frame and Masks_7
+  - first:
+      213: 4048899606431386521
+    second: Skill Frame and Masks_8
+  - first:
+      213: 6894507587160276947
+    second: Skill Frame and Masks_9
+  - first:
+      213: -4118596899679754159
+    second: Skill Frame and Masks_10
+  - first:
+      213: -4639231674448192613
+    second: Skill Frame and Masks_11
+  - first:
+      213: 2477400357594963049
+    second: Skill Frame and Masks_12
+  - first:
+      213: 53448377642220081
+    second: Skill Frame and Masks_13
+  - first:
+      213: 3049403970120136622
+    second: Skill Frame and Masks_14
+  - first:
+      213: -6846713023727581342
+    second: Skill Frame and Masks_15
+  - first:
+      213: -9192753669364430400
+    second: Skill Frame and Masks_16
+  - first:
+      213: 6514874836146631189
+    second: Skill Frame and Masks_17
+  - first:
+      213: 4694065400683860252
+    second: Skill Frame and Masks_18
+  - first:
+      213: 6532329321333302341
+    second: Skill Frame and Masks_19
+  - first:
+      213: 6913524181848456549
+    second: Skill Frame and Masks_20
+  - first:
+      213: 748117318177162465
+    second: Skill Frame and Masks_21
+  - first:
+      213: -7507229498939611903
+    second: Skill Frame and Masks_22
+  - first:
+      213: 5031128935389961268
+    second: Skill Frame and Masks_23
+  - first:
+      213: -6653381662487221025
+    second: Skill Frame and Masks_24
+  - first:
+      213: 3319805352647560223
+    second: Skill Frame and Masks_25
+  - first:
+      213: -5674249714232039211
+    second: Skill Frame and Masks_26
+  - first:
+      213: -8226756183453136080
+    second: Skill Frame and Masks_27
+  - first:
+      213: 9044404911820098157
+    second: Skill Frame and Masks_28
+  - first:
+      213: -4535054325856489420
+    second: Skill Frame and Masks_29
+  - first:
+      213: 8244017400579974863
+    second: Skill Frame and Masks_30
+  - first:
+      213: 971801089512517067
+    second: Skill Frame and Masks_31
+  - first:
+      213: -4597633906596543916
+    second: Skill Frame and Masks_32
+  - first:
+      213: 1144002420274675138
+    second: Skill Frame and Masks_33
+  - first:
+      213: 8639219086370430254
+    second: Skill Frame and Masks_34
+  - first:
+      213: -7919598271494490946
+    second: Skill Frame and Masks_35
+  - first:
+      213: 6909169208941863726
+    second: Skill Frame and Masks_36
+  - first:
+      213: -9029488599449968591
+    second: Skill Frame and Masks_37
+  - first:
+      213: -419464033604440254
+    second: Skill Frame and Masks_38
+  - first:
+      213: 7752715692967332119
+    second: Skill Frame and Masks_39
+  - first:
+      213: 5202777541347599515
+    second: Skill Frame and Masks_40
+  - first:
+      213: -319967941716789519
+    second: Skill Frame and Masks_41
+  - first:
+      213: -5111318576528689910
+    second: Skill Frame and Masks_42
+  - first:
+      213: 3122647470688331225
+    second: Skill Frame and Masks_43
+  - first:
+      213: -7726637554287540263
+    second: Skill Frame and Masks_44
+  - first:
+      213: 413458935407968394
+    second: Skill Frame and Masks_45
+  - first:
+      213: -8450586424200996889
+    second: Skill Frame and Masks_46
+  - first:
+      213: 3328324567741470218
+    second: Skill Frame and Masks_47
+  - first:
+      213: -7811905986592948874
+    second: Skill Frame and Masks_48
+  - first:
+      213: 2584198976948345175
+    second: Skill Frame and Masks_49
+  - first:
+      213: -740187071493248966
+    second: Skill Frame and Masks_50
+  - first:
+      213: 5589946241300509543
+    second: Skill Frame and Masks_51
+  - first:
+      213: 8620500516691213901
+    second: Skill Frame and Masks_52
+  - first:
+      213: 4545320592992041132
+    second: Skill Frame and Masks_53
+  - first:
+      213: 3744228258832414956
+    second: Skill Frame and Masks_54
+  - first:
+      213: 4631816335853156110
+    second: Skill Frame and Masks_55
+  - first:
+      213: -5176956381082146279
+    second: Skill Frame and Masks_56
+  - first:
+      213: 2331831556869186606
+    second: Skill Frame and Masks_57
+  - first:
+      213: 4180077028405641669
+    second: Skill Frame and Masks_58
+  - first:
+      213: 6763134373159472626
+    second: Skill Frame and Masks_59
+  - first:
+      213: 757963755070736630
+    second: Skill Frame and Masks_60
+  - first:
+      213: 4123148352659187070
+    second: Skill Frame and Masks_61
+  - first:
+      213: 933451022078300179
+    second: Skill Frame and Masks_62
+  - first:
+      213: -6141166535744518987
+    second: Skill Frame and Masks_63
+  - first:
+      213: -3503871746341935519
+    second: Skill Frame and Masks_64
+  - first:
+      213: -7372356745605237710
+    second: Skill Frame and Masks_65
+  - first:
+      213: -7301837856169373334
+    second: Skill Frame and Masks_66
+  - first:
+      213: -7060294571727589379
+    second: Skill Frame and Masks_67
+  - first:
+      213: 3049246466919996038
+    second: Skill Frame and Masks_68
+  - first:
+      213: -8385025976982368463
+    second: Skill Frame and Masks_69
+  - first:
+      213: -4966852386238767906
+    second: Skill Frame and Masks_70
+  - first:
+      213: -57730327401117391
+    second: Skill Frame and Masks_71
+  - first:
+      213: -5693853640458600002
+    second: Skill Frame and Masks_72
+  - first:
+      213: -3883016102173438084
+    second: Skill Frame and Masks_73
+  - first:
+      213: 1329961580967191299
+    second: Skill Frame and Masks_74
+  - first:
+      213: -5607752722237536873
+    second: Skill Frame and Masks_75
+  - first:
+      213: -4546905738173136260
+    second: Skill Frame and Masks_76
+  - first:
+      213: -1653068645343708268
+    second: Skill Frame and Masks_77
+  - first:
+      213: 4208778455242927444
+    second: Skill Frame and Masks_78
+  - first:
+      213: -5182938054936034934
+    second: Skill Frame and Masks_79
+  - first:
+      213: -996030934736355960
+    second: Skill Frame and Masks_80
+  - first:
+      213: 258110235170426996
+    second: Skill Frame and Masks_81
+  - first:
+      213: -7500101263959918444
+    second: Skill Frame and Masks_82
+  - first:
+      213: 1495697081943027713
+    second: Skill Frame and Masks_83
+  - first:
+      213: -8827288762262850831
+    second: Skill Frame and Masks_84
+  - first:
+      213: 5341675937732682672
+    second: Skill Frame and Masks_85
+  - first:
+      213: 7864093254694330620
+    second: Skill Frame and Masks_86
+  - first:
+      213: 8791455149190630574
+    second: Skill Frame and Masks_87
+  - first:
+      213: -7932976952166152052
+    second: Skill Frame and Masks_88
+  - first:
+      213: 1416529059262466214
+    second: Skill Frame and Masks_89
+  - first:
+      213: 1557052943382098745
+    second: Skill Frame and Masks_90
+  - first:
+      213: 2902062505575965278
+    second: Skill Frame and Masks_91
+  - first:
+      213: -9146181050853688200
+    second: Skill Frame and Masks_92
+  - first:
+      213: 2291161215443831094
+    second: Skill Frame and Masks_93
+  - first:
+      213: -4037633658414978045
+    second: Skill Frame and Masks_94
+  - first:
+      213: 740469291748379010
+    second: Skill Frame and Masks_95
+  - first:
+      213: -1810470634793680296
+    second: Skill Frame and Masks_96
+  - first:
+      213: 1680586817623573216
+    second: Skill Frame and Masks_97
+  - first:
+      213: -51459522737972879
+    second: Skill Frame and Masks_98
+  - first:
+      213: 4989339906323138021
+    second: Skill Frame and Masks_99
+  - first:
+      213: 7797140359926487736
+    second: Skill Frame and Masks_100
+  - first:
+      213: 3571132699937270855
+    second: Skill Frame and Masks_101
+  - first:
+      213: -2502055529690024526
+    second: Skill Frame and Masks_102
+  - first:
+      213: -5741691863203396532
+    second: Skill Frame and Masks_103
+  - first:
+      213: -3284142363761483262
+    second: Skill Frame and Masks_104
+  - first:
+      213: -9047461495429286933
+    second: Skill Frame and Masks_105
+  - first:
+      213: -4373977046467078330
+    second: Skill Frame and Masks_106
+  - first:
+      213: 3855658834978520401
+    second: Skill Frame and Masks_107
+  - first:
+      213: -1989257613657710545
+    second: Skill Frame and Masks_108
+  - first:
+      213: 471758700278311590
+    second: Skill Frame Masks_0
+  - first:
+      213: -7557326741844521757
+    second: Skill Frame Masks_1
+  - first:
+      213: -7191659402359670246
+    second: Skill Frame Masks_2
+  - first:
+      213: -3774005590826065951
+    second: SkillPreviewMask
+  - first:
+      213: -3888537948899317067
+    second: Passive Skill Mask
+  - first:
+      213: -29906113888716292
+    second: Skill Not Ready Mask
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SkillPreviewMask
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 105
+        width: 271
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef597229e900abc0800000000000000
+      internalID: -3774005590826065951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
