@@ -56,3 +56,6 @@ TagManager:
   - name: SkillTarget
     uniqueID: 3182477279
     locked: 0
+  - name: HeroPreview
+    uniqueID: 3668265143
+    locked: 0

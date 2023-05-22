@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SkillTargeting : MonoBehaviour
+public class SkillTargeting : MonoBehaviour, ISkillTargeting
 {
    #region VARIABLES
 
@@ -21,6 +23,38 @@ public class SkillTargeting : MonoBehaviour
    #endregion
 
    #region METHODS
+
+   public void ShowArrowAndNodes()
+   {
+      Arrow.GetComponent<Image>().enabled = true;
+
+      foreach (var node in Nodes)
+      {
+         node.GetComponent<Image>().enabled = true;
+      }
+   }
+   
+   public void HideArrowAndNodes()
+   {
+      Arrow.GetComponent<Image>().enabled = false;
+
+      foreach (var node in Nodes)
+      {
+         node.GetComponent<Image>().enabled = false;
+      }
+   }
+
+   public void ShowCrossHair()
+   {
+      CrossHair.GetComponent<Image>().enabled = true;
+   }
+   
+   public void HideCrossHair()
+   {
+      CrossHair.GetComponent<Image>().enabled = false;
+   }
+
+
 
 
 
