@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3910777555636928486}
-  - component: {fileID: 3910777555636928487}
+  - component: {fileID: 4711278350917139359}
   - component: {fileID: 2689960912244333807}
+  - component: {fileID: 3910777555636928487}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -44,6 +45,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 700, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4711278350917139359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910777555636928473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16bb8d5bce5a0c2478bb10e7b2cb4dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleSceneManager: {fileID: 0}
+  heroes: {fileID: 2689960912244333807}
+--- !u!114 &2689960912244333807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910777555636928473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0d73756ee20ec4fb13cc1b425c2051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHeroes:
+  - {fileID: 6688773931742297552}
+  - {fileID: 7625577297049636603}
+  - {fileID: 7113497176791805456}
+  - {fileID: 5508522986005555999}
+  - {fileID: 4123137071485025100}
+  - {fileID: 395171469870580561}
+  - {fileID: 2549011753313080821}
 --- !u!114 &3910777555636928487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,26 +103,6 @@ MonoBehaviour:
   m_Spacing: {x: -14, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
---- !u!114 &2689960912244333807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3910777555636928473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0d73756ee20ec4fb13cc1b425c2051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHeroes:
-  - {fileID: 6688773931742297552}
-  - {fileID: 7625577297049636603}
-  - {fileID: 7113497176791805456}
-  - {fileID: 5508522986005555999}
-  - {fileID: 4123137071485025100}
-  - {fileID: 395171469870580561}
-  - {fileID: 2549011753313080821}
 --- !u!1001 &275783049994505706
 PrefabInstance:
   m_ObjectHideFlags: 0
