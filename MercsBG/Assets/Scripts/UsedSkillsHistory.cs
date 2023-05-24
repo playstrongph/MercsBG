@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public class UsedSkillsHistory : MonoBehaviour
+public class UsedSkillsHistory : MonoBehaviour, IUsedSkillsHistory
 {
    #region VARIABLES
 

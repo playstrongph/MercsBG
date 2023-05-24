@@ -13,6 +13,11 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayer))] private Object enemyPlayer = null;
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkills))] private Object heroSkills = null;
+   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUsedSkillsHistory))] private Object usedSkillsHistory = null;
+   
+   
+   
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
 
@@ -26,6 +31,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    public IPlayer EnemyPlayer => enemyPlayer as IPlayer;
    
    public IHeroSkills HeroSkills => heroSkills as IHeroSkills;
+   
+   public IUsedSkillsHistory UsedSkillsHistory => usedSkillsHistory as IUsedSkillsHistory;
    
    public ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
 
