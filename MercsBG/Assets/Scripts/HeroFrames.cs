@@ -37,6 +37,12 @@ public class HeroFrames : MonoBehaviour, IHeroFrames
       image.sprite = Frames[2];
    }
    
+   public void SetColorGreyDefault(Image image)
+   {
+      //Element 3 is Grey
+      image.sprite = Frames[3];
+   }
+   
    
 
 

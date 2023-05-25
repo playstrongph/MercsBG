@@ -3481,6 +3481,7 @@ GameObject:
   - component: {fileID: 7303268495912542916}
   - component: {fileID: 7303268495912542919}
   - component: {fileID: 7303268495912542918}
+  - component: {fileID: 5575448940102303418}
   m_Layer: 0
   m_Name: HeroPreview
   m_TagString: Untagged
@@ -3529,7 +3530,7 @@ Canvas:
   m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: -626702153
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -3557,6 +3558,18 @@ MonoBehaviour:
   m_Spacing: {x: -186.51, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!114 &5575448940102303418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7303268495912542917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9edcc95713db324697d74c4eff00d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7303268495946711064
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5684690126836488245}
   - component: {fileID: 5684690126836488244}
+  - component: {fileID: 3561195838964450642}
   m_Layer: 0
   m_Name: HeroPreviewHero
   m_TagString: Untagged
@@ -63,6 +64,27 @@ Canvas:
   m_SortingLayerID: -626702153
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!114 &3561195838964450642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684690126836488242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9edcc95713db324697d74c4eff00d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroFrames: {fileID: 7007843199401105147}
+  frameGraphic: {fileID: 7007843199401105144}
+  heroGraphic: {fileID: 7007843199172510805}
+  armorGraphic: {fileID: 7007843199092861058}
+  attackText: {fileID: 7007843198989334999}
+  healthText: {fileID: 7007843200127399108}
+  armorText: {fileID: 7007843198901757698}
+  nameText: {fileID: 7007843198473976438}
+  raceText: {fileID: 7007843200185508828}
 --- !u!1 &7007843198473976432
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +883,7 @@ MonoBehaviour:
   - {fileID: -4902278355354446413, guid: 84aa0f73768a00447b661127de00511e, type: 3}
   - {fileID: -9130639797075620102, guid: 3d4d95900434b384cb3385ccc5abb545, type: 3}
   - {fileID: -5524865532692075295, guid: 3d287e3f702a40142b7acce0f67aa684, type: 3}
+  - {fileID: -5526074859663678738, guid: f48ccbc587f5d924196d7d71fca5d7ab, type: 3}
 --- !u!1 &7007843199839772138
 GameObject:
   m_ObjectHideFlags: 0

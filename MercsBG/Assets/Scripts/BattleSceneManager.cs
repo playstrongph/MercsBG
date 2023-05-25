@@ -16,10 +16,11 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUsedSkillsHistory))] private Object usedSkillsHistory = null;
    
-   
-   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ICombatButton))] private Object combatButton = null;
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
+   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object displaySkillTargeting = null;
 
 
    #endregion
@@ -29,12 +30,12 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    public IGameBoard GameBoard => gameBoard as IGameBoard;
    public IPlayer MainPlayer => mainPlayer as IPlayer;
    public IPlayer EnemyPlayer => enemyPlayer as IPlayer;
-   
    public IHeroSkills HeroSkills => heroSkills as IHeroSkills;
-   
    public IUsedSkillsHistory UsedSkillsHistory => usedSkillsHistory as IUsedSkillsHistory;
-   
+   public ICombatButton CombatButton => combatButton as ICombatButton;
    public ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
+   
+   public ISkillTargeting DisplaySkillTargeting => displaySkillTargeting as ISkillTargeting;
 
    
    
