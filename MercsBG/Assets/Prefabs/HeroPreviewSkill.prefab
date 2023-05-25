@@ -91,7 +91,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.65
+  m_fontSize: 12
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -167,7 +167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.112600915, y: 0}
   m_AnchorMax: {x: 0.68551713, y: 0.6592536}
-  m_AnchoredPosition: {x: -0.029302597, y: 0.22301102}
+  m_AnchoredPosition: {x: -0.02930069, y: 0.22301102}
   m_SizeDelta: {x: 0.111600995, y: -0.076766506}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &115584416485328704
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 34.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
+  m_fontSize: 12
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -410,6 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 115584417022732867}
+  - component: {fileID: 7981592530474326949}
   - component: {fileID: 115584417022732893}
   - component: {fileID: 115584417022732866}
   m_Layer: 0
@@ -435,9 +436,26 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.20860459, y: 0.21454507}
   m_AnchorMax: {x: 0.7913954, y: 0.794}
-  m_AnchoredPosition: {x: -0.039756775, y: -1.4414673}
+  m_AnchoredPosition: {x: -0.039749146, y: -1.4414673}
   m_SizeDelta: {x: -0.2627833, y: 0.5004959}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7981592530474326949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115584417022732864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889a9c7293879e64f9b0b35be7b758a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 6308278330998182386, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
+  - {fileID: 2531894167454913421, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
+  - {fileID: -6372847374873367398, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
+  - {fileID: -8614387202556066374, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
 --- !u!222 &115584417022732893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -512,7 +530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3753253, y: 0.52900004}
   m_AnchorMax: {x: 0.62830603, y: 0.7818071}
-  m_AnchoredPosition: {x: 0.19211197, y: 0.18799973}
+  m_AnchoredPosition: {x: 0.19210815, y: 0.18800354}
   m_SizeDelta: {x: -0.57152283, y: -0.48544627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &115584417238429389
@@ -601,7 +619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.605831, y: 0.6871519}
   m_AnchorMax: {x: 0.7124604, y: 0.794}
-  m_AnchoredPosition: {x: 0.060791016, y: -0.033943176}
+  m_AnchoredPosition: {x: 0.060791016, y: -0.033935547}
   m_SizeDelta: {x: -0.15554261, y: -0.28702256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &115584417343436946
@@ -676,7 +694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21113855, y: 0.17600001}
   m_AnchorMax: {x: 0.78886145, y: 0.8274364}
-  m_AnchoredPosition: {x: -0.002204895, y: -0.0685931}
+  m_AnchoredPosition: {x: -0.002204895, y: -0.06859398}
   m_SizeDelta: {x: -0.2351254, y: 0.19835958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &115584417442284397
@@ -734,7 +752,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
+  m_fontSize: 30
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -788,7 +806,7 @@ GameObject:
   - component: {fileID: 115584417598688722}
   - component: {fileID: 115584417598688723}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -810,7 +828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0007133484, y: -0.003704071}
+  m_AnchoredPosition: {x: 0.0007095337, y: -0.0037078857}
   m_SizeDelta: {x: 0.06572151, y: -0.023409843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &115584417598688722
@@ -886,7 +904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4072421, y: 0.5142591}
   m_AnchorMax: {x: 0.61926013, y: 0.62171173}
-  m_AnchoredPosition: {x: 0.28976637, y: 0.095062256}
+  m_AnchoredPosition: {x: 0.28976822, y: 0.095062256}
   m_SizeDelta: {x: -0.057981998, y: -0.5289625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &115584417645925523
@@ -936,7 +954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 115584418095960022}
-  - component: {fileID: 115584418095960017}
+  - component: {fileID: 1696709187}
   m_Layer: 0
   m_Name: HeroPreviewSkill
   m_TagString: Untagged
@@ -970,27 +988,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0.48355103, y: 0.28076172}
   m_SizeDelta: {x: 0.9805622, y: -0.64442027}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!223 &115584418095960017
-Canvas:
+--- !u!114 &1696709187
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115584418095960023}
   m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: -626702153
-  m_SortingOrder: 2
-  m_TargetDisplay: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 831241127017ab0428dbe19bd66c3182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPreviewFrames: {fileID: 7981592530474326949}
+  previewFrame: {fileID: 115584417022732866}
+  skillGraphic: {fileID: 115584417598688723}
+  cooldownGraphic: {fileID: 115584417343436947}
+  speedGraphic: {fileID: 115584417645925520}
+  skillNameText: {fileID: 115584418133776610}
+  skillElementText: {fileID: 115584416957523501}
+  skillDescriptionText: {fileID: 115584416176553049}
+  skillCooldownText: {fileID: 115584417442284434}
+  skillSpeedText: {fileID: 115584416485328705}
 --- !u!1 &115584418133776608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.342, y: 0.43114972}
   m_AnchorMax: {x: 0.65800005, y: 0.48379993}
-  m_AnchoredPosition: {x: 0.018047333, y: 0.50771713}
+  m_AnchoredPosition: {x: 0.018051147, y: 0.50771713}
   m_SizeDelta: {x: 0.6156323, y: 2.5894763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &115584418133776637
@@ -1083,7 +1102,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.4
+  m_fontSize: 20
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
