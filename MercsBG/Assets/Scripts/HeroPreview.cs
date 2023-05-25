@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroPreview : MonoBehaviour
+public class HeroPreview : MonoBehaviour, IHeroPreview
 {
    #region VARIABLES
+
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))]private Object battleSceneManager = null;
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreviewHero))] private Object heroPreviewHero = null;
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreviewSkill))] private List<Object> heroPreviewSkills = new List<Object>();
-   
-   
-
 
 
 
    #endregion
 
    #region PROPERTIES
+   
+   public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
 
    public IHeroPreviewHero HeroPreviewHero => heroPreviewHero as IHeroPreviewHero;
 

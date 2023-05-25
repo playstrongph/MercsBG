@@ -22,6 +22,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object displaySkillTargeting = null;
 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreview))] private Object heroPreview = null;
+
 
    #endregion
 
@@ -37,9 +39,11 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    
    public ISkillTargeting DisplaySkillTargeting => displaySkillTargeting as ISkillTargeting;
 
-   
-   
-   
+   public IHeroPreview HeroPreview => heroPreview as IHeroPreview;
+
+
+
+
    #endregion
 
    #region METHODS
