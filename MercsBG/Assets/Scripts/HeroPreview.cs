@@ -12,11 +12,15 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreviewSkill))] private List<Object> heroPreviewSkills = new List<Object>();
 
+   [SerializeField] private Canvas canvas = null;
+
 
 
    #endregion
 
    #region PROPERTIES
+
+   
    
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
 
@@ -34,6 +38,8 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
          return newHeroPreviewSkills;
       }
    }
+
+   public Canvas Canvas => canvas;
 
    #endregion
 

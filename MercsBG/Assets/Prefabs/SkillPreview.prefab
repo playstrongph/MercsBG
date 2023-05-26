@@ -1001,6 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f593f71f697994899a9209ff96341b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleSceneManager: {fileID: 0}
   skillPreviewFrames: {fileID: 1487500738006000510}
   skillGraphic: {fileID: 4872700158723444685}
   cooldownGraphic: {fileID: 4872700158970329741}
@@ -1010,6 +1011,7 @@ MonoBehaviour:
   descriptionText: {fileID: 4872700157805674055}
   cooldownText: {fileID: 4872700159064981900}
   speedText: {fileID: 4872700157605758303}
+  canvas: {fileID: 4872700159216520655}
 --- !u!223 &4872700159216520655
 Canvas:
   m_ObjectHideFlags: 0

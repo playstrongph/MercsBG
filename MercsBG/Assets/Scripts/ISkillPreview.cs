@@ -1,4 +1,5 @@
 ﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public interface ISkillPreview
@@ -13,4 +14,6 @@ public interface ISkillPreview
     TextMeshProUGUI DescriptionText { get; }
     TextMeshProUGUI CooldownText { get; }
     TextMeshProUGUI SpeedText { get; }
+
+    Canvas Canvas { get; }
 }

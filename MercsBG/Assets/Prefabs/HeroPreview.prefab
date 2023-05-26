@@ -55,12 +55,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef4f49bdd782094680e0b4fb12bc114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleSceneManager: {fileID: 0}
   heroPreviewHero: {fileID: 8946077191037527908}
   heroPreviewSkills:
   - {fileID: 1408607248014545501}
   - {fileID: 4960434839437272274}
   - {fileID: 3762243397522403232}
   - {fileID: 3760716867548915331}
+  canvas: {fileID: 7303268495912542919}
 --- !u!223 &7303268495912542919
 Canvas:
   m_ObjectHideFlags: 0

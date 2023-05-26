@@ -878,7 +878,27 @@ PrefabInstance:
     - target: {fileID: 4891520307105993111, guid: dbad8b77cce3b10468abd738807f753f,
         type: 3}
       propertyPath: m_Name
-      value: SkillQueuePreview2
+      value: SkillQueuePreview
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435141908448337648, guid: dbad8b77cce3b10468abd738807f753f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 11.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435141909280064644, guid: dbad8b77cce3b10468abd738807f753f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435141909424316479, guid: dbad8b77cce3b10468abd738807f753f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435141910141074255, guid: dbad8b77cce3b10468abd738807f753f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 28.55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbad8b77cce3b10468abd738807f753f, type: 3}
@@ -1387,6 +1407,11 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8201221664133566301, guid: 0e889b8de30e74b488fc3bc9b57600ac,
+        type: 3}
+      propertyPath: battleSceneManager
+      value: 
+      objectReference: {fileID: 552241100}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e889b8de30e74b488fc3bc9b57600ac, type: 3}
 --- !u!224 &214230640316236942 stripped
@@ -1477,7 +1502,7 @@ PrefabInstance:
     - target: {fileID: 2076426741502584043, guid: 8f340eec36786724fbd4d807f83788c2,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 310.06897
+      value: -246
       objectReference: {fileID: 0}
     - target: {fileID: 2076426741502584043, guid: 8f340eec36786724fbd4d807f83788c2,
         type: 3}

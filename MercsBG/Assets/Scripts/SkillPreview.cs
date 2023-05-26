@@ -24,6 +24,8 @@ public class SkillPreview : MonoBehaviour, ISkillPreview
    [SerializeField] private TextMeshProUGUI cooldownText = null;
    [SerializeField] private TextMeshProUGUI speedText = null;
 
+   [SerializeField]private Canvas canvas = null;   
+
 
    #endregion
 
@@ -40,9 +42,9 @@ public class SkillPreview : MonoBehaviour, ISkillPreview
    public TextMeshProUGUI DescriptionText => descriptionText;
    public TextMeshProUGUI CooldownText => cooldownText;
    public TextMeshProUGUI SpeedText => speedText;
-   
-   
-   
+
+   public Canvas Canvas => canvas;
+
 
    #endregion
 
