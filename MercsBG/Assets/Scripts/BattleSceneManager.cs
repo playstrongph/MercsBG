@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 {
@@ -23,6 +25,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object displaySkillTargeting = null;
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreview))] private Object heroPreview = null;
+   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPreview))] private Object skillPreview = null;
 
 
    #endregion
@@ -40,6 +44,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    public ISkillTargeting DisplaySkillTargeting => displaySkillTargeting as ISkillTargeting;
 
    public IHeroPreview HeroPreview => heroPreview as IHeroPreview;
+   public ISkillPreview SkillPreview => skillPreview as ISkillPreview;
 
 
 
@@ -48,7 +53,10 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    #region METHODS
 
-
+   private void Awake()
+   {
+      
+   }
 
    #endregion
 }

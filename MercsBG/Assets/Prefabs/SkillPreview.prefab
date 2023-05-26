@@ -225,7 +225,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 8
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 10
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -410,6 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4872700158142113885}
+  - component: {fileID: 1487500738006000510}
   - component: {fileID: 4872700158142113859}
   - component: {fileID: 4872700158142113884}
   m_Layer: 0
@@ -438,6 +439,23 @@ RectTransform:
   m_AnchoredPosition: {x: -0.039749146, y: -1.4414673}
   m_SizeDelta: {x: -0.2627833, y: 0.5004959}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1487500738006000510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872700158142113886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889a9c7293879e64f9b0b35be7b758a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 6308278330998182386, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
+  - {fileID: 2531894167454913421, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
+  - {fileID: -6372847374873367398, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
+  - {fileID: -8614387202556066374, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
 --- !u!222 &4872700158142113859
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -488,7 +506,7 @@ GameObject:
   - component: {fileID: 4872700158723444684}
   - component: {fileID: 4872700158723444685}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SkillGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -885,7 +903,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.9
+  m_fontSize: 20
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -936,6 +954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4872700159216520648}
+  - component: {fileID: 8201221664133566301}
   - component: {fileID: 4872700159216520655}
   m_Layer: 0
   m_Name: SkillPreview
@@ -970,6 +989,27 @@ RectTransform:
   m_AnchoredPosition: {x: -0.113098145, y: 3.8127594}
   m_SizeDelta: {x: -5.3366165, y: 0.36810708}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8201221664133566301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872700159216520649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f593f71f697994899a9209ff96341b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPreviewFrames: {fileID: 1487500738006000510}
+  skillGraphic: {fileID: 4872700158723444685}
+  cooldownGraphic: {fileID: 4872700158970329741}
+  speedGraphic: {fileID: 4872700158734898830}
+  nameText: {fileID: 4872700159254207228}
+  elementText: {fileID: 4872700158081229875}
+  descriptionText: {fileID: 4872700157805674055}
+  cooldownText: {fileID: 4872700159064981900}
+  speedText: {fileID: 4872700157605758303}
 --- !u!223 &4872700159216520655
 Canvas:
   m_ObjectHideFlags: 0
@@ -1083,7 +1123,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.45
+  m_fontSize: 12
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
