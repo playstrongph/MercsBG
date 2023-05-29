@@ -15618,7 +15618,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4891520307105993108}
   - component: {fileID: 4891520307105993109}
-  - component: {fileID: 3476393844055833969}
   m_Layer: 0
   m_Name: UsedSkillPreview
   m_TagString: Untagged
@@ -15669,31 +15668,6 @@ Canvas:
   m_SortingLayerID: 532522629
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &3476393844055833969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4891520307105993111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e3a230dc7ab5e4a8e5b211aef784d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillPreviewFrames: {fileID: 4073574830726062167}
-  heroFrames: {fileID: 6392486195443694638}
-  skillGraphic: {fileID: 6435141909962978574}
-  cooldownGraphic: {fileID: 6435141910243524686}
-  speedGraphic: {fileID: 6435141909941005389}
-  arrowGraphic: {fileID: 4891520307501596702}
-  arrowGlowGraphic: {fileID: 4891520308191976229}
-  heroGraphic: {fileID: 6392486193970291659}
-  skillNameText: {fileID: 6435141909424316479}
-  elementText: {fileID: 6435141908448337648}
-  descriptionText: {fileID: 6435141909280064644}
-  cooldownText: {fileID: 6435141910141074255}
-  speedText: {fileID: 6435141908916731804}
 --- !u!1 &4891520307501596688
 GameObject:
   m_ObjectHideFlags: 0

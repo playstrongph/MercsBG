@@ -7,10 +7,11 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-public class SkillUsed : MonoBehaviour
+public class SkillUsed : MonoBehaviour, ISkillUsed
 {
    #region VARIABLES
 
+  
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPreviewFrames))] private Object skillPreviewFrames = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroFrames))] private Object heroFrames = null;
    
@@ -35,7 +36,8 @@ public class SkillUsed : MonoBehaviour
    #endregion
 
    #region PROPERTIES
-
+   
+   
    public ISkillPreviewFrames SkillPreviewFrames => skillPreviewFrames as ISkillPreviewFrames;
    public IHeroFrames HeroFrames => heroFrames as IHeroFrames;
    
