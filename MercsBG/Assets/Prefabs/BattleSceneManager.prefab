@@ -878,7 +878,7 @@ PrefabInstance:
     - target: {fileID: 4891520307105993111, guid: dbad8b77cce3b10468abd738807f753f,
         type: 3}
       propertyPath: m_Name
-      value: SkillQueuePreview
+      value: UsedSkillsPreview
       objectReference: {fileID: 0}
     - target: {fileID: 6435141908448337648, guid: dbad8b77cce3b10468abd738807f753f,
         type: 3}
@@ -1400,7 +1400,7 @@ PrefabInstance:
     - target: {fileID: 4872700159216520655, guid: 0e889b8de30e74b488fc3bc9b57600ac,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4872700159254207228, guid: 0e889b8de30e74b488fc3bc9b57600ac,
         type: 3}

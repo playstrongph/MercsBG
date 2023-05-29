@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-public class SkillQueueHeroTargets : MonoBehaviour
+public class UsedSkillsHeroTargets : MonoBehaviour
 {
    #region VARIABLES
 
