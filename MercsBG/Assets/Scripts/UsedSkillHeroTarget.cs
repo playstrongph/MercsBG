@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-public class UsedSkillHeroTarget : MonoBehaviour
+public class UsedSkillHeroTarget : MonoBehaviour, IUsedSkillHeroTarget
 {
    #region VARIABLES
 
@@ -45,6 +45,7 @@ public class UsedSkillHeroTarget : MonoBehaviour
    public TextMeshProUGUI NameText => nameText;
    public TextMeshProUGUI RaceText => raceText;
    public TextMeshProUGUI DamageText => damageText;
+   public Transform Transform => this.transform;
 
    #endregion
 

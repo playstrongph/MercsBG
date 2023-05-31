@@ -9,4 +9,10 @@
     ISkillTargeting SkillTargeting { get; }
 
     ISkillTargeting DisplaySkillTargeting { get; }
+
+    IHeroPreview HeroPreview { get; }
+
+    ISkillPreview SkillPreview { get; }
+
+    IUsedSkillPreview UsedSkillPreview { get; }
 }

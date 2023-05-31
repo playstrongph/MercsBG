@@ -27,7 +27,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreview))] private Object heroPreview = null;
    
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPreview))] private Object skillPreview = null;
-   
+
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUsedSkillPreview))] private Object usedSkillPreview = null;
   
 
 
@@ -47,6 +48,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    public IHeroPreview HeroPreview => heroPreview as IHeroPreview;
    public ISkillPreview SkillPreview => skillPreview as ISkillPreview;
+   public IUsedSkillPreview UsedSkillPreview => usedSkillPreview as IUsedSkillPreview;
    
    
 
