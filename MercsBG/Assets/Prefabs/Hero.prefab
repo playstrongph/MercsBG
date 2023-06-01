@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 8048816148521417251}
   - component: {fileID: 1004762245}
   - component: {fileID: 479678864000175803}
+  - component: {fileID: 1951731710}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -167,6 +168,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac13ee810821124b84a5e284f7339d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  heroVisual: {fileID: 1951731710}
+--- !u!114 &1951731710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048816148521417250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875cca167f22a3e4a899e7cb1ad8905a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hero: {fileID: 479678864000175803}
+  heroFrames: {fileID: 8048816149896755318}
+  heroGlows: {fileID: 8048816149828623905}
+  heroStatusEffects: {fileID: 368169584510021124}
+  heroFrame: {fileID: 8048816149896755319}
+  heroGraphic: {fileID: 8048816149812228077}
+  armor: {fileID: 8048816150047531903}
+  turnOrderBalloon: {fileID: 8048816148506494396}
+  attackText: {fileID: 8048816148985939123}
+  healthText: {fileID: 8048816149297939226}
+  armorText: {fileID: 8048816150381795498}
+  turnOrderText: {fileID: 8048816150090219224}
 --- !u!1 &8048816148985939125
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +495,7 @@ GameObject:
   - component: {fileID: 8048816149812228074}
   - component: {fileID: 8048816149812228077}
   m_Layer: 0
-  m_Name: HeroImage
+  m_Name: HeroGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,6 +743,7 @@ MonoBehaviour:
   - {fileID: -4902278355354446413, guid: 84aa0f73768a00447b661127de00511e, type: 3}
   - {fileID: -9130639797075620102, guid: 3d4d95900434b384cb3385ccc5abb545, type: 3}
   - {fileID: -5524865532692075295, guid: 3d287e3f702a40142b7acce0f67aa684, type: 3}
+  - {fileID: -5526074859663678738, guid: f48ccbc587f5d924196d7d71fca5d7ab, type: 3}
 --- !u!1 &8048816150012559777
 GameObject:
   m_ObjectHideFlags: 0

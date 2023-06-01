@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroStatusEffects : MonoBehaviour
+public class HeroStatusEffects : MonoBehaviour, IHeroStatusEffects
 {
    #region VARIABLES
 
