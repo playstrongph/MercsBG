@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 2516480283320697890}
   - component: {fileID: 3796955572346015203}
   m_Layer: 0
-  m_Name: Image
+  m_Name: PassiveGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 6173573340856799930}
   - component: {fileID: 6173573340856799931}
   m_Layer: 0
-  m_Name: Image
+  m_Name: ReadyGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,6 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6173573341022000838}
   - component: {fileID: 1181734340}
+  - component: {fileID: 8099773362735705414}
   - component: {fileID: 6173573341022000837}
   m_Layer: 0
   m_Name: Skill
@@ -386,6 +387,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62d24c902c90154aabb36f2b95bab2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heroSkills: {fileID: 0}
+  skillVisual: {fileID: 8099773362735705414}
+--- !u!114 &8099773362735705414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6173573341022000839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1e403758f0eb746a23470006b74e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill: {fileID: 1181734340}
+  skillReady: {fileID: 6173573341507058984}
+  skillNotReady: {fileID: 6173573342328627377}
+  passiveSkill: {fileID: 6173573342139538863}
+  skillReadyGraphic: {fileID: 6173573340856799931}
+  skillNotReadyGraphic: {fileID: 6173573342478404097}
+  passiveSkillGraphic: {fileID: 3796955572346015203}
+  speedText: {fileID: 6173573341709001044}
+  cooldownText: {fileID: 6173573340914842550}
 --- !u!223 &6173573341022000837
 Canvas:
   m_ObjectHideFlags: 0
@@ -1028,7 +1052,7 @@ GameObject:
   - component: {fileID: 6173573342478404096}
   - component: {fileID: 6173573342478404097}
   m_Layer: 0
-  m_Name: Image
+  m_Name: NotReadyGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

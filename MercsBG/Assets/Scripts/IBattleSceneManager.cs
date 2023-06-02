@@ -1,4 +1,6 @@
-﻿public interface IBattleSceneManager
+﻿using UnityEngine;
+
+public interface IBattleSceneManager
 {
     IGameBoard GameBoard { get; }
     IPlayer MainPlayer { get; }
@@ -15,4 +17,6 @@
     ISkillPreview SkillPreview { get; }
 
     IUsedSkillPreview UsedSkillPreview { get; }
+
+    Transform Transform { get; }
 }

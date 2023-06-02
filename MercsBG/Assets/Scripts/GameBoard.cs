@@ -7,7 +7,7 @@ public class GameBoard : MonoBehaviour, IGameBoard
 {
    #region VARIABLES
 
-   [SerializeField] private Object battleSceneManager = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))]private Object battleSceneManager = null;
    
    [SerializeField] private Canvas canvas = null;
 

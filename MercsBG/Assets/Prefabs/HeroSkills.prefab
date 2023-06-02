@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48830697e122624c9e974e1ee80ebed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleSceneManager: {fileID: 0}
   threeSkills: {fileID: 4555205230501927617}
   fourSkills: {fileID: 1139021159614998364}
 --- !u!1001 &1524039768659975577
@@ -361,6 +362,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3693188540425213745}
     m_Modifications:
+    - target: {fileID: 1181734340, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
+      propertyPath: heroSkills
+      value: 
+      objectReference: {fileID: 1624916242970045263}
     - target: {fileID: 6173573340914842551, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -518,6 +523,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3693188540425213745}
     m_Modifications:
+    - target: {fileID: 1181734340, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
+      propertyPath: heroSkills
+      value: 
+      objectReference: {fileID: 1624916242970045263}
     - target: {fileID: 6173573340914842551, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -685,6 +694,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3693188540425213745}
     m_Modifications:
+    - target: {fileID: 1181734340, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
+      propertyPath: heroSkills
+      value: 
+      objectReference: {fileID: 1624916242970045263}
     - target: {fileID: 6173573340914842551, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -852,6 +865,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3693188541571869390}
     m_Modifications:
+    - target: {fileID: 1181734340, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
+      propertyPath: heroSkills
+      value: 
+      objectReference: {fileID: 1624916242970045263}
     - target: {fileID: 6173573340914842551, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1004,6 +1021,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3693188541571869390}
     m_Modifications:
+    - target: {fileID: 1181734340, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
+      propertyPath: heroSkills
+      value: 
+      objectReference: {fileID: 1624916242970045263}
     - target: {fileID: 6173573340914842551, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1166,6 +1187,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3693188541571869390}
     m_Modifications:
+    - target: {fileID: 1181734340, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
+      propertyPath: heroSkills
+      value: 
+      objectReference: {fileID: 1624916242970045263}
     - target: {fileID: 6173573340914842551, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1328,6 +1353,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3693188540425213745}
     m_Modifications:
+    - target: {fileID: 1181734340, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
+      propertyPath: heroSkills
+      value: 
+      objectReference: {fileID: 1624916242970045263}
     - target: {fileID: 6173573340914842551, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_AnchoredPosition.x

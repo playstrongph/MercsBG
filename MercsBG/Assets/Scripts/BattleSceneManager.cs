@@ -49,7 +49,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    public IHeroPreview HeroPreview => heroPreview as IHeroPreview;
    public ISkillPreview SkillPreview => skillPreview as ISkillPreview;
    public IUsedSkillPreview UsedSkillPreview => usedSkillPreview as IUsedSkillPreview;
-   
+
+   public Transform Transform => transform;
    
 
 
