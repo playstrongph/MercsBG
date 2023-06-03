@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroSkills : MonoBehaviour, IHeroSkills
+public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
 {
    #region VARIABLES
 

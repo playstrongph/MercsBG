@@ -1577,7 +1577,7 @@ PrefabInstance:
     - target: {fileID: 3693188542287271110, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: m_Name
-      value: HeroSkills
+      value: HeroSkillsDisplay
       objectReference: {fileID: 0}
     - target: {fileID: 8937998008600333106, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}

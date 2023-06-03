@@ -1,4 +1,4 @@
-public interface IHeroSkills
+public interface IHeroSkillsDisplay
 {
 
     IBattleSceneManager BattleSceneManager { get; }
