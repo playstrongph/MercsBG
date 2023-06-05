@@ -3,9 +3,9 @@ public interface IHeroSkillsDisplay
 
     IBattleSceneManager BattleSceneManager { get; }
 
-    ISkills ThreeSkills { get; }
+    ISkillVisuals ThreeSkillVisuals { get; }
 
-    ISkills FourSkills { get; }
+    ISkillVisuals FourSkillVisuals { get; }
 
    
 }

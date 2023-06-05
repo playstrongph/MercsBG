@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public interface ISkillVisual
 {
-    ISkill Skill { get; }
+    
     GameObject SkillReady { get; }
     GameObject SkillNotReady { get; }
     GameObject PassiveSkill { get; }

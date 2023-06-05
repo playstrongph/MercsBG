@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
 {
    #region VARIABLES
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))] private Object battleSceneManager = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkills))] private Object threeSkills = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkills))] private Object fourSkills = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisuals))] private Object threeSkills = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisuals))] private Object fourSkills = null;
 
 
    #endregion
@@ -16,14 +18,17 @@ public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
    #region PROPERTIES
    
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
-   public ISkills ThreeSkills => threeSkills as ISkills;
-   public ISkills FourSkills => fourSkills as ISkills;
+   public ISkillVisuals ThreeSkillVisuals => threeSkills as ISkillVisuals;
+   public ISkillVisuals FourSkillVisuals => fourSkills as ISkillVisuals;
 
    #endregion
 
    #region METHODS
 
-
+   private void Awake()
+   {
+      
+   }
 
    #endregion
 }

@@ -342,7 +342,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6173573341022000838}
-  - component: {fileID: 1181734340}
   - component: {fileID: 8099773362735705414}
   - component: {fileID: 6173573341022000837}
   m_Layer: 0
@@ -375,20 +374,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.9, y: 153.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1181734340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6173573341022000839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b62d24c902c90154aabb36f2b95bab2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroSkills: {fileID: 0}
-  skillVisual: {fileID: 8099773362735705414}
 --- !u!114 &8099773362735705414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1e403758f0eb746a23470006b74e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill: {fileID: 1181734340}
+  heroSkillsDisplay: {fileID: 0}
   skillReady: {fileID: 6173573341507058984}
   skillNotReady: {fileID: 6173573342328627377}
   passiveSkill: {fileID: 6173573342139538863}
