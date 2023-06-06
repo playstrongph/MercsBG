@@ -9,7 +9,6 @@ public class Skill : MonoBehaviour, ISkill
 {
    #region VARIABLES
 
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkills = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual = null;
 
 
@@ -17,7 +16,7 @@ public class Skill : MonoBehaviour, ISkill
 
    #region PROPERTIES
    
-   public IHeroSkillsDisplay HeroSkillsDisplay => heroSkills as IHeroSkillsDisplay;
+  
    public ISkillVisual SkillVisual => skillVisual as ISkillVisual;
 
 
