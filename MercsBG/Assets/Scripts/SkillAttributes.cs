@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillAttributes : MonoBehaviour
+public class SkillAttributes : MonoBehaviour, ISkillAttributes
 {
    #region VARIABLES
    

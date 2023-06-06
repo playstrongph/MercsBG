@@ -1,6 +1,8 @@
 public interface ISkill
 {
   
-    ISkillVisual SkillVisual { get; }
+    IHeroSkillsDisplay HeroSkillsDisplay { get; }
+
+    ISkillAttributes SkillAttributes { get; }
 
 }

@@ -1636,6 +1636,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7097228921892222324}
     m_Modifications:
+    - target: {fileID: 47095207120604948, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: heroSkillsDisplay
+      value: 
+      objectReference: {fileID: 8426992109814451513}
     - target: {fileID: 56423502510094944, guid: cf2583de8a8b3b34c8c0598416249747,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1726,6 +1731,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2813604262402834347, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: heroSkillsDisplay
+      value: 
+      objectReference: {fileID: 8426992109814451513}
     - target: {fileID: 3875425226541091147, guid: cf2583de8a8b3b34c8c0598416249747,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1876,6 +1886,16 @@ PrefabInstance:
       propertyPath: heroes
       value: 
       objectReference: {fileID: 5128127904874993167}
+    - target: {fileID: 5596116666681067513, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: heroSkillsDisplay
+      value: 
+      objectReference: {fileID: 8426992109814451513}
+    - target: {fileID: 5612951679776305442, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: heroSkillsDisplay
+      value: 
+      objectReference: {fileID: 8426992109814451513}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf2583de8a8b3b34c8c0598416249747, type: 3}
 --- !u!224 &6069642204511139078 stripped
