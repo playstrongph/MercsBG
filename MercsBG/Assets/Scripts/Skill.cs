@@ -8,19 +8,15 @@ using Object = UnityEngine.Object;
 public class Skill : MonoBehaviour, ISkill
 {
    #region VARIABLES
-
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkillsDisplay = null;
-   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkills))] private Object heroSkills = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillAttributes))] private Object skillAttributes = null;
 
    #endregion
 
    #region PROPERTIES
-   
-  
-   public IHeroSkillsDisplay HeroSkillsDisplay => heroSkillsDisplay as IHeroSkillsDisplay;
-   
+
    public ISkillAttributes SkillAttributes => skillAttributes  as ISkillAttributes;
+   public IHeroSkills HeroSkills => heroSkills as IHeroSkills;
 
 
    #endregion

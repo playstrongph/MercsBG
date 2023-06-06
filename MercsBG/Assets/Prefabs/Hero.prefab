@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62d24c902c90154aabb36f2b95bab2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroSkillsDisplay: {fileID: 0}
+  heroSkills: {fileID: 6039862950908708011}
   skillAttributes: {fileID: 1621358490670554582}
 --- !u!114 &1621358490670554582
 MonoBehaviour:
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62d24c902c90154aabb36f2b95bab2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroSkillsDisplay: {fileID: 0}
+  heroSkills: {fileID: 6039862950908708011}
   skillAttributes: {fileID: 6329891841149869107}
 --- !u!114 &6329891841149869107
 MonoBehaviour:
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62d24c902c90154aabb36f2b95bab2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroSkillsDisplay: {fileID: 0}
+  heroSkills: {fileID: 6039862950908708011}
   skillAttributes: {fileID: 30019326685038327}
 --- !u!114 &30019326685038327
 MonoBehaviour:
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62d24c902c90154aabb36f2b95bab2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroSkillsDisplay: {fileID: 0}
+  heroSkills: {fileID: 6039862950908708011}
   skillAttributes: {fileID: 969033528098201541}
 --- !u!114 &969033528098201541
 MonoBehaviour:
