@@ -7,7 +7,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6069642204511139129}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -1508,7 +1508,7 @@ PrefabInstance:
     - target: {fileID: 3693188542287271108, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3693188542287271109, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
@@ -2045,7 +2045,7 @@ PrefabInstance:
     - target: {fileID: 2559801578124480621, guid: cf2583de8a8b3b34c8c0598416249747,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2695754838999490436, guid: cf2583de8a8b3b34c8c0598416249747,
         type: 3}
