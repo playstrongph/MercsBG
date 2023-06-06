@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4711278350917139359}
   - component: {fileID: 2689960912244333807}
   - component: {fileID: 3910777555636928487}
+  - component: {fileID: 2559801578124480621}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -103,6 +104,27 @@ MonoBehaviour:
   m_Spacing: {x: -14, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!223 &2559801578124480621
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910777555636928473}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 1
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 1
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 987682575
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &481584414063530586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -345,6 +367,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4711278350917139359}
+    - target: {fileID: 3343586262681492608, guid: d33fe049bca246143a63404be32df19a,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8048816148521417248, guid: d33fe049bca246143a63404be32df19a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -522,6 +549,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4711278350917139359}
+    - target: {fileID: 3343586262681492608, guid: d33fe049bca246143a63404be32df19a,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8048816148521417248, guid: d33fe049bca246143a63404be32df19a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -902,6 +934,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4711278350917139359}
+    - target: {fileID: 3343586262681492608, guid: d33fe049bca246143a63404be32df19a,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8048816148521417248, guid: d33fe049bca246143a63404be32df19a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1079,6 +1116,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4711278350917139359}
+    - target: {fileID: 3343586262681492608, guid: d33fe049bca246143a63404be32df19a,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8048816148521417248, guid: d33fe049bca246143a63404be32df19a,
         type: 3}
       propertyPath: m_LocalPosition.x

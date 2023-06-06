@@ -8,6 +8,8 @@ public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
 {
    #region VARIABLES
 
+   [SerializeField] private Canvas canvas = null;
+
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))] private Object battleSceneManager = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisuals))] private Object threeSkills = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisuals))] private Object fourSkills = null;
@@ -16,7 +18,8 @@ public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
    #endregion
 
    #region PROPERTIES
-   
+
+   public Canvas Canvas => canvas;
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
    public ISkillVisuals ThreeSkillVisuals => threeSkills as ISkillVisuals;
    public ISkillVisuals FourSkillVisuals => fourSkills as ISkillVisuals;

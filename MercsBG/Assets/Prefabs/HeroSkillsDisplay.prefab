@@ -326,7 +326,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3693188542287271110}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48830697e122624c9e974e1ee80ebed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 3693188542287271108}
   battleSceneManager: {fileID: 0}
   threeSkills: {fileID: 4555205230501927617}
   fourSkills: {fileID: 1139021159614998364}
