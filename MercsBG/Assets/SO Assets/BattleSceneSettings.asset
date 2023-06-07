@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allyTeamHeroes: {fileID: 11400000, guid: 1ba6aa8910808b247b942086ef8c73ce, type: 2}
   enemyTeamHeroes: {fileID: 11400000, guid: 4ee172a9547001b4ba14fbae9a221aa4, type: 2}
+  boardImage: {fileID: -5916072495580227715, guid: c0961d71106b0a34281dc272be99ac90,
+    type: 3}

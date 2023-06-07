@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 912281743222991088}
   - component: {fileID: 912281743222991091}
   - component: {fileID: 8198216792059393782}
+  - component: {fileID: 6363589249261872898}
   m_Layer: 0
   m_Name: GameBoard
   m_TagString: Untagged
@@ -149,3 +150,15 @@ MonoBehaviour:
   battleSceneManager: {fileID: 0}
   canvas: {fileID: 912281743222991091}
   boardImage: {fileID: 912281741823348113}
+--- !u!114 &6363589249261872898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912281743222991089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9047aafd7a48b44ac1ec959bab4cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
