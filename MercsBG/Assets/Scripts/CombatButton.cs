@@ -9,6 +9,7 @@ public class CombatButton : MonoBehaviour, ICombatButton
    #region VARIABLES
 
    [SerializeField] private Image buttonImage = null;
+   [SerializeField] private Canvas canvas = null;
    [SerializeField] private List<Sprite> buttonSprites = new List<Sprite>();
    [SerializeField] private TextMeshProUGUI buttonText = null;
    [SerializeField] private Button button = null;
@@ -45,6 +46,8 @@ public class CombatButton : MonoBehaviour, ICombatButton
       var x = Random.Range(0, 3);
       ButtonImage.sprite = ButtonSprites[x];
    }
+
+   public Canvas Canvas => canvas;
 
    public void SetButtonText(string text)
    {

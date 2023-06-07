@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafcab106cc90dd45a6c9ced51f0299b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleSceneManager: {fileID: 0}
   usedSkills:
   - {fileID: 5247572111825891551}
   - {fileID: 2627153505564781450}
@@ -62,6 +63,7 @@ MonoBehaviour:
   - {fileID: 3751148525837870317}
   - {fileID: 43285371056343082}
   - {fileID: 5793929954266607022}
+  canvas: {fileID: 6299935570261167246}
 --- !u!222 &6299935570261167244
 CanvasRenderer:
   m_ObjectHideFlags: 0

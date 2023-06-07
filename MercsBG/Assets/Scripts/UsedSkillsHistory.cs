@@ -9,15 +9,16 @@ public class UsedSkillsHistory : MonoBehaviour, IUsedSkillsHistory
    #region VARIABLES
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))] private Object battleSceneManager = null;
-
+   [SerializeField] private Canvas canvas = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUsedSkill))] private List<Object> usedSkills = new List<Object>();
+
+   
    
    #endregion
 
    #region PROPERTIES
    
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
-
    public List<IUsedSkill> UsedSkills
    {
       get
@@ -30,6 +31,8 @@ public class UsedSkillsHistory : MonoBehaviour, IUsedSkillsHistory
          return newUsedSkills;
       }
    }
+
+   public Canvas Canvas => canvas;
 
    #endregion
 

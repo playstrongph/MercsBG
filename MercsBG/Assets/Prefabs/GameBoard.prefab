@@ -146,5 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e6474d3e422574480e4da3aad9b54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleSceneManager: {fileID: 0}
   canvas: {fileID: 912281743222991091}
   boardImage: {fileID: 912281741823348113}

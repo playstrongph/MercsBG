@@ -300,6 +300,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1317843334300651027, guid: a724356cd210dba408f082d3be3da174,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1317843334300651036, guid: a724356cd210dba408f082d3be3da174,
         type: 3}
       propertyPath: m_Name
@@ -1402,6 +1407,11 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 912281743222991091, guid: cb6c6584fef96e645bb80fc7ceac3085,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8198216792059393782, guid: cb6c6584fef96e645bb80fc7ceac3085,
         type: 3}
       propertyPath: battleSceneManager
@@ -2478,6 +2488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299935570261167246, guid: aee256dda546f7f4380a705307bd6cae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6299935570261167247, guid: aee256dda546f7f4380a705307bd6cae,
         type: 3}
