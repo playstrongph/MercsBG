@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bec5dc9621ac9a4ba7782f1bf9cccef, type: 3}
+  m_Name: Fighter Samuro
+  m_EditorClassIdentifier: 
+  heroName: Samuro
+  heroLevel: 30
+  heroStars: 91
+  heroCp: 91
+  heroSprite: {fileID: -3542922669990823581, guid: e817f4d36cdbb114eaea25a1e932529e,
+    type: 3}
+  health: 71
+  attack: 11
+  defense: 71
+  speed: 61
+  armor: 51
+  focusPoints: 41
+  criticalHitChance: 50
+  criticalHitDamage: 150
+  effectiveness: 0
+  effectResistance: 0
+  dualAttackChance: 5
+  hitChance: 100

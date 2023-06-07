@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bec5dc9621ac9a4ba7782f1bf9cccef, type: 3}
-  m_Name: Sample Caster 1
+  m_Name: Fighter Ilidan
   m_EditorClassIdentifier: 
-  heroName: Caster 1
-  heroLevel: 91
+  heroName: Ilidan
+  heroLevel: 30
   heroStars: 91
   heroCp: 91
-  heroSprite: {fileID: 7354032955313513432, guid: 150aa0758b68e254baa517a72c35012b,
+  heroSprite: {fileID: 2727401211416412737, guid: 51f47383a61086644a0360b201d8aed1,
     type: 3}
-  health: 91
-  attack: 81
-  defense: 71
+  health: 71
+  attack: 13
+  defense: 79
   speed: 61
   armor: 51
   focusPoints: 41
