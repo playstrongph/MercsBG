@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bec5dc9621ac9a4ba7782f1bf9cccef, type: 3}
+  m_Name: Sample Caster 2
+  m_EditorClassIdentifier: 
+  heroName: Sampler Hero 2
+  heroLevel: 92
+  heroStars: 92
+  heroCp: 92
+  heroSprite: {fileID: 7354032955313513432, guid: 150aa0758b68e254baa517a72c35012b,
+    type: 3}
+  health: 92
+  attack: 82
+  defense: 72
+  speed: 61
+  armor: 52
+  focusPoints: 42
+  criticalHitChance: 50
+  criticalHitDamage: 150
+  effectiveness: 0
+  effectResistance: 0
+  dualAttackChance: 5
+  hitChance: 100
