@@ -2,7 +2,7 @@
 
 namespace SO_Assets
 {
-    public interface IHeroAssets
+    public interface IHeroAsset
     {
         string HeroName { get; }
         int HeroLevel { get; }
