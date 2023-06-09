@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using SO_Assets;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -8,6 +9,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 {
    #region VARIABLES
 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleScene1SettingsAsset))] private Object battleScene1Settings = null;
+   
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IGameBoard))] private Object gameBoard = null;
    
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayer))] private Object mainPlayer = null;
@@ -33,6 +36,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    #endregion
 
    #region PROPERTIES
+   
+   public IBattleScene1SettingsAsset BattleScene1SettingsAsset => battleScene1Settings as IBattleScene1SettingsAsset;
    
    public IGameBoard GameBoard => gameBoard as IGameBoard;
    public IPlayer MainPlayer => mainPlayer as IPlayer;
@@ -61,6 +66,44 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    private void Awake()
    {
       
+   }
+   
+   private void Start()
+   {
+      //TODO: Might be transferred in the future as part of scene loading
+      StartCoroutine(StartAllCoroutines());
+   }
+   
+   private IEnumerator StartAllCoroutines()
+   {
+      
+      
+      yield return StartCoroutine(InitializeGameBoard());
+      
+      /*yield return StartCoroutine(InitializeSkillQueue());
+   
+      yield return StartCoroutine(InitializeSkillQueuePreview());
+   
+      yield return StartCoroutine(InitializeAllPlayers());
+   
+      yield return StartCoroutine(InitializeAllHeroes());
+
+      yield return StartCoroutine(InitializeAllSkills());
+
+      yield return StartCoroutine(InitializeFightButton());
+
+      
+      yield return StartCoroutine(StartBattle());*/
+      
+      yield return null;
+   }
+   
+   
+   private IEnumerator InitializeGameBoard()
+   {
+      GameBoard.InitializeGameBoard.LoadGameBoard();
+      
+      yield return null;
    }
 
    #endregion

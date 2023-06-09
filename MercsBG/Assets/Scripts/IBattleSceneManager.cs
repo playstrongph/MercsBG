@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using SO_Assets;
+using UnityEngine;
 
 public interface IBattleSceneManager
 {
+    IBattleScene1SettingsAsset BattleScene1SettingsAsset { get; }
     IGameBoard GameBoard { get; }
     IPlayer MainPlayer { get; }
     IPlayer EnemyPlayer { get; }

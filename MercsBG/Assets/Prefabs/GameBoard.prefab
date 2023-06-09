@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleSceneManager: {fileID: 0}
+  initializeGameBoard: {fileID: 6363589249261872898}
   canvas: {fileID: 912281743222991091}
   boardImage: {fileID: 912281741823348113}
 --- !u!114 &6363589249261872898
@@ -162,3 +163,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9047aafd7a48b44ac1ec959bab4cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameBoard: {fileID: 912281743222991089}

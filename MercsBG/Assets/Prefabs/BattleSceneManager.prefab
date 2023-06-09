@@ -103,6 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b58c19e0c89d854eb513e3c7bde93f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleScene1Settings: {fileID: 11400000, guid: 4a8839f4067076542b96612fa6a93e8f,
+    type: 2}
   gameBoard: {fileID: 1421878157770733092}
   mainPlayer: {fileID: 2530951147300237695}
   enemyPlayer: {fileID: 2530951147387883852}
@@ -1282,6 +1284,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7097228921892222324}
     m_Modifications:
+    - target: {fileID: 912281741823348113, guid: cb6c6584fef96e645bb80fc7ceac3085,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3774005590826065951, guid: b76a2213169798e4ebd8b2c53ba4292d,
+        type: 3}
     - target: {fileID: 912281741823348126, guid: cb6c6584fef96e645bb80fc7ceac3085,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -1412,6 +1420,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6363589249261872898, guid: cb6c6584fef96e645bb80fc7ceac3085,
+        type: 3}
+      propertyPath: gameBoard
+      value: 
+      objectReference: {fileID: 1421878157770733092}
     - target: {fileID: 8198216792059393782, guid: cb6c6584fef96e645bb80fc7ceac3085,
         type: 3}
       propertyPath: battleSceneManager
