@@ -8,6 +8,8 @@ using Object = UnityEngine.Object;
 public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 {
    #region VARIABLES
+   
+   [Header("GAME OBJECT REFERENCES")]
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleScene1SettingsAsset))] private Object battleScene1Settings = null;
    
@@ -33,6 +35,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUsedSkillPreview))] private Object usedSkillPreview = null;
 
+   [Header("COMPONENTS")] 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializePlayers))] private Object initializePlayers = null;
+
    #endregion
 
    #region PROPERTIES
@@ -55,7 +60,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    public Transform Transform => transform;
    
-
+   public IInitializePlayers InitializePlayers => initializePlayers as IInitializePlayers;
 
 
 
@@ -80,11 +85,12 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       
       yield return StartCoroutine(InitializeGameBoard());
       
+      yield return StartCoroutine(InitializeAllPlayers());
+      
       /*yield return StartCoroutine(InitializeSkillQueue());
    
-      yield return StartCoroutine(InitializeSkillQueuePreview());
-   
-      yield return StartCoroutine(InitializeAllPlayers());
+      yield return StartCoroutine(InitializeSkillQueuePreview());  
+      
    
       yield return StartCoroutine(InitializeAllHeroes());
 
@@ -101,7 +107,14 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    
    private IEnumerator InitializeGameBoard()
    {
-      GameBoard.InitializeGameBoard.LoadGameBoard();
+      GameBoard.InitializeGameBoard.StartAction();
+      
+      yield return null;
+   }
+   
+   private IEnumerator InitializeAllPlayers()
+   {
+     InitializePlayers.StartAction();
       
       yield return null;
    }

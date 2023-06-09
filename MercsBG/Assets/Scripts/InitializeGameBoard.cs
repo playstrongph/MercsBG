@@ -18,11 +18,17 @@ public class InitializeGameBoard : MonoBehaviour, IInitializeGameBoard
 
    #region METHODS
 
-   public void LoadGameBoard()
+   public void StartAction()
    {
-       GameBoard.BoardImage.sprite = GameBoard.BattleSceneManager.BattleScene1SettingsAsset.BoardImage;
-
+       var battleSceneManager = GameBoard.BattleSceneManager;
+       
+       //Set the board image and enable the display
+       GameBoard.BoardImage.sprite = battleSceneManager.BattleScene1SettingsAsset.BoardImage;
        GameBoard.Canvas.enabled = true;
+       
+       //Set References
+       GameBoard.MainPlayer = battleSceneManager.MainPlayer;
+       GameBoard.EnemyPlayer = battleSceneManager.EnemyPlayer;
    }
 
 

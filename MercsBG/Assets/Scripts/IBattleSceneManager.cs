@@ -21,4 +21,7 @@ public interface IBattleSceneManager
     IUsedSkillPreview UsedSkillPreview { get; }
 
     Transform Transform { get; }
+    
+    //Components
+    IInitializePlayers InitializePlayers { get; }
 }

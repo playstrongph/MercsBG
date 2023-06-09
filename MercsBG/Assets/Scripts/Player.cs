@@ -21,6 +21,8 @@ public class Player : MonoBehaviour, IPlayer
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
    public IHeroes Heroes => heroes as IHeroes;
 
+   public IPlayer OtherPlayer { get; set; }
+
    #endregion
 
    #region METHODS

@@ -1,4 +1,4 @@
 ﻿public interface IInitializeGameBoard
 {
-    void LoadGameBoard();
+    void StartAction();
 }

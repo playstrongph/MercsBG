@@ -27,6 +27,10 @@ public class GameBoard : MonoBehaviour, IGameBoard
    public Canvas Canvas => canvas;
    public Image BoardImage => boardImage;
 
+   public IPlayer MainPlayer { get; set; }
+   
+   public IPlayer EnemyPlayer { get; set; }
+
 
    #endregion
 
