@@ -34,29 +34,15 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       
       
       //Enable main player heroes
-      for (int i = 0; i < mainPlayerHeroes.Count; i++)
+      for (var i = 0; i < mainPlayerHeroes.Count; i++)
       {
-         if (i < allyHeroes.Count)
-         {
-           mainPlayerHeroes[i].ThisGameObject.SetActive(true);
-         }
-         else
-         {
-            mainPlayerHeroes[i].ThisGameObject.SetActive(false);
-         }
+         mainPlayerHeroes[i].ThisGameObject.SetActive(i < allyHeroes.Count);
       }
       
       //Enable enemy player heroes
-      for (int i = 0; i < enemyPlayerHeroes.Count; i++)
+      for (var i = 0; i < enemyPlayerHeroes.Count; i++)
       {
-         if (i < allyHeroes.Count)
-         {
-            enemyPlayerHeroes[i].ThisGameObject.SetActive(true);
-         }
-         else
-         {
-            enemyPlayerHeroes[i].ThisGameObject.SetActive(false);
-         }
+         enemyPlayerHeroes[i].ThisGameObject.SetActive(i < allyHeroes.Count);
       }
    }
 
