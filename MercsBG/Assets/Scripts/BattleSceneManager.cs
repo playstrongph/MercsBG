@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using SO_Assets;
+﻿using SO_Assets;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
 public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 {
    #region VARIABLES
-   
+
    [Header("GAME OBJECT REFERENCES")]
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleScene1SettingsAsset))] private Object battleScene1Settings = null;
@@ -36,14 +33,18 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUsedSkillPreview))] private Object usedSkillPreview = null;
 
    [Header("COMPONENTS")] 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleStart))] private Object battleStart = null;
+   
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializePlayers))] private Object initializePlayers = null;
+   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeHeroes))] private Object initializeHeroes = null;
 
    #endregion
 
    #region PROPERTIES
    
+   private IBattleStart BattleStart => battleStart as IBattleStart;
    public IBattleScene1SettingsAsset BattleScene1SettingsAsset => battleScene1Settings as IBattleScene1SettingsAsset;
-   
    public IGameBoard GameBoard => gameBoard as IGameBoard;
    public IPlayer MainPlayer => mainPlayer as IPlayer;
    public IPlayer EnemyPlayer => enemyPlayer as IPlayer;
@@ -61,62 +62,16 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    public Transform Transform => transform;
    
    public IInitializePlayers InitializePlayers => initializePlayers as IInitializePlayers;
-
-
+   
+   public IInitializeHeroes InitializeHeroes => initializeHeroes as IInitializeHeroes;
 
    #endregion
 
    #region METHODS
 
-   private void Awake()
-   {
-      
-   }
-   
    private void Start()
    {
-      //TODO: Might be transferred in the future as part of scene loading
-      StartCoroutine(StartAllCoroutines());
-   }
-   
-   private IEnumerator StartAllCoroutines()
-   {
-      
-      
-      yield return StartCoroutine(InitializeGameBoard());
-      
-      yield return StartCoroutine(InitializeAllPlayers());
-      
-      /*yield return StartCoroutine(InitializeSkillQueue());
-   
-      yield return StartCoroutine(InitializeSkillQueuePreview());  
-      
-   
-      yield return StartCoroutine(InitializeAllHeroes());
-
-      yield return StartCoroutine(InitializeAllSkills());
-
-      yield return StartCoroutine(InitializeFightButton());
-
-      
-      yield return StartCoroutine(StartBattle());*/
-      
-      yield return null;
-   }
-   
-   
-   private IEnumerator InitializeGameBoard()
-   {
-      GameBoard.InitializeGameBoard.StartAction();
-      
-      yield return null;
-   }
-   
-   private IEnumerator InitializeAllPlayers()
-   {
-     InitializePlayers.StartAction();
-      
-      yield return null;
+      BattleStart.StartAction();
    }
 
    #endregion

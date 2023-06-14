@@ -22,6 +22,8 @@ public class Hero : MonoBehaviour, IHero
    
    public IHeroSkills HeroSkills => heroSkills as IHeroSkills;
 
+   public GameObject ThisGameObject => this.gameObject;
+
    #endregion
 
    #region METHODS

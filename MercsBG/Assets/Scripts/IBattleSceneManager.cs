@@ -24,4 +24,5 @@ public interface IBattleSceneManager
     
     //Components
     IInitializePlayers InitializePlayers { get; }
+    IInitializeHeroes InitializeHeroes { get; }
 }

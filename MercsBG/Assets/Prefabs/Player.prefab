@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleSceneManager: {fileID: 0}
   heroes: {fileID: 2689960912244333807}
+  canvas: {fileID: 2559801578124480621}
 --- !u!114 &2689960912244333807
 MonoBehaviour:
   m_ObjectHideFlags: 0

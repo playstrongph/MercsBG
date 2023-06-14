@@ -27,6 +27,10 @@ public class InitializePlayers : MonoBehaviour, IInitializePlayers
       //Set References
       mainPlayer.OtherPlayer = enemyPlayer;
       enemyPlayer.OtherPlayer = mainPlayer;
+      
+      //Enable Player Canvas
+      mainPlayer.Canvas.enabled = true;
+      enemyPlayer.Canvas.enabled = true;
    }
 
    #endregion
