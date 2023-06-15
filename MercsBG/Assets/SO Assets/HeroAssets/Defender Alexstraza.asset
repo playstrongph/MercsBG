@@ -18,6 +18,7 @@ MonoBehaviour:
   heroCp: 91
   heroSprite: {fileID: 8185664584269150990, guid: 08b3e88a450866d40adb4983f7572621,
     type: 3}
+  heroClass: {fileID: 11400000, guid: 87dd21b1436382b4c8301fb1ff97c3f5, type: 2}
   health: 81
   attack: 8
   defense: 71

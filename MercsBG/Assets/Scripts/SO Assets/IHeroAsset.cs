@@ -21,5 +21,8 @@ namespace SO_Assets
         int EffectResistance { get; }
         int DualAttackChance { get; }
         int HitChance { get; }
+
+        IHeroClassAsset HeroClass { get; }
+
     }
 }
