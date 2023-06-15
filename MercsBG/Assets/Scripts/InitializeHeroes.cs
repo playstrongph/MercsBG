@@ -21,6 +21,8 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
    public void StartAction()
    {
       EnableHeroes();
+      
+      LoadHeroVisuals();
    }
 
    private void EnableHeroes()
@@ -44,6 +46,47 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       {
          enemyPlayerHeroes[i].ThisGameObject.SetActive(i < allyHeroes.Count);
       }
+   }
+   
+   private void LoadHeroVisuals()
+   {
+      var allyTeamAsset = BattleSceneManager.BattleScene1SettingsAsset.AllyTeamHeroes.HeroAssets;
+      var enemyTeamAsset = BattleSceneManager.BattleScene1SettingsAsset.EnemyTeamHeroes.HeroAssets;
+      var mainPlayerHeroes = BattleSceneManager.MainPlayer.Heroes.PlayerHeroes;
+      var enemyPlayerHeroes = BattleSceneManager.EnemyPlayer.Heroes.PlayerHeroes;
+      
+      //Ally Heroes
+      for (int i = 0; i < allyTeamAsset.Count; i++)
+      {
+         var heroVisual = mainPlayerHeroes[i].HeroVisual;
+         var heroAsset = allyTeamAsset[i];
+         
+         //TODO - Images
+         heroVisual.HeroGraphic.sprite = heroAsset.HeroSprite;
+         
+         //TODO - TEXTs
+         heroVisual.ArmorText.text = heroAsset.Armor.ToString();
+         heroVisual.HealthText.text = heroAsset.Health.ToString();
+         heroVisual.AttackText.text = heroAsset.Attack.ToString();
+      }
+      
+      //Enemy Heroes
+      for (int i = 0; i < enemyTeamAsset.Count; i++)
+      {
+         var heroVisual = enemyPlayerHeroes[i].HeroVisual;
+         var heroAsset = enemyTeamAsset[i];
+         
+         //TODO - Images
+         heroVisual.HeroGraphic.sprite = heroAsset.HeroSprite;
+         
+         //TODO - TEXTs
+         heroVisual.ArmorText.text = heroAsset.Armor.ToString();
+         heroVisual.HealthText.text = heroAsset.Health.ToString();
+         heroVisual.AttackText.text = heroAsset.Attack.ToString();
+      }
+      
+      
+      
    }
 
    #endregion
