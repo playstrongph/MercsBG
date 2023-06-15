@@ -63,6 +63,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          
          //TODO - Images
          heroVisual.HeroGraphic.sprite = heroAsset.HeroSprite;
+         heroAsset.HeroClass.SetClassColor(heroVisual.Hero);
          
          //TODO - TEXTs
          heroVisual.ArmorText.text = heroAsset.Armor.ToString();
@@ -78,6 +79,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          
          //TODO - Images
          heroVisual.HeroGraphic.sprite = heroAsset.HeroSprite;
+         heroAsset.HeroClass.SetClassColor(heroVisual.Hero);
          
          //TODO - TEXTs
          heroVisual.ArmorText.text = heroAsset.Armor.ToString();
