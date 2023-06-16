@@ -2,12 +2,13 @@
 
 public interface IHero
 {
-
     IPlayer Player { get; }
-    IHeroVisual HeroVisual { get; }
-
     IHeroSkills HeroSkills { get; }
-
     GameObject ThisGameObject { get; }
+
+    IHeroInformation HeroInformation { get; }
+    IHeroAttributes HeroAttributes { get; }
+    IHeroVisual HeroVisual { get; }
+    
 
 }
