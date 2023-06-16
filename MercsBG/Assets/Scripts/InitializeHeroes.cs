@@ -22,7 +22,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
    {
       EnableHeroes();
       
-      LoadHeroInformation();
+      LoadHeroInformationAndAttributes();
       
       LoadHeroVisuals();
    }
@@ -50,7 +50,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       }
    }
 
-   private void LoadHeroInformation()
+   private void LoadHeroInformationAndAttributes()
    {
       var allyTeamAsset = BattleSceneManager.BattleScene1SettingsAsset.AllyTeamHeroes.HeroAssets;
       var enemyTeamAsset = BattleSceneManager.BattleScene1SettingsAsset.EnemyTeamHeroes.HeroAssets;
@@ -61,22 +61,56 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       for (int i = 0; i < allyTeamAsset.Count; i++)
       {
          var heroInformation = mainPlayerHeroes[i].HeroInformation;
+         var heroAttributes = mainPlayerHeroes[i].HeroAttributes;
          var heroAsset = allyTeamAsset[i];
-
+         
+         //Information
          heroInformation.HeroName = heroAsset.HeroName;
          heroInformation.HeroClass = heroAsset.HeroClass;
+         
+         //Attributes
+         heroAttributes.Health = heroAsset.Health;
+         heroAttributes.Attack = heroAsset.Attack;
+         heroAttributes.Defense = heroAsset.Defense;
+         heroAttributes.Speed = heroAsset.Speed;
+         heroAttributes.Armor = heroAsset.Armor;
+         heroAttributes.FocusPoints = heroAsset.FocusPoints;
+         heroAttributes.CriticalHitChance = heroAsset.CriticalHitChance;
+         heroAttributes.CriticalHitDamage = heroAsset.CriticalHitDamage;
+         heroAttributes.Effectiveness = heroAsset.Effectiveness;
+         heroAttributes.EffectResistance = heroAsset.EffectResistance;
+         heroAttributes.DualAttackChance = heroAsset.DualAttackChance;
+         heroAttributes.HitChance = heroAsset.HitChance;
 
+         //Rename the hero in the inspector
          mainPlayerHeroes[i].ThisGameObject.name = heroAsset.HeroName;
       }
       
       for (int i = 0; i < enemyTeamAsset.Count; i++)
       {
          var heroInformation = enemyPlayerHeroes[i].HeroInformation;
+         var heroAttributes = enemyPlayerHeroes[i].HeroAttributes;
          var heroAsset = enemyTeamAsset[i];
-
+         
+         //Information
          heroInformation.HeroName = heroAsset.HeroName;
          heroInformation.HeroClass = heroAsset.HeroClass;
          
+         //Attributes
+         heroAttributes.Health = heroAsset.Health;
+         heroAttributes.Attack = heroAsset.Attack;
+         heroAttributes.Defense = heroAsset.Defense;
+         heroAttributes.Speed = heroAsset.Speed;
+         heroAttributes.Armor = heroAsset.Armor;
+         heroAttributes.FocusPoints = heroAsset.FocusPoints;
+         heroAttributes.CriticalHitChance = heroAsset.CriticalHitChance;
+         heroAttributes.CriticalHitDamage = heroAsset.CriticalHitDamage;
+         heroAttributes.Effectiveness = heroAsset.Effectiveness;
+         heroAttributes.EffectResistance = heroAsset.EffectResistance;
+         heroAttributes.DualAttackChance = heroAsset.DualAttackChance;
+         heroAttributes.HitChance = heroAsset.HitChance;
+         
+         //Rename the hero in the inspector
          enemyPlayerHeroes[i].ThisGameObject.name = heroAsset.HeroName;
       }
       
