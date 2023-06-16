@@ -2145,6 +2145,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3910777555636928487, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: m_Spacing.x
+      value: -23
+      objectReference: {fileID: 0}
     - target: {fileID: 4711278350917139359, guid: cf2583de8a8b3b34c8c0598416249747,
         type: 3}
       propertyPath: battleSceneManager
@@ -2559,6 +2564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910777555636928487, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: m_Spacing.x
+      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 4711278350917139359, guid: cf2583de8a8b3b34c8c0598416249747,
         type: 3}
