@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b5a01e66b568a9540ac9c60403e6f42f
+guid: d95a7e0b650572b4eb4a6dce657bba71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7005634360006303555
-    second: Dragon Queens Gambit Alexstraza_0
+      213: 137161636269836455
+    second: Whirling Blade Samuro_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dragon Queens Gambit Alexstraza_0
+      name: Whirling Blade Samuro_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 487
-        height: 491
+        width: 166
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34f527e3553093160800000000000000
-      internalID: 7005634360006303555
+      spriteID: 7a8ccae08cb47e100800000000000000
+      internalID: 137161636269836455
       vertices: []
       indices: 
       edges: []
