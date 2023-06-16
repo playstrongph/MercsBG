@@ -22,6 +22,8 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
    {
       EnableHeroes();
       
+      LoadHeroInformation();
+      
       LoadHeroVisuals();
    }
 
@@ -47,7 +49,41 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          enemyPlayerHeroes[i].ThisGameObject.SetActive(i < allyHeroes.Count);
       }
    }
-   
+
+   private void LoadHeroInformation()
+   {
+      var allyTeamAsset = BattleSceneManager.BattleScene1SettingsAsset.AllyTeamHeroes.HeroAssets;
+      var enemyTeamAsset = BattleSceneManager.BattleScene1SettingsAsset.EnemyTeamHeroes.HeroAssets;
+      var mainPlayerHeroes = BattleSceneManager.MainPlayer.Heroes.PlayerHeroes;
+      var enemyPlayerHeroes = BattleSceneManager.EnemyPlayer.Heroes.PlayerHeroes;
+
+
+      for (int i = 0; i < allyTeamAsset.Count; i++)
+      {
+         var heroInformation = mainPlayerHeroes[i].HeroInformation;
+         var heroAsset = allyTeamAsset[i];
+
+         heroInformation.HeroName = heroAsset.HeroName;
+         heroInformation.HeroClass = heroAsset.HeroClass;
+
+         mainPlayerHeroes[i].ThisGameObject.name = heroAsset.HeroName;
+      }
+      
+      for (int i = 0; i < enemyTeamAsset.Count; i++)
+      {
+         var heroInformation = enemyPlayerHeroes[i].HeroInformation;
+         var heroAsset = enemyTeamAsset[i];
+
+         heroInformation.HeroName = heroAsset.HeroName;
+         heroInformation.HeroClass = heroAsset.HeroClass;
+         
+         enemyPlayerHeroes[i].ThisGameObject.name = heroAsset.HeroName;
+      }
+      
+   }
+
+
+
    private void LoadHeroVisuals()
    {
       var allyTeamAsset = BattleSceneManager.BattleScene1SettingsAsset.AllyTeamHeroes.HeroAssets;
