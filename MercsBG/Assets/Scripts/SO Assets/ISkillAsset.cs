@@ -13,5 +13,8 @@ namespace SO_Assets
 
         ISkillElementAsset SkillElement { get; }
         ISkillTypeAsset SkillType { get; }
+
+        ISkillTargetAsset SkillTarget { get; }
+        ISkillReadinessAsset SkillReadiness { get; }
     }
 }

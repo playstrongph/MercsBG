@@ -2,7 +2,7 @@
 
 namespace SO_Assets
 {
-   public class SkillReadinessAsset : ScriptableObject
+   public class SkillReadinessAsset : ScriptableObject, ISkillReadinessAsset
    {
       #region VARIABLES
 

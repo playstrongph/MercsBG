@@ -20,14 +20,8 @@ namespace SO_Assets
       [Header("Objects and Assets")]
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillElementAsset))] private ScriptableObject skillElement = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTypeAsset))] private ScriptableObject skillType = null;
-      
-      
-      /*    
-      
-      
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetAsset))] private ScriptableObject skillTarget = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillReadinessAsset))] private ScriptableObject skillReadiness = null;
-      */
 
       #endregion
         
@@ -46,11 +40,8 @@ namespace SO_Assets
       //Objects and Assets
       public ISkillElementAsset SkillElement => skillElement as ISkillElementAsset;
       public ISkillTypeAsset SkillType => skillType as ISkillTypeAsset;
-      
-      /*public ISkillElementAsset SkillElement => skillElement as ISkillElementAsset;
-      
       public ISkillTargetAsset SkillTarget => skillTarget as ISkillTargetAsset;
-      public ISkillReadinessAsset SkillReadiness => skillReadiness as ISkillReadinessAsset;*/
+      public ISkillReadinessAsset SkillReadiness => skillReadiness as ISkillReadinessAsset;
       
       #endregion
         
