@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillTargetCollider : MonoBehaviour
+public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
 {
    #region VARIABLES
 
