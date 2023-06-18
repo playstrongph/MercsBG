@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7c5105c900e314a8873dd29e030da9, type: 3}
-  m_Name: Icicle
+  m_Name: CursedBullets
   m_EditorClassIdentifier: 
-  skillName: Icicle
-  skillDescription: Deal 14 damage to a character.  If it's Frozen, deal 29 damage
-    instead.
-  skillSprite: {fileID: -5077351286943683441, guid: d06e8c3c215650b438cdecfcc6e2056a,
+  skillName: CursedBullets
+  skillDescription: Deal 10 damage to an enemy.  Give them +3 Shadow Weakness.
+  skillSprite: {fileID: 1588038281375555692, guid: f1852d03030134144ad5966b072a6505,
     type: 3}
   skillCooldown: 0
-  skillSpeed: 7
+  skillSpeed: 3
   fightingSpirit: 0
-  skillElement: {fileID: 11400000, guid: f8e40241ef75ad64db0e7039a99a2774, type: 2}
+  skillElement: {fileID: 11400000, guid: 04a6c16a225735648b8f646532958d83, type: 2}
   skillType: {fileID: 11400000, guid: 066b3445171d0fa4c9bbc772b2933ff9, type: 2}
-  skillTarget: {fileID: 11400000, guid: 74c2814deca3eeb44b202437bce8feba, type: 2}
+  skillTarget: {fileID: 11400000, guid: a0fefd66cf8b78f4e988d62b6cc7681a, type: 2}
   skillReadiness: {fileID: 11400000, guid: fef403b84680a984b8155db741e66ca8, type: 2}
   skillEnableStatusAsset: {fileID: 11400000, guid: 16106da9c2da2da4b893c80dc67306b7,
     type: 2}

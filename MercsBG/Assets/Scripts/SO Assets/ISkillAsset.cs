@@ -16,5 +16,7 @@ namespace SO_Assets
 
         ISkillTargetAsset SkillTarget { get; }
         ISkillReadinessAsset SkillReadiness { get; }
+
+        ISkillEnableStatusAsset SkillEnableStatusAsset { get; }
     }
 }
