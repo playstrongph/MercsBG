@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7c5105c900e314a8873dd29e030da9, type: 3}
-  m_Name: Water Elemental
+  m_Name: DragonBreath
   m_EditorClassIdentifier: 
-  skillName: Water Elemental
-  skillDescription: Taunt.  Whenever this damages a character, FREEZE them.
-  skillSprite: {fileID: -6220825946191482846, guid: 752a97094ea2c674288d5fc77e93ddb8,
+  skillName: DragonBreath
+  skillDescription: Deal 14 damage to an enemy, or restore 20 Health to a friendly
+    character.
+  skillSprite: {fileID: 8605602878451178448, guid: a15134d436b64874da6fc0d8c84c95b6,
     type: 3}
-  skillCooldown: 1
-  skillSpeed: 5
+  skillCooldown: 0
+  skillSpeed: 6
   fightingSpirit: 0
-  skillElement: {fileID: 11400000, guid: 6ecbd9314ef8e2843bb6009e2ad0c134, type: 2}
+  skillElement: {fileID: 11400000, guid: 15ecb69a4fd778b4a99e0c38a463e71a, type: 2}
   skillType: {fileID: 11400000, guid: 066b3445171d0fa4c9bbc772b2933ff9, type: 2}
-  skillTarget: {fileID: 11400000, guid: 74c2814deca3eeb44b202437bce8feba, type: 2}
-  skillReadiness: {fileID: 11400000, guid: 297df627793151143b1c6e4a2ea366f3, type: 2}
+  skillTarget: {fileID: 11400000, guid: 64dc3dc79a715414bbed86a52a7ae767, type: 2}
+  skillReadiness: {fileID: 11400000, guid: fef403b84680a984b8155db741e66ca8, type: 2}
   skillEnableStatusAsset: {fileID: 11400000, guid: 16106da9c2da2da4b893c80dc67306b7,
     type: 2}

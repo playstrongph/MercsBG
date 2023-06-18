@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7c5105c900e314a8873dd29e030da9, type: 3}
-  m_Name: Water Elemental
+  m_Name: FlameBuffet
   m_EditorClassIdentifier: 
-  skillName: Water Elemental
-  skillDescription: Taunt.  Whenever this damages a character, FREEZE them.
-  skillSprite: {fileID: -6220825946191482846, guid: 752a97094ea2c674288d5fc77e93ddb8,
+  skillName: FlameBuffet
+  skillDescription: Deal 16 damage to an enemy.  If you control another Dragon, also
+    damage its neighbors.
+  skillSprite: {fileID: -7517717191242200885, guid: 624e37eb5a629fd4b8bec383651c2171,
     type: 3}
   skillCooldown: 1
   skillSpeed: 5
   fightingSpirit: 0
-  skillElement: {fileID: 11400000, guid: 6ecbd9314ef8e2843bb6009e2ad0c134, type: 2}
+  skillElement: {fileID: 11400000, guid: 15ecb69a4fd778b4a99e0c38a463e71a, type: 2}
   skillType: {fileID: 11400000, guid: 066b3445171d0fa4c9bbc772b2933ff9, type: 2}
   skillTarget: {fileID: 11400000, guid: 74c2814deca3eeb44b202437bce8feba, type: 2}
   skillReadiness: {fileID: 11400000, guid: 297df627793151143b1c6e4a2ea366f3, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Ice Floes
   skillDescription: Deal 12 damage.  Gain +3 Frost Damage
-  skillSprite: {fileID: -5077351286943683441, guid: d06e8c3c215650b438cdecfcc6e2056a,
+  skillSprite: {fileID: -7772023734190555800, guid: df2a8a3c66d8f80468e17838a8467d6a,
     type: 3}
   skillCooldown: 0
   skillSpeed: 6
