@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace SO_Assets
 {
@@ -31,9 +33,9 @@ namespace SO_Assets
       [SerializeField] private int effectResistance = 0;
       [SerializeField] private int dualAttackChance = 5;
       [SerializeField] private int hitChance = 100;
-      
-      
-        
+
+      [Header("Hero Skills")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillAsset))] private List<Object> skillAssets = new List<Object>();
+
 
       #endregion
         
@@ -62,6 +64,19 @@ namespace SO_Assets
       public int EffectResistance { get => effectResistance; private set => effectResistance = value; }
       public int DualAttackChance { get => dualAttackChance; private set => dualAttackChance = value; }
       public int HitChance { get => hitChance; private set => hitChance = value; }
+
+      public List<ISkillAsset> SkillAssets
+      {
+         get
+         {
+            var newSkillAssets = new List<ISkillAsset>();
+            foreach (var skillAsset in skillAssets)
+            {
+               newSkillAssets.Add(skillAsset as ISkillAsset);
+            }
+            return newSkillAssets;
+         }
+      }
 
       #endregion
         

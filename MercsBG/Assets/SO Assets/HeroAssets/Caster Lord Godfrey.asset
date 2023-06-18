@@ -31,3 +31,7 @@ MonoBehaviour:
   effectResistance: 0
   dualAttackChance: 5
   hitChance: 100
+  skillAssets:
+  - {fileID: 11400000, guid: 68dafa9dfb2828e44acdd4dc4f50270f, type: 2}
+  - {fileID: 11400000, guid: 26d17eb9629448c4db12e96e9af97433, type: 2}
+  - {fileID: 11400000, guid: 252d3c9a2491a8c4381c0d655fb0db51, type: 2}

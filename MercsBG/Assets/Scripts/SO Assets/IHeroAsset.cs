@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace SO_Assets
 {
@@ -23,6 +24,9 @@ namespace SO_Assets
         int HitChance { get; }
 
         IHeroClassAsset HeroClass { get; }
+
+
+        List<ISkillAsset> SkillAssets { get; }
 
     }
 }
