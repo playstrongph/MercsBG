@@ -36,10 +36,8 @@ public class BattleStart : MonoBehaviour, IBattleStart
       
       /*yield return StartCoroutine(InitializeSkillQueue());
    
-      yield return StartCoroutine(InitializeSkillQueuePreview());        
-   
-      yield return StartCoroutine(InitializeAllHeroes());     
-
+      yield return StartCoroutine(InitializeSkillQueuePreview());  
+       
       yield return StartCoroutine(InitializeFightButton());
       
       yield return StartCoroutine(StartBattle());*/
