@@ -38,6 +38,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializePlayers))] private Object initializePlayers = null;
    
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeHeroes))] private Object initializeHeroes = null;
+   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeSkills))] private Object initializeSkills = null;
 
    #endregion
 
@@ -64,6 +66,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    public IInitializePlayers InitializePlayers => initializePlayers as IInitializePlayers;
    
    public IInitializeHeroes InitializeHeroes => initializeHeroes as IInitializeHeroes;
+   
+   public IInitializeSkills InitializeSkills => initializeSkills as IInitializeSkills;
 
    #endregion
 

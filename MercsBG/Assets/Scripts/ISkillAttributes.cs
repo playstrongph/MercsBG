@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using SO_Assets;
+using UnityEngine;
 
 public interface ISkillAttributes
 {
@@ -10,4 +11,10 @@ public interface ISkillAttributes
     int BaseSkillCooldown { get; set; }
     int BaseSkillSpeed { get; set; }
     Sprite SkillSprite { get; set; }
+
+    ISkillElementAsset SkillElement { get; set; }
+    ISkillTypeAsset SkillType { get; set; }
+    ISkillTargetAsset SkillTarget { get; set; }
+    ISkillReadinessAsset SkillReadiness { get; set; }
+    ISkillEnableStatusAsset SkillEnableStatusAsset { get; set; }
 }

@@ -32,16 +32,15 @@ public class BattleStart : MonoBehaviour, IBattleStart
       
       yield return StartCoroutine(InitializeHeroes());
       
+      yield return StartCoroutine(InitializeSkills());
+      
       /*yield return StartCoroutine(InitializeSkillQueue());
    
       yield return StartCoroutine(InitializeSkillQueuePreview());        
    
-      yield return StartCoroutine(InitializeAllHeroes());
-
-      yield return StartCoroutine(InitializeAllSkills());
+      yield return StartCoroutine(InitializeAllHeroes());     
 
       yield return StartCoroutine(InitializeFightButton());
-
       
       yield return StartCoroutine(StartBattle());*/
       
@@ -65,6 +64,13 @@ public class BattleStart : MonoBehaviour, IBattleStart
    private IEnumerator InitializeHeroes()
    {
       BattleSceneManager.InitializeHeroes.StartAction();
+      
+      yield return null;
+   }
+
+   private IEnumerator InitializeSkills()
+   {  
+      BattleSceneManager.InitializeSkills.StartAction();
       
       yield return null;
    }

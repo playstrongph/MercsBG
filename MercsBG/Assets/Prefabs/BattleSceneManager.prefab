@@ -35,6 +35,7 @@ GameObject:
   - component: {fileID: 2432167654082834625}
   - component: {fileID: 669889623}
   - component: {fileID: 1371107902}
+  - component: {fileID: 1649049758}
   m_Layer: 0
   m_Name: BattleSceneManager
   m_TagString: Untagged
@@ -122,6 +123,7 @@ MonoBehaviour:
   battleStart: {fileID: 2432167654082834625}
   initializePlayers: {fileID: 669889623}
   initializeHeroes: {fileID: 1371107902}
+  initializeSkills: {fileID: 1649049758}
 --- !u!114 &2432167654082834625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +160,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 518c264f4365ea64faf9e86019037312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleSceneManager: {fileID: 552241100}
+--- !u!114 &1649049758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097228921892222323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7589489a210f40545b4033e2813c4937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   battleSceneManager: {fileID: 552241100}
@@ -1628,6 +1643,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7097228921892222324}
     m_Modifications:
+    - target: {fileID: 494046088068775698, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_Name
+      value: SkillVisual 3
+      objectReference: {fileID: 0}
     - target: {fileID: 494046088068775699, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1687,12 +1707,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 586151209695530831, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_Name
+      value: SkillVisual 2
       objectReference: {fileID: 0}
     - target: {fileID: 1624916242970045263, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: battleSceneManager
       value: 
       objectReference: {fileID: 552241100}
+    - target: {fileID: 2675681603550690578, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_Name
+      value: SkillVisual 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3693188542287271108, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: m_Enabled
@@ -1808,6 +1838,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeroSkillsDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 4650681464935664478, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_Name
+      value: SkillVisual 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345560814633924792, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_Name
+      value: SkillVisual 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275223146624422492, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_Name
+      value: SkillVisual 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8937998008600333106, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1837,6 +1882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937998008600333107, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_Name
+      value: SkillVisual 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ff5362fb2db2240a7904da01d1a55d, type: 3}

@@ -46,7 +46,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       //Enable enemy player heroes
       for (var i = 0; i < enemyPlayerHeroes.Count; i++)
       {
-         enemyPlayerHeroes[i].ThisGameObject.SetActive(i < allyHeroes.Count);
+         enemyPlayerHeroes[i].ThisGameObject.SetActive(i < enemyHeroes.Count);
       }
    }
 
