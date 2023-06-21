@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bec5dc9621ac9a4ba7782f1bf9cccef, type: 3}
-  m_Name: ArbiterVildred
+  m_Name: Ravi
   m_EditorClassIdentifier: 
-  heroName: Arbiter Vildred
+  heroName: Ravi
   heroLevel: 60
   heroStars: 6
   heroCp: 0
-  heroSprite: {fileID: -1480662104701489587, guid: da8a73182172b214ca9e90e85300333a,
+  heroSprite: {fileID: -3957932111162053311, guid: a300f1a384f683843ae3a9ffe8569828,
     type: 3}
   heroClass: {fileID: 11400000, guid: 96196a92da2df6e41aea8d1e997d431a, type: 2}
-  health: 51
-  attack: 12
-  defense: 522
-  speed: 116
+  health: 73
+  attack: 9
+  defense: 657
+  speed: 102
   armor: 0
   focusPoints: 0
-  criticalHitChance: 23
+  criticalHitChance: 15
   criticalHitDamage: 150
   effectiveness: 0
   effectResistance: 0

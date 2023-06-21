@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bec5dc9621ac9a4ba7782f1bf9cccef, type: 3}
-  m_Name: ArbiterVildred
+  m_Name: Destina
   m_EditorClassIdentifier: 
-  heroName: Arbiter Vildred
+  heroName: Destina
   heroLevel: 60
   heroStars: 6
   heroCp: 0
-  heroSprite: {fileID: -1480662104701489587, guid: da8a73182172b214ca9e90e85300333a,
+  heroSprite: {fileID: -8731023023461230969, guid: daeb9bc76f018ba4d8923565b6e54dec,
     type: 3}
-  heroClass: {fileID: 11400000, guid: 96196a92da2df6e41aea8d1e997d431a, type: 2}
-  health: 51
-  attack: 12
-  defense: 522
-  speed: 116
+  heroClass: {fileID: 11400000, guid: 637bf3c4967d4f041b91e4d51a25fc00, type: 2}
+  health: 60
+  attack: 6
+  defense: 775
+  speed: 89
   armor: 0
   focusPoints: 0
-  criticalHitChance: 23
+  criticalHitChance: 15
   criticalHitDamage: 150
   effectiveness: 0
   effectResistance: 0

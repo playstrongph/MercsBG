@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bec5dc9621ac9a4ba7782f1bf9cccef, type: 3}
-  m_Name: ArbiterVildred
+  m_Name: Tamarine
   m_EditorClassIdentifier: 
-  heroName: Arbiter Vildred
+  heroName: Tamarinne
   heroLevel: 60
   heroStars: 6
   heroCp: 0
-  heroSprite: {fileID: -1480662104701489587, guid: da8a73182172b214ca9e90e85300333a,
+  heroSprite: {fileID: -6192129969548311611, guid: 7796517a720210f489757886d554599f,
     type: 3}
-  heroClass: {fileID: 11400000, guid: 96196a92da2df6e41aea8d1e997d431a, type: 2}
-  health: 51
-  attack: 12
-  defense: 522
-  speed: 116
+  heroClass: {fileID: 11400000, guid: 637bf3c4967d4f041b91e4d51a25fc00, type: 2}
+  health: 43
+  attack: 9
+  defense: 652
+  speed: 108
   armor: 0
   focusPoints: 0
-  criticalHitChance: 23
+  criticalHitChance: 15
   criticalHitDamage: 150
   effectiveness: 0
   effectResistance: 0

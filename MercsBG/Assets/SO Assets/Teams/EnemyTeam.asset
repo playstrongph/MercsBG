@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyTeam
   m_EditorClassIdentifier: 
   heroAssets:
-  - {fileID: 11400000, guid: 09041bdfaa6b1cb44a25a762b17b8c89, type: 2}
-  - {fileID: 11400000, guid: 8795896b45428ba4892538af6a913a65, type: 2}
-  - {fileID: 11400000, guid: 3ad7a205092e6b44792265811dd3e03d, type: 2}
-  - {fileID: 11400000, guid: fb12a9ef9c1f11440bfbd43dcd42c856, type: 2}
+  - {fileID: 11400000, guid: 94c5ab29b9a9785479a8006265d5102b, type: 2}
+  - {fileID: 11400000, guid: 449e2c4ed9464a74d8c9befa889b7716, type: 2}
+  - {fileID: 11400000, guid: 7b6f4f0687ddc1b44b2cb150e7d06dd5, type: 2}
+  - {fileID: 11400000, guid: 57ee1964662971b418b129b407d43b46, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AllyTeam
   m_EditorClassIdentifier: 
   heroAssets:
-  - {fileID: 11400000, guid: 780f0aea76bf193499c929bf27d2e769, type: 2}
-  - {fileID: 11400000, guid: 0ffc1083860d69045b984fb226dedfe9, type: 2}
-  - {fileID: 11400000, guid: fb4096f341f5af041bfafb0913a7952b, type: 2}
-  - {fileID: 11400000, guid: 8c7f2e2a621834143844e01d57d8ff34, type: 2}
+  - {fileID: 11400000, guid: 39672e56a0f5470449ccd0f416c313a2, type: 2}
+  - {fileID: 11400000, guid: 0810ba641a23e97448dd8e6a20018682, type: 2}
+  - {fileID: 11400000, guid: 1eab5ab4c0176ca4a93bd468cb551c2d, type: 2}
+  - {fileID: 11400000, guid: 0cdd86b2dc8a2ec45850727eaea824e5, type: 2}
