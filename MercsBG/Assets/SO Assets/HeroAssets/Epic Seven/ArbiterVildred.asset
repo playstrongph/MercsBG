@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bec5dc9621ac9a4ba7782f1bf9cccef, type: 3}
   m_Name: ArbiterVildred
   m_EditorClassIdentifier: 
-  heroName: 
-  heroLevel: 0
-  heroStars: 0
+  heroName: Arbiter Vildred
+  heroLevel: 60
+  heroStars: 6
   heroCp: 0
-  heroSprite: {fileID: 0}
-  heroClass: {fileID: 0}
+  heroSprite: {fileID: -1480662104701489587, guid: da8a73182172b214ca9e90e85300333a,
+    type: 3}
+  heroClass: {fileID: 11400000, guid: 96196a92da2df6e41aea8d1e997d431a, type: 2}
   health: 0
   attack: 0
   defense: 0

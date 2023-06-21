@@ -32,6 +32,6 @@ MonoBehaviour:
   dualAttackChance: 5
   hitChance: 100
   skillAssets:
-  - {fileID: 11400000, guid: d0b66208b72d2354f95cba35c90021f0, type: 2}
-  - {fileID: 11400000, guid: 1700740b3475a624aa61f9327c02fbed, type: 2}
-  - {fileID: 11400000, guid: 98ff1b862b5a49841a09fc85832c1e1b, type: 2}
+  - {fileID: 11400000, guid: 1bf1eca18e65be5419915e2598cbd78b, type: 2}
+  - {fileID: 11400000, guid: c75c03ce64da9da43a87b81b8a049c1c, type: 2}
+  - {fileID: 11400000, guid: f0680d399481ac74f9c94c73caea2a2d, type: 2}

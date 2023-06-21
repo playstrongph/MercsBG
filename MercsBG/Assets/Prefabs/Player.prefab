@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3910777555636928486}
   - component: {fileID: 4711278350917139359}
+  - component: {fileID: 1914603819729331316}
   - component: {fileID: 2689960912244333807}
   - component: {fileID: 3910777555636928487}
   - component: {fileID: 2559801578124480621}
@@ -61,6 +62,20 @@ MonoBehaviour:
   battleSceneManager: {fileID: 0}
   heroes: {fileID: 2689960912244333807}
   canvas: {fileID: 2559801578124480621}
+  souls: {fileID: 1914603819729331316}
+--- !u!114 &1914603819729331316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910777555636928473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6783bed8fc461814aba7c8510e3d695c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soulCount: 0
 --- !u!114 &2689960912244333807
 MonoBehaviour:
   m_ObjectHideFlags: 0

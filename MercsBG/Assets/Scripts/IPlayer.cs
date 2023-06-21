@@ -7,4 +7,5 @@ public interface IPlayer
     IHeroes Heroes { get; }
 
     Canvas Canvas { get; }
+    ISouls Souls { get; }
 }

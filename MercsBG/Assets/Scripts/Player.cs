@@ -12,8 +12,12 @@ public class Player : MonoBehaviour, IPlayer
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))]private Object battleSceneManager = null;
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroes))] private Object heroes = null;
+   
+   [Header("COMPONENTS")]
 
    [SerializeField] private Canvas canvas = null;
+
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISouls))] private Object souls = null; 
 
 
    #endregion
@@ -24,6 +28,8 @@ public class Player : MonoBehaviour, IPlayer
    public IHeroes Heroes => heroes as IHeroes;
    public IPlayer OtherPlayer { get; set; }
    public Canvas Canvas => canvas;
+
+   public ISouls Souls => souls as ISouls;
 
    #endregion
 
