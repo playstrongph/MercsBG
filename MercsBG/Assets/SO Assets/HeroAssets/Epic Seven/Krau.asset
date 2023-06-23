@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bec5dc9621ac9a4ba7782f1bf9cccef, type: 3}
   m_Name: Krau
   m_EditorClassIdentifier: 
-  heroName: Crimson Armin
+  heroName: Krau
   heroLevel: 60
   heroStars: 6
   heroCp: 0
-  heroSprite: {fileID: -409663868545346401, guid: 2a38585f79c6dba459dbb612cf7ae155,
+  heroSprite: {fileID: -1430906805566211272, guid: 20814f7517cdfe241b7ce6212507b22d,
     type: 3}
   heroClass: {fileID: 11400000, guid: 87dd21b1436382b4c8301fb1ff97c3f5, type: 2}
-  health: 53
-  attack: 6
-  defense: 645
-  speed: 110
+  health: 56
+  attack: 7
+  defense: 690
+  speed: 100
   armor: 0
   focusPoints: 0
   criticalHitChance: 15
@@ -31,4 +31,7 @@ MonoBehaviour:
   effectResistance: 0
   dualAttackChance: 5
   hitChance: 100
-  skillAssets: []
+  skillAssets:
+  - {fileID: 11400000, guid: 15557c452acd94a42b04671f3e2dc4f3, type: 2}
+  - {fileID: 11400000, guid: 713a6433cc004ff4dad98f5db84bec89, type: 2}
+  - {fileID: 11400000, guid: e16bcf6425d168a448e0fd37c2059895, type: 2}

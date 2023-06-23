@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7c5105c900e314a8873dd29e030da9, type: 3}
+  m_Name: DevilDrive
+  m_EditorClassIdentifier: 
+  skillName: DevilDrive
+  skillDescription: Attack all enemies with a 75% chance to STUN.  Attack ignores
+    armor and reduces the enemies energy to zero.
+  skillSprite: {fileID: -6046780310032618199, guid: 92fa418c0f7e37c47b279d2014461bc6,
+    type: 3}
+  skillCooldown: 0
+  skillSpeed: 1
+  fightingSpirit: 40
+  skillElement: {fileID: 11400000, guid: 30b5e2bdb21011b44a25ebd9e9108c7f, type: 2}
+  skillType: {fileID: 11400000, guid: 066b3445171d0fa4c9bbc772b2933ff9, type: 2}
+  skillTarget: {fileID: 11400000, guid: 92a72401c18d68a41aab5049048b5327, type: 2}
+  skillReadiness: {fileID: 11400000, guid: fef403b84680a984b8155db741e66ca8, type: 2}
+  skillEnableStatusAsset: {fileID: 11400000, guid: 16106da9c2da2da4b893c80dc67306b7,
+    type: 2}

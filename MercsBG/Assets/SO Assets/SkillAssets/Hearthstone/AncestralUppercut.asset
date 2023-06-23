@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7c5105c900e314a8873dd29e030da9, type: 3}
+  m_Name: AncestralUppercut
+  m_EditorClassIdentifier: 
+  skillName: AncestralUppercut
+  skillDescription: Attack an enemy.  Restore 8 Health for each enemy that hasn't
+    acted yet.
+  skillSprite: {fileID: -5333463611844959607, guid: 52a202b5d76cce7418e0688070083c41,
+    type: 3}
+  skillCooldown: 0
+  skillSpeed: 6
+  fightingSpirit: 0
+  skillElement: {fileID: 11400000, guid: f8e40241ef75ad64db0e7039a99a2774, type: 2}
+  skillType: {fileID: 11400000, guid: 066b3445171d0fa4c9bbc772b2933ff9, type: 2}
+  skillTarget: {fileID: 11400000, guid: 74c2814deca3eeb44b202437bce8feba, type: 2}
+  skillReadiness: {fileID: 11400000, guid: fef403b84680a984b8155db741e66ca8, type: 2}
+  skillEnableStatusAsset: {fileID: 11400000, guid: 16106da9c2da2da4b893c80dc67306b7,
+    type: 2}

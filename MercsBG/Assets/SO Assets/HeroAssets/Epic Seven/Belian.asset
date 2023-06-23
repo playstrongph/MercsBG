@@ -16,7 +16,7 @@ MonoBehaviour:
   heroLevel: 60
   heroStars: 6
   heroCp: 0
-  heroSprite: {fileID: -8006168891851699216, guid: 0fd8d2b12301d89429b6ac306b219cff,
+  heroSprite: {fileID: 214928673314676971, guid: 6b8b1a67fbc190f4c91b4c3c27118096,
     type: 3}
   heroClass: {fileID: 11400000, guid: 87dd21b1436382b4c8301fb1ff97c3f5, type: 2}
   health: 67
@@ -31,4 +31,7 @@ MonoBehaviour:
   effectResistance: 0
   dualAttackChance: 5
   hitChance: 100
-  skillAssets: []
+  skillAssets:
+  - {fileID: 11400000, guid: 2f4096f18ce79b94abdbf63b3c2b56ed, type: 2}
+  - {fileID: 11400000, guid: 34ffd6f01b972ed4f887aba196fd642a, type: 2}
+  - {fileID: 11400000, guid: 2969ad2272e9f4543a6f1c9772d23fe8, type: 2}
