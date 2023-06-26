@@ -113,8 +113,8 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
 
       HeroPreviewHero.RaceText.text = hero.HeroInformation.HeroRace.RaceName;
       
-
-
+      //TEST
+      hero.HeroInformation.HeroClass.SetHeroPreviewFrameColor(this);
    }
 
 

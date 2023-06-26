@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace SO_Assets
 {
@@ -28,6 +29,14 @@ namespace SO_Assets
          
 
       }
+      
+      public virtual void SetHeroPreviewFrameColor(IHeroPreview heroPreview)
+      {
+         
+
+      }
+      
+      
 
       #endregion
    }

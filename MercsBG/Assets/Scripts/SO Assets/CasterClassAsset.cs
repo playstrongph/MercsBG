@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace SO_Assets
 {
@@ -16,7 +17,17 @@ namespace SO_Assets
          
          hero.HeroVisual.HeroFrames.SetColorBlueCaster(heroFrameImage);
       }
-        
+      
+      public override void SetHeroPreviewFrameColor(IHeroPreview heroPreview)
+      {
+         var image = heroPreview.HeroPreviewHero.FrameGraphic;
+         
+         //TODO: Set the image reference in FrameGraphic
+         heroPreview.HeroPreviewHero.HeroFrames.SetColorBlueCaster(image);
+
+      }
+      
+     
 
       #endregion
    }
