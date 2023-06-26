@@ -11,4 +11,6 @@ public interface IHeroInformation
     /// Classes - Caster, Fighter, and Defender
     /// </summary>
     IHeroClassAsset HeroClass { get; set; }
+
+    IHeroRaceAsset HeroRace { get; set; }
 }

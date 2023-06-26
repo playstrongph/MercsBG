@@ -25,6 +25,8 @@ namespace SO_Assets
 
         IHeroClassAsset HeroClass { get; }
 
+        IHeroRaceAsset HeroRace { get; }
+
 
         List<ISkillAsset> SkillAssets { get; }
 

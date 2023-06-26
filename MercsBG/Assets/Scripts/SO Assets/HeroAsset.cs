@@ -16,7 +16,9 @@ namespace SO_Assets
       [SerializeField] private int heroStars;
       [SerializeField] private int heroCp;
       [SerializeField] private Sprite heroSprite;
+      
       [SerializeField] private ScriptableObject heroClass = null;
+      [SerializeField] private ScriptableObject heroRace = null;
       
       [Header("Base Hero Stats")] 
       [SerializeField] private int health;
@@ -48,6 +50,7 @@ namespace SO_Assets
       public int HeroCp { get => heroCp; private set => heroCp = value; }
       public Sprite HeroSprite { get => heroSprite; private set => heroSprite = value; }
       public IHeroClassAsset HeroClass => heroClass as IHeroClassAsset;
+      public IHeroRaceAsset HeroRace => heroRace as IHeroRaceAsset;
 
       //Hero Stats
       public int Health { get => health; private set => health = value; }

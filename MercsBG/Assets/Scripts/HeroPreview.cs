@@ -100,5 +100,20 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
       _delayCoroutine = null;
    }
 
+   private void UpdateHeroPreviewHero(IHero hero)
+   {
+      HeroPreviewHero.HeroGraphic.sprite = hero.HeroVisual.HeroGraphic.sprite;
+
+      HeroPreviewHero.AttackText.text = hero.HeroVisual.AttackText.text;
+      HeroPreviewHero.HealthText.text = hero.HeroVisual.HealthText.text;
+      HeroPreviewHero.ArmorText.text = hero.HeroVisual.ArmorText.text;
+      HeroPreviewHero.NameText.text = hero.HeroInformation.HeroName;
+      
+      //HeroPreviewHero.RaceText.text = hero.HeroInformation.
+
+
+   }
+
+
    #endregion
 }

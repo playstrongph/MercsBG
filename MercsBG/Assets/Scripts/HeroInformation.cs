@@ -14,7 +14,8 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroClassAsset))] private ScriptableObject heroClass = null;
    
-   //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroRaceAsset))] private ScriptableObject heroRace = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroRaceAsset))] private ScriptableObject heroRace = null;
+   
    //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAlliance = null;
    //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAsset))] private ScriptableObject heroAsset = null;
    
@@ -34,7 +35,9 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
    /// Classes - Caster, Fighter, and Defender
    /// </summary>
    public IHeroClassAsset HeroClass { get => heroClass as IHeroClassAsset; set => heroClass = value as ScriptableObject; }
-   
+
+   public IHeroRaceAsset HeroRace { get => heroRace as IHeroRaceAsset; set => heroRace = value as ScriptableObject; }
+
    /*/// <summary>
    /// Classes - Orc, Human, Demon, Elf, etc.
    /// </summary>
