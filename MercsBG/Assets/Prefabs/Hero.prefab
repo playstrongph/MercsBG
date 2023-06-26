@@ -66,6 +66,11 @@ MonoBehaviour:
   baseSkillCooldown: 0
   baseSkillSpeed: 0
   skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
+  skillType: {fileID: 0}
+  skillTarget: {fileID: 0}
+  skillReadiness: {fileID: 0}
+  skillEnableStatusAsset: {fileID: 0}
 --- !u!1 &3934053691380523153
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +137,11 @@ MonoBehaviour:
   baseSkillCooldown: 0
   baseSkillSpeed: 0
   skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
+  skillType: {fileID: 0}
+  skillTarget: {fileID: 0}
+  skillReadiness: {fileID: 0}
+  skillEnableStatusAsset: {fileID: 0}
 --- !u!1 &4133311879122560851
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +261,11 @@ MonoBehaviour:
   baseSkillCooldown: 0
   baseSkillSpeed: 0
   skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
+  skillType: {fileID: 0}
+  skillTarget: {fileID: 0}
+  skillReadiness: {fileID: 0}
+  skillEnableStatusAsset: {fileID: 0}
 --- !u!1 &7316504669276076116
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +332,11 @@ MonoBehaviour:
   baseSkillCooldown: 0
   baseSkillSpeed: 0
   skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
+  skillType: {fileID: 0}
+  skillTarget: {fileID: 0}
+  skillReadiness: {fileID: 0}
+  skillEnableStatusAsset: {fileID: 0}
 --- !u!1 &8048816148506494398
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,6 +427,7 @@ GameObject:
   - component: {fileID: 6629442175286056756}
   - component: {fileID: 1736671308080931276}
   - component: {fileID: 1951731710}
+  - component: {fileID: 2097794423131588598}
   - component: {fileID: 3343586262681492608}
   m_Layer: 0
   m_Name: Hero
@@ -537,6 +558,19 @@ MonoBehaviour:
   healthText: {fileID: 8048816149297939226}
   armorText: {fileID: 8048816150381795498}
   turnOrderText: {fileID: 8048816150090219224}
+--- !u!114 &2097794423131588598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048816148521417250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba41f1058282b644acebfeb32b0e1e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hero: {fileID: 479678864000175803}
 --- !u!223 &3343586262681492608
 Canvas:
   m_ObjectHideFlags: 0
@@ -2018,18 +2052,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cecf12c3cfdbed04a8f51c00e187448f, type: 3}
---- !u!114 &7693337742048091562 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7693337741763932002, guid: cecf12c3cfdbed04a8f51c00e187448f,
-    type: 3}
-  m_PrefabInstance: {fileID: 286274248}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8210607288117282238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51d159ac58aaa574d9c21fecb4b8a9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8210607288117282238 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8210607288401459062, guid: cecf12c3cfdbed04a8f51c00e187448f,
@@ -2042,6 +2064,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 286274248}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7693337742048091562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7693337741763932002, guid: cecf12c3cfdbed04a8f51c00e187448f,
+    type: 3}
+  m_PrefabInstance: {fileID: 286274248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8210607288117282238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d159ac58aaa574d9c21fecb4b8a9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &406011586
 PrefabInstance:
   m_ObjectHideFlags: 0

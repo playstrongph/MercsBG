@@ -15,6 +15,12 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
    [SerializeField] private Canvas canvas = null;
 
 
+   private readonly float _displayDelay = 0.5f;
+  
+   private bool _enablePreview = false;
+
+   private Coroutine _delayCoroutine = null;
+   
 
    #endregion
 
@@ -45,7 +51,54 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
 
    #region METHODS
 
+   public void ShowHeroPreview()
+   {
+      _enablePreview = true;
+     
+      if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
+      _delayCoroutine = StartCoroutine(ShowPreview());
+   }
+   
+   public void ShowHeroPreviewOnMouseEnter()
+   {
+      //Stop coroutine if running previously
+      if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
+        
+      _delayCoroutine = StartCoroutine(ShowPreview());
+   }
 
+   public void HideHeroPreview()
+   {
+      _enablePreview = false;
+      Canvas.enabled = false;
+        
+      //Stop coroutine if running previously
+      if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
+   }
+   
+   public void HideHeroPreviewOnMouseExit()
+   {
+      //_enablePreview = false;
+      Canvas.enabled = false;
+        
+      //Stop coroutine if running previously
+      if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
+   }
+   
+   private IEnumerator ShowPreview()
+   {
+      yield return new WaitForSeconds(_displayDelay);
+        
+      if (_enablePreview)
+      {
+         Canvas.enabled = true;
+         
+         //TODO: Update Hero Preview Info
+         //TODO: Update Skill Preview Info
+      }
+
+      _delayCoroutine = null;
+   }
 
    #endregion
 }
