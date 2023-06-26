@@ -51,20 +51,20 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
 
    #region METHODS
 
-   public void ShowHeroPreview()
+   public void ShowHeroPreview(IHero hero)
    {
       _enablePreview = true;
      
       if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
-      _delayCoroutine = StartCoroutine(ShowPreview());
+      _delayCoroutine = StartCoroutine(ShowPreview(hero));
    }
    
-   public void ShowHeroPreviewOnMouseEnter()
+   public void ShowHeroPreviewOnMouseEnter(IHero hero)
    {
       //Stop coroutine if running previously
       if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
         
-      _delayCoroutine = StartCoroutine(ShowPreview());
+      _delayCoroutine = StartCoroutine(ShowPreview(hero));
    }
 
    public void HideHeroPreview()
@@ -85,7 +85,7 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
       if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
    }
    
-   private IEnumerator ShowPreview()
+   private IEnumerator ShowPreview(IHero hero)
    {
       yield return new WaitForSeconds(_displayDelay);
         
@@ -94,6 +94,8 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
          Canvas.enabled = true;
          
          //TODO: Update Hero Preview Info
+         UpdateHeroPreviewHero(hero);
+
          //TODO: Update Skill Preview Info
       }
 
@@ -108,8 +110,9 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
       HeroPreviewHero.HealthText.text = hero.HeroVisual.HealthText.text;
       HeroPreviewHero.ArmorText.text = hero.HeroVisual.ArmorText.text;
       HeroPreviewHero.NameText.text = hero.HeroInformation.HeroName;
+
+      HeroPreviewHero.RaceText.text = hero.HeroInformation.HeroRace.RaceName;
       
-      //HeroPreviewHero.RaceText.text = hero.HeroInformation.
 
 
    }

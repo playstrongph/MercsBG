@@ -8,9 +8,9 @@ public interface IHeroPreview
     List<IHeroPreviewSkill> HeroPreviewSkills { get; }
     Canvas Canvas { get; }
 
-    void ShowHeroPreview();
+    void ShowHeroPreview(IHero hero);
     void HideHeroPreview();
 
-    void ShowHeroPreviewOnMouseEnter();
+    void ShowHeroPreviewOnMouseEnter(IHero hero);
     void HideHeroPreviewOnMouseExit();
 }

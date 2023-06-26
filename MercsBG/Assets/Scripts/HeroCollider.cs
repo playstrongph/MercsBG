@@ -24,7 +24,7 @@ public class HeroCollider : MonoBehaviour, IHeroCollider
 
    private void OnMouseDown()
    {
-      Hero.Player.BattleSceneManager.HeroPreview.ShowHeroPreview();
+      Hero.Player.BattleSceneManager.HeroPreview.ShowHeroPreview(Hero);
    }
 
    private void OnMouseUp()
@@ -34,7 +34,7 @@ public class HeroCollider : MonoBehaviour, IHeroCollider
    
    private void OnMouseEnter()
    {
-      Hero.Player.BattleSceneManager.HeroPreview.ShowHeroPreviewOnMouseEnter();
+      Hero.Player.BattleSceneManager.HeroPreview.ShowHeroPreviewOnMouseEnter(Hero);
    }
 
    private void OnMouseExit()

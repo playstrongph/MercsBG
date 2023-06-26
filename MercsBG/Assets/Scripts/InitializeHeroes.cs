@@ -67,6 +67,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          //Information
          heroInformation.HeroName = heroAsset.HeroName;
          heroInformation.HeroClass = heroAsset.HeroClass;
+         heroInformation.HeroRace = heroAsset.HeroRace;
          
          //Attributes
          heroAttributes.Health = heroAsset.Health;
@@ -95,6 +96,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          //Information
          heroInformation.HeroName = heroAsset.HeroName;
          heroInformation.HeroClass = heroAsset.HeroClass;
+         heroInformation.HeroRace = heroAsset.HeroRace;
          
          //Attributes
          heroAttributes.Health = heroAsset.Health;
