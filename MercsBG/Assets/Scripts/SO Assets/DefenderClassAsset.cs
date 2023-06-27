@@ -12,9 +12,14 @@ namespace SO_Assets
       
       public override void SetClassColor(IHero hero)
       {
-         var heroFrameImage = hero.HeroVisual.HeroFrame;
-         
-         hero.HeroVisual.HeroFrames.SetColorRedDefender(heroFrameImage);
+         hero.HeroVisual.HeroFrames.SetColorRedDefender();
+      }
+      
+      
+      public override void SetHeroPreviewFrameColor(IHeroPreview heroPreview)
+      {
+         heroPreview.HeroPreviewHero.HeroFrames.SetColorRedDefender();
+
       }
         
 

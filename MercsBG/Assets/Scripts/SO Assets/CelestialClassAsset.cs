@@ -12,9 +12,7 @@ namespace SO_Assets
       
       public override void SetClassColor(IHero hero)
       {
-         var heroFrameImage = hero.HeroVisual.HeroFrame;
-         
-         hero.HeroVisual.HeroFrames.SetColorGreenFighter(heroFrameImage);
+         hero.HeroVisual.HeroFrames.SetColorGreenFighter();
       }
         
 

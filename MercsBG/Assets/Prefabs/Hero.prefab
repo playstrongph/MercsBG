@@ -510,6 +510,7 @@ MonoBehaviour:
   heroStars: 0
   heroCp: 0
   heroClass: {fileID: 0}
+  heroRace: {fileID: 0}
 --- !u!114 &1736671308080931276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,6 +1143,7 @@ MonoBehaviour:
   - {fileID: -9130639797075620102, guid: 3d4d95900434b384cb3385ccc5abb545, type: 3}
   - {fileID: -5524865532692075295, guid: 3d287e3f702a40142b7acce0f67aa684, type: 3}
   - {fileID: -5526074859663678738, guid: f48ccbc587f5d924196d7d71fca5d7ab, type: 3}
+  frameImage: {fileID: 8048816149896755319}
 --- !u!1 &8048816150012559777
 GameObject:
   m_ObjectHideFlags: 0

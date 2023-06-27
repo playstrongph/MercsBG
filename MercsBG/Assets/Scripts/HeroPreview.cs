@@ -106,16 +106,20 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
    {
       HeroPreviewHero.HeroGraphic.sprite = hero.HeroVisual.HeroGraphic.sprite;
 
-      HeroPreviewHero.AttackText.text = hero.HeroVisual.AttackText.text;
-      HeroPreviewHero.HealthText.text = hero.HeroVisual.HealthText.text;
-      HeroPreviewHero.ArmorText.text = hero.HeroVisual.ArmorText.text;
+      HeroPreviewHero.AttackText.text = hero.HeroAttributes.Attack.ToString();
+      HeroPreviewHero.HealthText.text = hero.HeroAttributes.Health.ToString();
+      HeroPreviewHero.ArmorText.text = hero.HeroAttributes.Armor.ToString();
       HeroPreviewHero.NameText.text = hero.HeroInformation.HeroName;
 
       HeroPreviewHero.RaceText.text = hero.HeroInformation.HeroRace.RaceName;
-      
-      //TEST
+
       hero.HeroInformation.HeroClass.SetHeroPreviewFrameColor(this);
+      
+      //Armor Display
+      HeroPreviewHero.ArmorGraphic.enabled = hero.HeroAttributes.Armor > 0;
+      HeroPreviewHero.ArmorText.enabled = hero.HeroAttributes.Armor > 0;
    }
+
 
 
    #endregion

@@ -9,38 +9,41 @@ public class HeroFrames : MonoBehaviour, IHeroFrames
 
    [SerializeField] private List<Sprite> frames = new List<Sprite>();
 
+   [SerializeField] private Image frameImage = null;
 
    #endregion
 
    #region PROPERTIES
    private List<Sprite> Frames => frames;
 
+   private Image FrameImage => frameImage;
+
    #endregion
 
    #region METHODS
-   
-   public void SetColorRedDefender(Image image)
+
+   public void SetColorRedDefender()
    {
       //Element 0 is Red
-      image.sprite = Frames[0];
+      frameImage.sprite = Frames[0];
    }
    
-   public void SetColorGreenFighter(Image image)
+   public void SetColorGreenFighter( )
    {
       //Element 1 is Green
-      image.sprite = Frames[1];
+      frameImage.sprite = Frames[1];
    }
    
-   public void SetColorBlueCaster(Image image)
+   public void SetColorBlueCaster( )
    {
       //Element 2 is Blue
-      image.sprite = Frames[2];
+      frameImage.sprite = Frames[2];
    }
    
-   public void SetColorGreyDefault(Image image)
+   public void SetColorGreyDefault( )
    {
       //Element 3 is Grey
-      image.sprite = Frames[3];
+      frameImage.sprite = Frames[3];
    }
    
    
