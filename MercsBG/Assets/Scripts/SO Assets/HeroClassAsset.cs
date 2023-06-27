@@ -37,6 +37,13 @@ namespace SO_Assets
       }
       
       
+      public virtual void SetSkillPreviewFrameColor(ISkillPreviewFrames skillPreviewFrames)
+      {
+         
+
+      }
+      
+      
 
       #endregion
    }

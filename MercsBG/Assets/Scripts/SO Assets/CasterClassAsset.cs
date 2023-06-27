@@ -22,6 +22,13 @@ namespace SO_Assets
 
       }
       
+      public override void SetSkillPreviewFrameColor(ISkillPreviewFrames skillPreviewFrames)
+      {
+         skillPreviewFrames.SetColorBlueCaster();
+      }
+      
+      
+      
      
 
       #endregion

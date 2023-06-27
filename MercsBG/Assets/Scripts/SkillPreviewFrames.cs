@@ -8,6 +8,7 @@ public class SkillPreviewFrames : MonoBehaviour, ISkillPreviewFrames
    #region VARIABLES
 
    [SerializeField] private List<Sprite> frames = new List<Sprite>();
+   [SerializeField] private Image skillPreviewFrame = null;
    
    
    #endregion
@@ -16,32 +17,34 @@ public class SkillPreviewFrames : MonoBehaviour, ISkillPreviewFrames
 
    private List<Sprite> Frames => frames;
 
+   private Image SkillPreviewFrame => skillPreviewFrame;
+
    #endregion
 
    #region METHODS
 
-   public void SetColorRedDefender(Image image)
+   public void SetColorRedDefender()
    {
       //Element 0 is Red
-      image.sprite = Frames[0];
+      SkillPreviewFrame.sprite = Frames[0];
    }
    
-   public void SetColorGreenFighter(Image image)
+   public void SetColorGreenFighter()
    {
       //Element 1 is Green
-      image.sprite = Frames[1];
+      SkillPreviewFrame.sprite = Frames[1];
    }
    
-   public void SetColorBlueCaster(Image image)
+   public void SetColorBlueCaster()
    {
       //Element 2 is Blue
-      image.sprite = Frames[2];
+      SkillPreviewFrame.sprite = Frames[2];
    }
    
-   public void SetColorGreyDefault(Image image)
+   public void SetColorGreyDefault()
    {
       //Element 3 is Grey
-      image.sprite = Frames[3];
+      SkillPreviewFrame.sprite = Frames[3];
    }
 
 

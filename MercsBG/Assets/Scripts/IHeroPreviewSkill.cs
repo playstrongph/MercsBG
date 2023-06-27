@@ -1,4 +1,5 @@
 ﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public interface IHeroPreviewSkill
@@ -13,4 +14,6 @@ public interface IHeroPreviewSkill
     TextMeshProUGUI SkillDescriptionText { get; }
     TextMeshProUGUI SkillCooldownText { get; }
     TextMeshProUGUI SkillSpeedText { get; }
+
+    Transform Transform { get; }
 }

@@ -21,6 +21,11 @@ namespace SO_Assets
          heroPreview.HeroPreviewHero.HeroFrames.SetColorRedDefender();
 
       }
+      
+      public override void SetSkillPreviewFrameColor(ISkillPreviewFrames skillPreviewFrames)
+      {
+         skillPreviewFrames.SetColorRedDefender();
+      }
         
 
       #endregion

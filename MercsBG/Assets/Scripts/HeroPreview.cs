@@ -97,6 +97,7 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
          UpdateHeroPreviewHero(hero);
 
          //TODO: Update Skill Preview Info
+         UpdateHeroPreviewSkills(hero);
       }
 
       _delayCoroutine = null;
@@ -118,6 +119,50 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
       //Armor Display
       HeroPreviewHero.ArmorGraphic.enabled = hero.HeroAttributes.Armor > 0;
       HeroPreviewHero.ArmorText.enabled = hero.HeroAttributes.Armor > 0;
+   }
+
+   private void UpdateHeroPreviewSkills(IHero hero)
+   {
+      var heroSkills = hero.HeroSkills.AllSkills;
+      
+      //Initialize the displayed game objects
+      foreach (var heroPreviewSkill in HeroPreviewSkills)
+      {
+         heroPreviewSkill.Transform.gameObject.SetActive(false);
+      }
+
+      for (int i = 0; i < hero.HeroSkills.InUseHeroSkills; i++)
+      {
+         var previewSkills = HeroPreviewSkills[i];
+         var skillAttributes = heroSkills[i].SkillAttributes;
+         
+         previewSkills.Transform.gameObject.SetActive(true);
+           
+           //Frame Color
+           hero.HeroInformation.HeroClass.SetSkillPreviewFrameColor(previewSkills.SkillPreviewFrames);
+
+           //Images
+           previewSkills.SkillGraphic.sprite = skillAttributes.SkillSprite;
+           //TODO: Speed and Cooldown Displays
+           
+           //Text values
+           previewSkills.SkillDescriptionText.text = skillAttributes.Description;
+           previewSkills.SkillCooldownText.text = skillAttributes.SkillCooldown.ToString();
+           previewSkills.SkillElementText.text = skillAttributes.SkillElement.ElementName;
+           previewSkills.SkillNameText.text = skillAttributes.SkillName;
+           previewSkills.SkillSpeedText.text = skillAttributes.SkillSpeed.ToString();
+         
+           //Skill Speed and graphic display
+           previewSkills.SkillSpeedText.enabled = skillAttributes.SkillSpeed > 0;
+           previewSkills.SpeedGraphic.enabled = skillAttributes.SkillSpeed > 0;
+         
+           //Skill Cooldown Graphic and Text
+           previewSkills.SkillCooldownText.enabled = skillAttributes.SkillCooldown > 0;
+           previewSkills.CooldownGraphic.enabled = skillAttributes.SkillCooldown > 0;
+
+
+      }
+      
    }
 
 

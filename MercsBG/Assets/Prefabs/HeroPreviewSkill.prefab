@@ -91,7 +91,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 8.65
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.35
+  m_fontSize: 30
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
+  m_fontSize: 10
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -456,6 +456,7 @@ MonoBehaviour:
   - {fileID: 2531894167454913421, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
   - {fileID: -6372847374873367398, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
   - {fileID: -8614387202556066374, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
+  skillPreviewFrame: {fileID: 115584417022732866}
 --- !u!222 &115584417022732893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -752,7 +753,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 20
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1102,7 +1103,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
+  m_fontSize: 13.75
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1

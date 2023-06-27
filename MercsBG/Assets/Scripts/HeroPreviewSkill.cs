@@ -39,6 +39,8 @@ public class HeroPreviewSkill : MonoBehaviour, IHeroPreviewSkill
    public TextMeshProUGUI SkillCooldownText => skillCooldownText;
    public TextMeshProUGUI SkillSpeedText => skillSpeedText;
 
+   public Transform Transform => transform;
+
 
    #endregion
 

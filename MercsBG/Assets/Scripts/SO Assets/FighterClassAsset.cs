@@ -20,6 +20,11 @@ namespace SO_Assets
          heroPreview.HeroPreviewHero.HeroFrames.SetColorGreenFighter();
 
       }
+      
+      public override void SetSkillPreviewFrameColor(ISkillPreviewFrames skillPreviewFrames)
+      {
+         skillPreviewFrames.SetColorGreenFighter();
+      }
         
 
       #endregion

@@ -18,7 +18,7 @@ MonoBehaviour:
   skillSprite: {fileID: 8269996166704896489, guid: 8439122d1af43254f8b1b76bd0f73d83,
     type: 3}
   skillCooldown: 0
-  skillSpeed: 1
+  skillSpeed: 0
   fightingSpirit: 0
   skillElement: {fileID: 11400000, guid: 30b5e2bdb21011b44a25ebd9e9108c7f, type: 2}
   skillType: {fileID: 11400000, guid: c35cbeed7ac91eb4595ee1f81505542b, type: 2}

@@ -29,6 +29,8 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       {
          var skillAssets = allyTeamAsset[i].SkillAssets;
          var heroSkills = mainPlayerHeroes[i].HeroSkills.AllSkills;
+         
+         
 
          for (int j = 0; j < skillAssets.Count; j++)
          {
@@ -47,6 +49,9 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
             heroSkills[j].SkillAttributes.SkillReadiness = skillAssets[j].SkillReadiness;
             heroSkills[j].SkillAttributes.SkillEnableStatusAsset = skillAssets[j].SkillEnableStatusAsset;
          }
+         
+         //Set the number of in use hero skills
+         mainPlayerHeroes[i].HeroSkills.InUseHeroSkills = skillAssets.Count;
       }
       
       for (int i = 0; i < enemyTeamAsset.Count; i++)
@@ -71,6 +76,9 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
             heroSkills[j].SkillAttributes.SkillReadiness = skillAssets[j].SkillReadiness;
             heroSkills[j].SkillAttributes.SkillEnableStatusAsset = skillAssets[j].SkillEnableStatusAsset;
          }
+         
+         //Set the number of in use hero skills
+         enemyPlayerHeroes[i].HeroSkills.InUseHeroSkills = skillAssets.Count;
       }
    }
 
