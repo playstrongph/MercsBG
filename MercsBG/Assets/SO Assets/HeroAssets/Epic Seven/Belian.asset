@@ -24,7 +24,7 @@ MonoBehaviour:
   attack: 8
   defense: 648
   speed: 110
-  armor: 0
+  armor: 12
   focusPoints: 0
   criticalHitChance: 15
   criticalHitDamage: 150

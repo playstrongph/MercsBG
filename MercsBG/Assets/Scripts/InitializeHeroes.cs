@@ -141,6 +141,10 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          heroVisual.ArmorText.text = heroAsset.Armor.ToString();
          heroVisual.HealthText.text = heroAsset.Health.ToString();
          heroVisual.AttackText.text = heroAsset.Attack.ToString();
+         
+         //Armor Display
+         heroVisual.Armor.enabled = heroVisual.Hero.HeroAttributes.Armor > 0;
+         heroVisual.ArmorText.enabled = heroVisual.Hero.HeroAttributes.Armor > 0;
       }
       
       //Enemy Heroes
@@ -157,6 +161,10 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          heroVisual.ArmorText.text = heroAsset.Armor.ToString();
          heroVisual.HealthText.text = heroAsset.Health.ToString();
          heroVisual.AttackText.text = heroAsset.Attack.ToString();
+         
+         //Armor Display
+         heroVisual.Armor.enabled = heroVisual.Hero.HeroAttributes.Armor > 0;
+         heroVisual.ArmorText.enabled = heroVisual.Hero.HeroAttributes.Armor > 0;
       }
       
       
