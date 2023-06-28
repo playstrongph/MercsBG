@@ -10,5 +10,6 @@ public interface IHeroSkillsDisplay
 
     ISkillVisuals FourSkillVisuals { get; }
 
-   
+    IShowSkillsDisplay ShowSkillsDisplay { get; }
+
 }

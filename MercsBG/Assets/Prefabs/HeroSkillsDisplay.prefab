@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 3693188542287271109}
   - component: {fileID: 3693188542287271108}
   - component: {fileID: 1624916242970045263}
+  - component: {fileID: 471815084804590906}
   m_Layer: 0
   m_Name: HeroSkillsDisplay
   m_TagString: Untagged
@@ -356,6 +357,19 @@ MonoBehaviour:
   battleSceneManager: {fileID: 0}
   threeSkills: {fileID: 4555205230501927617}
   fourSkills: {fileID: 1139021159614998364}
+--- !u!114 &471815084804590906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3693188542287271110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff749d2271591c340aee0da4a5e281f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroSkillsDisplay: {fileID: 1624916242970045263}
 --- !u!1001 &1524039768659975577
 PrefabInstance:
   m_ObjectHideFlags: 0

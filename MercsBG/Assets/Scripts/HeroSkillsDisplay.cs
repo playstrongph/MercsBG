@@ -14,15 +14,20 @@ public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisuals))] private Object threeSkills = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisuals))] private Object fourSkills = null;
 
-
+   [Header("COMPONENTS")] 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IShowSkillsDisplay))] private Object showSkillsDisplay = null;
+   
    #endregion
 
    #region PROPERTIES
-
+   
    public Canvas Canvas => canvas;
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
    public ISkillVisuals ThreeSkillVisuals => threeSkills as ISkillVisuals;
    public ISkillVisuals FourSkillVisuals => fourSkills as ISkillVisuals;
+
+   //COMPONENTS
+   public IShowSkillsDisplay ShowSkillsDisplay => showSkillsDisplay as IShowSkillsDisplay;
 
    #endregion
 
