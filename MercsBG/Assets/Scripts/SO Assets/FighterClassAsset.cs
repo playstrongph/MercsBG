@@ -25,6 +25,12 @@ namespace SO_Assets
       {
          skillPreviewFrames.SetColorGreenFighter();
       }
+      
+      public override void SetSkillPanelFrameColor(ISkillPanelFrames skillPanelFrames)
+      {
+         skillPanelFrames.SetGreenFighterFrame();
+
+      }
         
 
       #endregion

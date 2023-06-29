@@ -27,6 +27,12 @@ namespace SO_Assets
          skillPreviewFrames.SetColorBlueCaster();
       }
       
+      public override void SetSkillPanelFrameColor(ISkillPanelFrames skillPanelFrames)
+      {
+         skillPanelFrames.SetBlueCasterFrame();
+
+      }
+      
       
       
      

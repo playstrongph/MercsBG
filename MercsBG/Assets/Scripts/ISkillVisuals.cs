@@ -5,6 +5,8 @@ public interface ISkillVisuals
 {
     List<ISkillVisual> HeroSkillVisuals { get; }
 
+    ISkillPanelFrames SkillPanelFrames { get; }
+
     Transform Transform { get; }
 
 }

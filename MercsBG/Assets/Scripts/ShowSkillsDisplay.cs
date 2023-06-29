@@ -7,8 +7,8 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
    #region VARIABLES
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkillsDisplay = null;
-   
-   
+
+   private ISkillVisuals _skillPanelInUse = null;
 
 
    #endregion
@@ -39,30 +39,54 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
       var heroSkillsCount = hero.HeroSkills.InUseHeroSkills;
       var threeSkillPanel = HeroSkillsDisplay.ThreeSkillVisuals;
       var fourSkillPanel = HeroSkillsDisplay.FourSkillVisuals;
+      var heroSkills = hero.HeroSkills.AllSkills;
       
-      var skillPanelInUse = threeSkillPanel; //Default is 3 skills
-      
+      //Default is three skills
+      _skillPanelInUse = threeSkillPanel;
+
       //Select Skill Panel Template - 3 or 4-skill panel
       if (heroSkillsCount < 4)
       {
         fourSkillPanel.Transform.gameObject.SetActive(false);
         threeSkillPanel.Transform.gameObject.SetActive(true);
 
-        
-
-        skillPanelInUse = threeSkillPanel;
+        _skillPanelInUse = threeSkillPanel;
       }
       else
       {
          fourSkillPanel.Transform.gameObject.SetActive(true);
          threeSkillPanel.Transform.gameObject.SetActive(false);
          
-         skillPanelInUse = fourSkillPanel;
+         _skillPanelInUse = fourSkillPanel;
       }
+      
+      //Set Frame Color of skill panel based on hero class
+      hero.HeroInformation.HeroClass.SetSkillPanelFrameColor(_skillPanelInUse.SkillPanelFrames);
 
       for (int i = 0; i < heroSkillsCount; i++)
       {
-         //TODO: Set Cooldown Text, 
+         var skillVisual = _skillPanelInUse.HeroSkillVisuals[i];
+         var heroSkill = heroSkills[i];
+         
+         //Set Text
+         skillVisual.CooldownText.text = heroSkill.SkillAttributes.SkillCooldown.ToString();
+         skillVisual.SpeedText.text = heroSkill.SkillAttributes.SkillSpeed.ToString();
+         
+         //Set Graphics
+         skillVisual.SkillReadyGraphic.sprite = heroSkill.SkillAttributes.SkillSprite;
+         skillVisual.SkillNotReadyGraphic.sprite = heroSkill.SkillAttributes.SkillSprite;
+         skillVisual.PassiveSkillGraphic.sprite = heroSkill.SkillAttributes.SkillSprite;
+         
+         
+
+         //TODO: Set Skill Frame based on skilltype
+         
+         //TODO: If there will be no individual skill speed, disable in the game object
+         skillVisual.SpeedText.enabled = heroSkill.SkillAttributes.SkillSpeed > 0;
+
+
+
+
       }
       
       

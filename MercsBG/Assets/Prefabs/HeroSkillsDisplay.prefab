@@ -61,6 +61,7 @@ MonoBehaviour:
   - {fileID: 6274538271038761437}
   - {fileID: 8064790207548408633}
   - {fileID: 64513802528867987}
+  skillPanelFrames: {fileID: 3693188540425213710}
 --- !u!222 &3693188540425213711
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -200,6 +201,7 @@ MonoBehaviour:
   - {fileID: 6471383624183574706}
   - {fileID: 3307526280121496782}
   - {fileID: 2530997184061162643}
+  skillPanelFrames: {fileID: 3693188541571869387}
 --- !u!222 &3693188541571869388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -495,12 +497,17 @@ PrefabInstance:
     - target: {fileID: 6173573341022000839, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_Name
-      value: SkillVisual 1
+      value: BasicSkillVisual
       objectReference: {fileID: 0}
     - target: {fileID: 6173573341507058983, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.070755005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173573341709001044, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6173573342139538862, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
@@ -661,7 +668,7 @@ PrefabInstance:
     - target: {fileID: 6173573341022000839, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_Name
-      value: SkillVisual 3
+      value: 3rdSkillVisual
       objectReference: {fileID: 0}
     - target: {fileID: 6173573341507058983, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
@@ -837,7 +844,7 @@ PrefabInstance:
     - target: {fileID: 6173573341022000839, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_Name
-      value: SkillVisual 2
+      value: 2ndSkillVisual
       objectReference: {fileID: 0}
     - target: {fileID: 6173573341507058983, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
@@ -904,6 +911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.20654106
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173573341022000837, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6173573341022000838, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
@@ -1013,12 +1025,22 @@ PrefabInstance:
     - target: {fileID: 6173573341022000839, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_Name
-      value: SkillVisual 1
+      value: BasicSkillVisual
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173573341507058980, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6173573341507058983, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.070755005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173573341709001044, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6173573342139538862, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
@@ -1174,7 +1196,7 @@ PrefabInstance:
     - target: {fileID: 6173573341022000839, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_Name
-      value: SkillVisual 3
+      value: 3rdSkillVisual
       objectReference: {fileID: 0}
     - target: {fileID: 6173573341507058983, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
@@ -1345,7 +1367,7 @@ PrefabInstance:
     - target: {fileID: 6173573341022000839, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_Name
-      value: SkillVisual 2
+      value: 2ndSkillVisual
       objectReference: {fileID: 0}
     - target: {fileID: 6173573341507058983, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
@@ -1516,7 +1538,7 @@ PrefabInstance:
     - target: {fileID: 6173573341022000839, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}
       propertyPath: m_Name
-      value: SkillVisual 4
+      value: 4thSkillVisual
       objectReference: {fileID: 0}
     - target: {fileID: 6173573341507058983, guid: 2156eba2a911f544eb355a98959f05f8,
         type: 3}

@@ -10,6 +10,8 @@ public class SkillVisuals : MonoBehaviour, ISkillVisuals
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private List<Object> heroSkillVisuals = new List<Object>();
 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelFrames))] private Object skillPanelFrames = null;
+   
    #endregion
 
    #region PROPERTIES
@@ -28,6 +30,8 @@ public class SkillVisuals : MonoBehaviour, ISkillVisuals
          return newHeroSkillVisuals;
       }
    }
+   
+   public ISkillPanelFrames SkillPanelFrames => skillPanelFrames as ISkillPanelFrames;
 
 
    public Transform Transform => transform;

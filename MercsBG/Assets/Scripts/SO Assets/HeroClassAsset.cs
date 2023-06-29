@@ -43,6 +43,14 @@ namespace SO_Assets
 
       }
       
+      public virtual void SetSkillPanelFrameColor(ISkillPanelFrames skillPanelFrames)
+      {
+         
+
+      }
+      
+      
+      
       
 
       #endregion

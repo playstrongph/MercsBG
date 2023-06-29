@@ -26,6 +26,12 @@ namespace SO_Assets
       {
          skillPreviewFrames.SetColorRedDefender();
       }
+      
+      public override void SetSkillPanelFrameColor(ISkillPanelFrames skillPanelFrames)
+      {
+         skillPanelFrames.SetRedDefenderFrame();
+
+      }
         
 
       #endregion

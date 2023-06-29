@@ -9,5 +9,7 @@ namespace SO_Assets
         void SetHeroPreviewFrameColor(IHeroPreview heroPreview);
 
         void SetSkillPreviewFrameColor(ISkillPreviewFrames skillPreviewFrames);
+
+        void SetSkillPanelFrameColor(ISkillPanelFrames skillPanelFrames);
     }
 }
