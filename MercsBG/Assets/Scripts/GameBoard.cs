@@ -13,6 +13,8 @@ public class GameBoard : MonoBehaviour, IGameBoard
    
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IInitializeGameBoard))]private Object initializeGameBoard = null;
    
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IGameBoardCollider))]private Object gameBoardCollider = null;
+   
    [SerializeField] private Canvas canvas = null;
 
    [SerializeField] private Image boardImage = null;
@@ -24,6 +26,8 @@ public class GameBoard : MonoBehaviour, IGameBoard
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
    
    public IInitializeGameBoard InitializeGameBoard => initializeGameBoard as IInitializeGameBoard;
+   
+   public IGameBoardCollider GameBoardCollider => gameBoardCollider as IGameBoardCollider;
    public Canvas Canvas => canvas;
    public Image BoardImage => boardImage;
 

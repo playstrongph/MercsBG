@@ -357,6 +357,7 @@ MonoBehaviour:
   battleSceneManager: {fileID: 0}
   threeSkills: {fileID: 4555205230501927617}
   fourSkills: {fileID: 1139021159614998364}
+  showSkillsDisplay: {fileID: 471815084804590906}
 --- !u!114 &471815084804590906
 MonoBehaviour:
   m_ObjectHideFlags: 0

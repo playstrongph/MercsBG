@@ -29,6 +29,9 @@ public class SkillVisuals : MonoBehaviour, ISkillVisuals
       }
    }
 
+
+   public Transform Transform => transform;
+
    #endregion
 
    #region METHODS

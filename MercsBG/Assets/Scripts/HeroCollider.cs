@@ -25,6 +25,10 @@ public class HeroCollider : MonoBehaviour, IHeroCollider
    private void OnMouseDown()
    {
       Hero.Player.BattleSceneManager.HeroPreview.ShowHeroPreview(Hero);
+      
+      //TEST
+      ShowHeroSkills();
+
    }
 
    private void OnMouseUp()
@@ -41,8 +45,19 @@ public class HeroCollider : MonoBehaviour, IHeroCollider
    {
       Hero.Player.BattleSceneManager.HeroPreview.HideHeroPreviewOnMouseExit();
    }
+
    
-   
+   /// <summary>
+   /// TEST
+   /// </summary>
+   private void ShowHeroSkills()
+   {
+      var heroSkillsDisplay = Hero.Player.BattleSceneManager.HeroSkillsDisplay;
+      
+      heroSkillsDisplay.ShowSkillsDisplay.DisplayOn(Hero);
+   }
+
+
 
    #endregion
 }

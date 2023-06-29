@@ -31,21 +31,42 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
 
    public void DisplayOff(IHero hero)
    {
-      HeroSkillsDisplay.Canvas.enabled = true;
+      HeroSkillsDisplay.Canvas.enabled = false;
    }
 
    private void UpdateDisplayInformation(IHero hero)
    {
-      var heroSkills = hero.HeroSkills.AllSkills;
-
-      if (heroSkills.Count < 4)
+      var heroSkillsCount = hero.HeroSkills.InUseHeroSkills;
+      var threeSkillPanel = HeroSkillsDisplay.ThreeSkillVisuals;
+      var fourSkillPanel = HeroSkillsDisplay.FourSkillVisuals;
+      
+      var skillPanelInUse = threeSkillPanel; //Default is 3 skills
+      
+      //Select Skill Panel Template - 3 or 4-skill panel
+      if (heroSkillsCount < 4)
       {
-         var skillPanel = HeroSkillsDisplay.ThreeSkillVisuals.HeroSkillVisuals;
+        fourSkillPanel.Transform.gameObject.SetActive(false);
+        threeSkillPanel.Transform.gameObject.SetActive(true);
+
+        
+
+        skillPanelInUse = threeSkillPanel;
       }
       else
       {
-         var skillPanel = HeroSkillsDisplay.FourSkillVisuals.HeroSkillVisuals;
+         fourSkillPanel.Transform.gameObject.SetActive(true);
+         threeSkillPanel.Transform.gameObject.SetActive(false);
+         
+         skillPanelInUse = fourSkillPanel;
       }
+
+      for (int i = 0; i < heroSkillsCount; i++)
+      {
+         //TODO: Set Cooldown Text, 
+      }
+      
+      
+
    }
 
 

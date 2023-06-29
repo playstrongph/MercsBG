@@ -9,7 +9,9 @@ public interface IGameBoard
     IBattleSceneManager BattleSceneManager { get; }
 
     IInitializeGameBoard InitializeGameBoard { get; }
-    
+
+    IGameBoardCollider GameBoardCollider { get; }
+
     IPlayer MainPlayer { get; set; }
    
     IPlayer EnemyPlayer { get; set; }
