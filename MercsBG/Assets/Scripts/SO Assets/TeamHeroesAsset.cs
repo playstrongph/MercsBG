@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = System.Object;
 
 namespace SO_Assets
 {
@@ -9,7 +10,9 @@ namespace SO_Assets
    {
       #region VARIABLES
 
-      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAsset))] private List<ScriptableObject> heroAssets = new List<ScriptableObject>();  
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAsset))] private List<ScriptableObject> heroAssets = new List<ScriptableObject>();
+
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAlliance = null;
 
       #endregion
         
@@ -27,6 +30,8 @@ namespace SO_Assets
             return iHeroAssetList;
          }
       }  
+      
+      public IPlayerAllianceAsset PlayerAlliance => playerAlliance as IPlayerAllianceAsset;
 
       #endregion
         

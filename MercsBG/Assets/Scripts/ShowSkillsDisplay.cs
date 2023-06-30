@@ -83,10 +83,7 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
          
          //TODO: If there will be no individual skill speed, disable in the game object
          skillVisual.SpeedText.enabled = heroSkill.SkillAttributes.SkillSpeed > 0;
-
-
-
-
+         
       }
       
       

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using SO_Assets;
+using UnityEngine;
 
 public interface IPlayer
 {
@@ -8,4 +9,6 @@ public interface IPlayer
 
     Canvas Canvas { get; }
     ISouls Souls { get; }
+
+    IPlayerAllianceAsset PlayerAlliance { get; set; }
 }

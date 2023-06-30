@@ -24,6 +24,7 @@ public class InitializePlayers : MonoBehaviour, IInitializePlayers
       var mainPlayer = BattleSceneManager.MainPlayer;
       var enemyPlayer = BattleSceneManager.EnemyPlayer;
       
+      
       //Set References
       mainPlayer.OtherPlayer = enemyPlayer;
       enemyPlayer.OtherPlayer = mainPlayer;
@@ -31,6 +32,11 @@ public class InitializePlayers : MonoBehaviour, IInitializePlayers
       //Enable Player Canvas
       mainPlayer.Canvas.enabled = true;
       enemyPlayer.Canvas.enabled = true;
+      
+      //Set Player Alliance
+      mainPlayer.PlayerAlliance = BattleSceneManager.BattleScene1SettingsAsset.AllyTeamHeroes.PlayerAlliance;
+      enemyPlayer.PlayerAlliance = BattleSceneManager.BattleScene1SettingsAsset.EnemyTeamHeroes.PlayerAlliance;
+
    }
 
    #endregion

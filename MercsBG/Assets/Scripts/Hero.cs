@@ -29,6 +29,8 @@ public class Hero : MonoBehaviour, IHero
    public IHeroInformation HeroInformation => heroInformation as IHeroInformation;
    public IHeroAttributes HeroAttributes => heroAttributes as IHeroAttributes;
    public IHeroVisual HeroVisual => heroVisual as IHeroVisual;
+
+   public Transform Transform => transform;
    
 
    #endregion

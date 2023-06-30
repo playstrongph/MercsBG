@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using SO_Assets;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -12,6 +13,8 @@ public class Player : MonoBehaviour, IPlayer
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))]private Object battleSceneManager = null;
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroes))] private Object heroes = null;
+   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAlliance = null;
    
    [Header("COMPONENTS")]
 
@@ -26,6 +29,12 @@ public class Player : MonoBehaviour, IPlayer
 
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
    public IHeroes Heroes => heroes as IHeroes;
+
+   public IPlayerAllianceAsset PlayerAlliance
+   {
+      get => playerAlliance as IPlayerAllianceAsset;
+      set => playerAlliance = value as ScriptableObject;
+   }
    public IPlayer OtherPlayer { get; set; }
    public Canvas Canvas => canvas;
 

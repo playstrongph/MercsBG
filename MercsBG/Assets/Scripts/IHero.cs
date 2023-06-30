@@ -9,6 +9,7 @@ public interface IHero
     IHeroInformation HeroInformation { get; }
     IHeroAttributes HeroAttributes { get; }
     IHeroVisual HeroVisual { get; }
-    
+
+    Transform Transform { get; }
 
 }
