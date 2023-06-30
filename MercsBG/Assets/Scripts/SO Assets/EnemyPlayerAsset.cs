@@ -19,15 +19,22 @@ namespace SO_Assets
         
       #region METHODS
 
-      public override void UpdateHeroSkillsOnDisplay(IHeroSkills heroSkills, IPlayer player)
-      {
-         //Do Nothing
-      }  
       
-      public override void DisplaySkillsAndScaleUpHero(IHero hero)
+      
+      public override void DisplayHeroSkills(IHero hero)
       {
          //Do Nothing
       }     
+      
+      public override void ScaleDownHero(IHero hero)
+      {
+         //Do Nothing
+      }
+      
+      public override void ScaleUpHero(IHero hero)
+      {
+         //Do Nothing
+      }
 
       #endregion
    }

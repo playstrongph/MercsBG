@@ -11,4 +11,6 @@ public interface IPlayer
     ISouls Souls { get; }
 
     IPlayerAllianceAsset PlayerAlliance { get; set; }
+
+    IHero SelectedHero { get; set; }
 }

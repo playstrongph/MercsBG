@@ -2,7 +2,9 @@
 {
     public interface IPlayerAllianceAsset
     {
-        void UpdateHeroSkillsOnDisplay(IHeroSkills heroSkills, IPlayer player);
-        void DisplaySkillsAndScaleUpHero(IHero hero);
+        void ScaleUpHero(IHero hero);
+        
+        void ScaleDownHero(IHero hero);
+        void DisplayHeroSkills(IHero hero);
     }
 }

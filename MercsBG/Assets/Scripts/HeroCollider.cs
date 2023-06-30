@@ -27,7 +27,7 @@ public class HeroCollider : MonoBehaviour, IHeroCollider
       Hero.Player.BattleSceneManager.HeroPreview.ShowHeroPreview(Hero);
       
       //TEST
-      ShowHeroSkills();
+      SelectHero();
 
    }
 
@@ -48,13 +48,23 @@ public class HeroCollider : MonoBehaviour, IHeroCollider
 
    
    /// <summary>
-   /// TEST
+   /// Displays the skill panel and scales up/down the selected hero
    /// </summary>
-   private void ShowHeroSkills()
+   private void SelectHero()
    {
-      var heroSkillsDisplay = Hero.Player.BattleSceneManager.HeroSkillsDisplay;
+      var playerAlliance = Hero.Player.PlayerAlliance;
+
+      //Scale down previously selected hero
+      if (Hero.Player.SelectedHero != null)
+      {
+         playerAlliance.ScaleDownHero(Hero.Player.SelectedHero);
+      }
+
+      //Update Selected Hero
+      Hero.Player.SelectedHero = Hero;
       
-      heroSkillsDisplay.ShowSkillsDisplay.DisplayOn(Hero);
+      Hero.Player.PlayerAlliance.DisplayHeroSkills(Hero);
+      playerAlliance.ScaleUpHero(Hero.Player.SelectedHero);
    }
 
 

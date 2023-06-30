@@ -18,15 +18,7 @@ namespace SO_Assets
         
       #region METHODS
 
-      public virtual void UpdateHeroSkillsOnDisplay(IHeroSkills heroSkills, IPlayer player)
-      {
-         // 1) Disable the current hero skills on display
-         // 2) Replace the current hero skills on display
-         // 3) Enable the current hero skills on display
-         // Note: Only for Ally player and its heroes.  No skill panel display for enemy player and ally heroes
-      }  
-      
-      public virtual void DisplaySkillsAndScaleUpHero(IHero hero)
+      public virtual void DisplayHeroSkills(IHero hero)
       {
          /*
          //Logic below is for ally heroes only 
@@ -34,6 +26,17 @@ namespace SO_Assets
          hero.HeroTransform.localScale = newScale;
          */
       }
+
+      public virtual void ScaleDownHero(IHero hero)
+      {
+         
+      }
+      
+      public virtual void ScaleUpHero(IHero hero)
+      {
+         
+      }
+      
 
       #endregion
    }

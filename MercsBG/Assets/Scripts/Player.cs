@@ -20,7 +20,11 @@ public class Player : MonoBehaviour, IPlayer
 
    [SerializeField] private Canvas canvas = null;
 
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISouls))] private Object souls = null; 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISouls))] private Object souls = null;
+
+   [Header("RUNTIME")] 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))] private Object selectedHero = null;
+   
 
 
    #endregion
@@ -40,6 +44,8 @@ public class Player : MonoBehaviour, IPlayer
 
    public ISouls Souls => souls as ISouls;
 
+   public IHero SelectedHero { get=> selectedHero as IHero; set => selectedHero = value as Object;}
+   
    #endregion
 
    #region METHODS
@@ -50,4 +56,5 @@ public class Player : MonoBehaviour, IPlayer
    }
 
    #endregion
+
 }
