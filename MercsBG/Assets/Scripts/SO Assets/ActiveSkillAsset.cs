@@ -39,6 +39,25 @@ namespace SO_Assets
       {
          
       }  
+      
+      public override void SetSkillFrame(ISkillVisual skillVisual,int skillCooldown)
+      {
+
+         skillVisual.PassiveSkillCanvas.enabled = false;
+         
+         //TODO: Replace this with skill readiness logic?
+         if (skillCooldown <=0)
+         {
+            skillVisual.SkillReadyCanvas.enabled = true;
+            skillVisual.SkillNotReadyCanvas.enabled = false;
+          
+         }
+         else
+         {
+            skillVisual.SkillReadyCanvas.enabled = false;
+            skillVisual.SkillNotReadyCanvas.enabled = true;   
+         }
+      }
 
       #endregion
    }

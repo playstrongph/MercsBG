@@ -6,5 +6,6 @@
         void SelectTarget(ISkill skill);
         void DisableTargetVisuals(ISkill skill);
         void EnableSkillTargeting(ISkill skill);
+        void SetSkillFrame(ISkillVisual skillVisual, int skillCooldown);
     }
 }

@@ -67,6 +67,7 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
       {
          var skillVisual = _skillPanelInUse.HeroSkillVisuals[i];
          var heroSkill = heroSkills[i];
+         var skillCooldown = heroSkill.SkillAttributes.SkillCooldown;
          
          //Set Text
          skillVisual.CooldownText.text = heroSkill.SkillAttributes.SkillCooldown.ToString();
@@ -76,10 +77,9 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
          skillVisual.SkillReadyGraphic.sprite = heroSkill.SkillAttributes.SkillSprite;
          skillVisual.SkillNotReadyGraphic.sprite = heroSkill.SkillAttributes.SkillSprite;
          skillVisual.PassiveSkillGraphic.sprite = heroSkill.SkillAttributes.SkillSprite;
-         
-         
 
          //TODO: Set Skill Frame based on skilltype
+         heroSkill.SkillAttributes.SkillType.SetSkillFrame(skillVisual,skillCooldown);
          
          //TODO: If there will be no individual skill speed, disable in the game object
          skillVisual.SpeedText.enabled = heroSkill.SkillAttributes.SkillSpeed > 0;

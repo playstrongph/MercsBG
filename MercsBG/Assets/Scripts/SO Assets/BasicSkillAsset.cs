@@ -39,6 +39,13 @@ namespace SO_Assets
       {
          
       }  
+      
+      public override void SetSkillFrame(ISkillVisual skillVisual,int skillCooldown)
+      {
+         skillVisual.SkillReadyCanvas.enabled = true;
+         skillVisual.SkillNotReadyCanvas.enabled = false;
+         skillVisual.PassiveSkillCanvas.enabled = false;
+      }
 
       #endregion
    }

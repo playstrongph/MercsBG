@@ -13,4 +13,8 @@ public interface ISkillVisual
     Image PassiveSkillGraphic { get; }
     TextMeshProUGUI SpeedText { get; }
     TextMeshProUGUI CooldownText { get; }
+
+    Canvas SkillReadyCanvas { get; }
+    Canvas SkillNotReadyCanvas { get; }
+    Canvas PassiveSkillCanvas { get; }
 }

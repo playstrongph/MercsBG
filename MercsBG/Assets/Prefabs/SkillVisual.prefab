@@ -408,6 +408,9 @@ MonoBehaviour:
   passiveSkillGraphic: {fileID: 3796955572346015203}
   speedText: {fileID: 6173573341709001044}
   cooldownText: {fileID: 6173573340914842550}
+  skillReadyCanvas: {fileID: 6173573341507058980}
+  skillNotReadyCanvas: {fileID: 6173573342328627375}
+  passiveSkillCanvas: {fileID: 6173573342139538861}
 --- !u!223 &6173573341022000837
 Canvas:
   m_ObjectHideFlags: 0
@@ -859,7 +862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6173573342139538862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -925,7 +928,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6173573342139538863}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -957,7 +960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6173573342328627376
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1024,7 +1027,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6173573342328627377}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}

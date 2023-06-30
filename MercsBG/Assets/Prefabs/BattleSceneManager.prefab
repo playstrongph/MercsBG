@@ -1643,6 +1643,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7097228921892222324}
     m_Modifications:
+    - target: {fileID: 494046088068775696, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 494046088068775698, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: m_Name
@@ -1677,6 +1682,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 494046088155354365, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 586151209695530829, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 586151209695530830, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
@@ -1713,11 +1728,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkillVisual 2
       objectReference: {fileID: 0}
+    - target: {fileID: 586151209781961888, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1624916242970045263, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: battleSceneManager
       value: 
       objectReference: {fileID: 552241100}
+    - target: {fileID: 2675681603329906429, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2675681603550690578, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: m_Name
@@ -1848,10 +1873,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkillVisual 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5345560814821167959, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275223146270489011, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8275223146624422492, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}
       propertyPath: m_Name
       value: SkillVisual 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937998008600333105, guid: 66ff5362fb2db2240a7904da01d1a55d,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8937998008600333106, guid: 66ff5362fb2db2240a7904da01d1a55d,
         type: 3}

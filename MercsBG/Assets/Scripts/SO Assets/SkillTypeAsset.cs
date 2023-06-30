@@ -38,7 +38,12 @@ namespace SO_Assets
       {
          
       }
-        
+
+      public virtual void SetSkillFrame(ISkillVisual skillVisual, int skillCooldown)
+      {
+         
+      }
+
 
       #endregion
    }
