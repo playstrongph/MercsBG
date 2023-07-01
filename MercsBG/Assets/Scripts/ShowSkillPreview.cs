@@ -82,7 +82,7 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
       var skillSpeed = skill.SkillAttributes.SkillSpeed;
       
       //Update Frame
-      //heroClass.SetSkillPreviewFrameColor(SkillPreview.SkillPreviewFrames);
+      heroClass.SetSkillPreviewFrameColor(SkillPreview.SkillPreviewFrames);
       
       //Update Skill Graphic 
       SkillPreview.SkillGraphic.sprite = skill.SkillAttributes.SkillSprite;

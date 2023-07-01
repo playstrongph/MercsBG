@@ -69,6 +69,9 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
          var heroSkill = heroSkills[i];
          var skillCooldown = heroSkill.SkillAttributes.SkillCooldown;
          
+         //Set Skill Reference
+         skillVisual.Skill = heroSkill;
+         
          //Set Text
          skillVisual.CooldownText.text = heroSkill.SkillAttributes.SkillCooldown.ToString();
          skillVisual.SpeedText.text = heroSkill.SkillAttributes.SkillSpeed.ToString();
@@ -84,8 +87,7 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
          //If there will be no individual skill speed, disable in the game object
          skillVisual.SpeedText.enabled = heroSkill.SkillAttributes.SkillSpeed > 0;
          
-         //Set Skill Reference
-         skillVisual.Skill = heroSkill;
+         
 
       }
       

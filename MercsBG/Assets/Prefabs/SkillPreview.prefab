@@ -456,7 +456,7 @@ MonoBehaviour:
   - {fileID: 2531894167454913421, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
   - {fileID: -6372847374873367398, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
   - {fileID: -8614387202556066374, guid: 4cd1f635599ebe848a6411bc64227e86, type: 3}
-  skillPreviewFrame: {fileID: 0}
+  skillPreviewFrame: {fileID: 4872700158142113884}
 --- !u!222 &4872700158142113859
 CanvasRenderer:
   m_ObjectHideFlags: 0
