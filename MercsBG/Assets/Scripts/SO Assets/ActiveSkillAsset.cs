@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace SO_Assets
 {
@@ -56,6 +58,38 @@ namespace SO_Assets
          {
             skillVisual.SkillReadyCanvas.enabled = false;
             skillVisual.SkillNotReadyCanvas.enabled = true;   
+         }
+      }
+      
+      public override void SetCooldownGraphicAndText(Image image, TextMeshProUGUI cooldownText ,int cooldown)
+      {
+         if (cooldown <= 0)
+         {
+            cooldownText.enabled = false;
+            image.enabled = false;
+         }
+         else
+         {
+            cooldownText.enabled = true;
+            image.enabled = true;
+
+            cooldownText.text = cooldown.ToString();
+         }
+      }
+      
+      public override void SetSpeedGraphicAndText(Image image, TextMeshProUGUI speedText, int speed)
+      {
+         if (speed <= 0)
+         {
+            speedText.enabled = false;
+            image.enabled = false;
+         }
+         else
+         {
+            speedText.enabled = true;
+            image.enabled = true;
+
+            speedText.text = speed.ToString();
          }
       }
 

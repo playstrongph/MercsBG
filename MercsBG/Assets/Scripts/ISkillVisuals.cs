@@ -8,5 +8,7 @@ public interface ISkillVisuals
     ISkillPanelFrames SkillPanelFrames { get; }
 
     Transform Transform { get; }
+    
+    
 
 }

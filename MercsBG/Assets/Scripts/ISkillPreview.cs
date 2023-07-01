@@ -16,4 +16,7 @@ public interface ISkillPreview
     TextMeshProUGUI SpeedText { get; }
 
     Canvas Canvas { get; }
+    
+    //Components
+    IShowSkillPreview ShowSkillPreview { get; }
 }

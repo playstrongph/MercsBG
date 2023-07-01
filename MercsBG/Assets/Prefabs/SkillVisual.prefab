@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d6dbdadbf2e6a4d899b390160486e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillVisual: {fileID: 8099773362735705414}
 --- !u!1 &748145177911951945
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +412,7 @@ MonoBehaviour:
   skillReadyCanvas: {fileID: 6173573341507058980}
   skillNotReadyCanvas: {fileID: 6173573342328627375}
   passiveSkillCanvas: {fileID: 6173573342139538861}
+  skillTargetCollider: {fileID: 9088444381844497158}
 --- !u!223 &6173573341022000837
 Canvas:
   m_ObjectHideFlags: 0

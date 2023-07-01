@@ -17,4 +17,8 @@ public interface ISkillVisual
     Canvas SkillReadyCanvas { get; }
     Canvas SkillNotReadyCanvas { get; }
     Canvas PassiveSkillCanvas { get; }
+    
+    ISkill Skill { get; set; }
+
+    IHeroSkillsDisplay HeroSkillsDisplay { get; }
 }

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace SO_Assets
 {
@@ -46,6 +48,18 @@ namespace SO_Assets
          skillVisual.SkillNotReadyCanvas.enabled = false;
 
          skillVisual.PassiveSkillCanvas.enabled = true;
+      }
+      
+      public override void SetCooldownGraphicAndText(Image image, TextMeshProUGUI cooldownText ,int cooldown)
+      {
+         cooldownText.enabled = false;
+         image.enabled = false;
+      }
+      
+      public override void SetSpeedGraphicAndText(Image image, TextMeshProUGUI speedText, int speed)
+      {
+         speedText.enabled = false;
+         image.enabled = false;
       }
 
       #endregion

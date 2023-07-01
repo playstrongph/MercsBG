@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace SO_Assets
 {
@@ -43,6 +45,18 @@ namespace SO_Assets
       {
          
       }
+
+      public virtual void SetCooldownGraphicAndText(Image image, TextMeshProUGUI cooldownText, int cooldown)
+      {
+         
+      }
+      
+      public virtual void SetSpeedGraphicAndText(Image image, TextMeshProUGUI speedText, int speed)
+      {
+         
+      }
+      
+      
 
 
       #endregion

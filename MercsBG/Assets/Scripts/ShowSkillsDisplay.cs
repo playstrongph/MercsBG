@@ -78,12 +78,15 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
          skillVisual.SkillNotReadyGraphic.sprite = heroSkill.SkillAttributes.SkillSprite;
          skillVisual.PassiveSkillGraphic.sprite = heroSkill.SkillAttributes.SkillSprite;
 
-         //TODO: Set Skill Frame based on skilltype
+         //Set Skill Frame based on skilltype
          heroSkill.SkillAttributes.SkillType.SetSkillFrame(skillVisual,skillCooldown);
          
-         //TODO: If there will be no individual skill speed, disable in the game object
+         //If there will be no individual skill speed, disable in the game object
          skillVisual.SpeedText.enabled = heroSkill.SkillAttributes.SkillSpeed > 0;
          
+         //Set Skill Reference
+         skillVisual.Skill = heroSkill;
+
       }
       
       

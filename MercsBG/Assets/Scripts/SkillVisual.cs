@@ -29,6 +29,10 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    [SerializeField] private Canvas skillNotReadyCanvas = null;
    [SerializeField] private Canvas passiveSkillCanvas = null;
    
+   [Header("Components")]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetCollider))] private Object skillTargetCollider = null;
+   
+   
 
    #endregion
 
@@ -55,6 +59,12 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    public Canvas SkillReadyCanvas => skillReadyCanvas;
    public Canvas SkillNotReadyCanvas => skillNotReadyCanvas;
    public Canvas PassiveSkillCanvas => passiveSkillCanvas;
+   
+   //Components
+   ISkillTargetCollider SkillTargetCollider => skillTargetCollider as ISkillTargetCollider;
+   
+   //Reference to the skill
+   public ISkill Skill { get; set; }
 
 
    #endregion

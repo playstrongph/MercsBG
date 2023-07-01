@@ -32,6 +32,8 @@ public class SkillVisuals : MonoBehaviour, ISkillVisuals
    }
    
    public ISkillPanelFrames SkillPanelFrames => skillPanelFrames as ISkillPanelFrames;
+   
+   
 
 
    public Transform Transform => transform;
