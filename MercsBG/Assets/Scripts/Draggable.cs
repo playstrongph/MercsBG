@@ -5,17 +5,16 @@ using Debug = System.Diagnostics.Debug;
 
 public class Draggable : MonoBehaviour
 {
+
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingCollider))] private Object skillTargetingCollider = null;
     
     private Vector3 _pointerDisplacement;
     private float _zDisplacement;
-    
-    //private ISkillTargetCollider SkillTargetCollider { get; set; }
-
     private Camera _mainCamera;
     
     //private ISkillTargeting SelectDragTarget { get; set; }
     
-    
+    private ISkillTargetingCollider SkillTargetingCollider => skillTargetingCollider as ISkillTargetingCollider;
 
     private void Awake()
     {
