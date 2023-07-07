@@ -22,9 +22,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ICombatButton))] private Object combatButton = null;
 
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingCollider))] private Object skillTargeting = null;
    
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object displaySkillTargeting = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingCollider))] private Object displaySkillTargeting = null;
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreview))] private Object heroPreview = null;
    
@@ -53,9 +53,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    public IHeroSkillsDisplay HeroSkillsDisplay => heroSkills as IHeroSkillsDisplay;
    public IUsedSkillsHistory UsedSkillsHistory => usedSkillsHistory as IUsedSkillsHistory;
    public ICombatButton CombatButton => combatButton as ICombatButton;
-   public ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
+   public ISkillTargetingCollider SkillTargetingCollider => skillTargeting as ISkillTargetingCollider;
    
-   public ISkillTargeting DisplaySkillTargeting => displaySkillTargeting as ISkillTargeting;
+   public ISkillTargetingCollider DisplaySkillTargetingCollider => displaySkillTargeting as ISkillTargetingCollider;
 
    public IHeroPreview HeroPreview => heroPreview as IHeroPreview;
    public ISkillPreview SkillPreview => skillPreview as ISkillPreview;

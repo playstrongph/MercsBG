@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkillTargeting : MonoBehaviour, ISkillTargeting
+public class SkillTargetingCollider : MonoBehaviour, ISkillTargetingCollider
 {
    #region VARIABLES
 

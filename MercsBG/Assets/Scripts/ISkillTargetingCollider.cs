@@ -1,4 +1,4 @@
-﻿public interface ISkillTargeting
+﻿public interface ISkillTargetingCollider
 {
     void ShowArrowAndNodes();
     void HideArrowAndNodes();

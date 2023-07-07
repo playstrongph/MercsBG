@@ -10,9 +10,9 @@ public interface IBattleSceneManager
     IHeroSkillsDisplay HeroSkillsDisplay { get; }
     IUsedSkillsHistory UsedSkillsHistory { get; }
     ICombatButton CombatButton { get; }
-    ISkillTargeting SkillTargeting { get; }
+    ISkillTargetingCollider SkillTargetingCollider { get; }
 
-    ISkillTargeting DisplaySkillTargeting { get; }
+    ISkillTargetingCollider DisplaySkillTargetingCollider { get; }
 
     IHeroPreview HeroPreview { get; }
 
