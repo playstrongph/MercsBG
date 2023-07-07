@@ -26,7 +26,6 @@ public class HeroCollider : MonoBehaviour, IHeroCollider
    {
       Hero.Player.BattleSceneManager.HeroPreview.ShowHeroPreview(Hero);
       
-      //TEST
       SelectHero();
 
    }

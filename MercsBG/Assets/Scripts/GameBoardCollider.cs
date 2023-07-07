@@ -24,9 +24,25 @@ public class GameBoardCollider : MonoBehaviour, IGameBoardCollider
    {
        var heroSkillsDisplay = GameBoard.BattleSceneManager.HeroSkillsDisplay;
        
+       
+       DeselectHero();
+       
+
+   }
+
+   private void DeselectHero()
+   {
+       var heroSkillsDisplay = GameBoard.BattleSceneManager.HeroSkillsDisplay;
+       var selectedHero = GameBoard.BattleSceneManager.MainPlayer.SelectedHero;
+       
        //Disable HeroS
        heroSkillsDisplay.Canvas.enabled = false;
-
+       
+       //Scale down selected hero
+       if (selectedHero != null)
+       {
+           selectedHero.Player.PlayerAlliance.ScaleDownHero(selectedHero);
+       }
    }
 
    #endregion
