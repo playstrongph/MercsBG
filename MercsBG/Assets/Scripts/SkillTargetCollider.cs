@@ -86,7 +86,9 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       SkillVisual.SkillVisuals.HeroSkillsDisplay.SelectedSkillVisual = SkillVisual;
       
       //Transfer skill targeting position
-      //battleSceneManager.SkillTargeting.Transform.position = SkillVisual.Transform.position;
+      battleSceneManager.SkillTargeting.Transform.position = SkillVisual.Transform.position;
+      
+      
    }
 
 
