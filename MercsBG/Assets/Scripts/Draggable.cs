@@ -6,17 +6,33 @@ using Debug = System.Diagnostics.Debug;
 
 public class Draggable : MonoBehaviour, IDraggable
 {
+    //VARIABLES
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
     
     private Vector3 _pointerDisplacement;
     private float _zDisplacement;
     private Camera _mainCamera;
+
+    private delegate void ShowSkillTargeting();
+
+    private ShowSkillTargeting _skillTargeting;
+    
+    
+    
+    
+    
+    
+    
+    //PROPERTIES
     private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
+    
+    
 
     private void Awake()
     {
         _mainCamera = Camera.main;
+        _skillTargeting = NoAction;
     }
     
     private void OnEnable()
@@ -28,21 +44,13 @@ public class Draggable : MonoBehaviour, IDraggable
     
     private void Update()
     {
-        var mousePos = MouseInWorldCoords();    
-        var thisTransform = this.transform;
-            
-        thisTransform.position = new Vector3(mousePos.x - _pointerDisplacement.x, mousePos.y - _pointerDisplacement.y, thisTransform.position.z);
-            
-        //SkillTargetCollider.SkillTargetDisplay.ShowLineArrowAndCrossHair();
+        _skillTargeting();
     }
     
     private Vector3 MouseInWorldCoords()
     {
         var screenMousePos = Input.mousePosition;
-        
         screenMousePos.z = _zDisplacement;
-        
-      
         return _mainCamera.ScreenToWorldPoint(screenMousePos);
     }
         
@@ -53,6 +61,7 @@ public class Draggable : MonoBehaviour, IDraggable
     public void EnableDraggable()
     {
         this.enabled = true;
+        _skillTargeting = UpdateAction;
     }
         
     /// <summary>
@@ -61,6 +70,22 @@ public class Draggable : MonoBehaviour, IDraggable
     /// </summary>
     public void DisableDraggable()
     {
+        _skillTargeting = NoAction;
         this.enabled = false;
+    }
+
+    private void UpdateAction()
+    {
+        var mousePos = MouseInWorldCoords();    
+        var thisTransform = this.transform;
+            
+        thisTransform.position = new Vector3(mousePos.x - _pointerDisplacement.x, mousePos.y - _pointerDisplacement.y, thisTransform.position.z);
+            
+        //SkillTargetCollider.SkillTargetDisplay.ShowLineArrowAndCrossHair();
+    }
+
+    private void NoAction()
+    {
+        
     }
 }
