@@ -9,6 +9,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    #region VARIABLES
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual = null;
+
+   
         
 
    #endregion
@@ -21,6 +23,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
         
    #region METHODS
 
+   
+
    private void OnMouseDown()
    {
       ShowSkillPreview();
@@ -28,6 +32,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       //TEST
       SelectSkill();
    }
+
+   
 
    private void OnMouseEnter()
    {
@@ -49,7 +55,6 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    {
       var skill = SkillVisual.Skill;
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
-      
       skillPreview.ShowSkillPreview.TurnOn(skill);
    }
    
@@ -57,7 +62,6 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    {
       var skill = SkillVisual.Skill;
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
-      
       skillPreview.ShowSkillPreview.TurnOnAtMouseEnter(skill);
    }
    
@@ -65,7 +69,6 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    {
       var skill = SkillVisual.Skill;
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
-      
       skillPreview.ShowSkillPreview.TurnOff();
    }
    
@@ -73,14 +76,17 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    {
       var skill = SkillVisual.Skill;
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
-      
       skillPreview.ShowSkillPreview.TurnOffAtMouseExit();
    }
    
    //TEST
    private void SelectSkill()
    {
+      var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
       SkillVisual.SkillVisuals.HeroSkillsDisplay.SelectedSkillVisual = SkillVisual;
+      
+      //Transfer skill targeting position
+      //battleSceneManager.SkillTargeting.Transform.position = SkillVisual.Transform.position;
    }
 
 

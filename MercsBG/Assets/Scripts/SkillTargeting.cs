@@ -8,22 +8,25 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
 
    [Header("Components")] 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingCollider))] private Object skillTargetingCollider = null;
-
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDraggable))] private Object draggable = null;
    
-   [Header("Inspector References")]
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkillsDisplay = null;
    
-   
+   [Header("Inspector References")] 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))] private Object battleSceneManager = null;
+
+
    #endregion
 
    #region PROPERTIES
-
+   
+   //Components
    public ISkillTargetingCollider SkillTargetingCollider => skillTargetingCollider as ISkillTargetingCollider;
    public IDraggable Draggable => draggable as IDraggable;
-
-   public IHeroSkillsDisplay HeroSkillsDisplay => heroSkillsDisplay as IHeroSkillsDisplay;
-
+   
+   //Inspector References
+   public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
+   
+   //Generic Properties
    public Transform Transform => transform;
 
    #endregion

@@ -72,7 +72,11 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    
    
    //Others
-   public Transform Transform { get; set; }
+   public Transform Transform
+   {
+      get => transform; 
+      set => value = transform;
+   }
 
 
    #endregion
