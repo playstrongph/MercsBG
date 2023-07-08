@@ -1,32 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Debug = System.Diagnostics.Debug;
 
 public class Draggable : MonoBehaviour, IDraggable
 {
 
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingCollider))] private Object skillTargetingCollider = null;
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
     
     private Vector3 _pointerDisplacement;
     private float _zDisplacement;
     private Camera _mainCamera;
-    
-    //private ISkillTargeting SelectDragTarget { get; set; }
-    
-    private ISkillTargetingCollider SkillTargetingCollider => skillTargetingCollider as ISkillTargetingCollider;
+    private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
 
     private void Awake()
     {
-        //SkillTargetCollider = GetComponent<ISkillTargetCollider>();
-        //SelectDragTarget = GetComponent<ISkillTargeting>();
         _mainCamera = Camera.main;
     }
     
     private void OnEnable()
     {
         var thisPosition = this.transform.position;
-        
         _zDisplacement = -_mainCamera.transform.position.z + thisPosition.z;
         _pointerDisplacement = -thisPosition + MouseInWorldCoords();
     }

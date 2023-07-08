@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe9236f3a62ad64f96820eaa3ed1b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillTargetingCollider: {fileID: 976455384}
+  skillTargeting: {fileID: 1584508866}
 --- !u!1 &2076426741921585346
 GameObject:
   m_ObjectHideFlags: 0
