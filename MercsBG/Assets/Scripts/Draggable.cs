@@ -1,53 +1,66 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Debug = System.Diagnostics.Debug;
 
-public class Draggable : MonoBehaviour
+public class Draggable : MonoBehaviour, IDraggable
 {
 
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingCollider))] private Object skillTargetingCollider = null;
+      
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
+    
+    
     
     private Vector3 _pointerDisplacement;
     private float _zDisplacement;
     private Camera _mainCamera;
+    private Transform _originalTransform;
+    private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
     
-    //private ISkillTargeting SelectDragTarget { get; set; }
-    
-    private ISkillTargetingCollider SkillTargetingCollider => skillTargetingCollider as ISkillTargetingCollider;
+    //TEST
+    private delegate void SkillTargetingDelegate();
+
+    private SkillTargetingDelegate _skillTargetingDelegate;
 
     private void Awake()
     {
-        //SkillTargetCollider = GetComponent<ISkillTargetCollider>();
-        //SelectDragTarget = GetComponent<ISkillTargeting>();
         _mainCamera = Camera.main;
+        
+        //Initialize the method called in update to doing nothing
+        _skillTargetingDelegate = NoAction;
     }
     
-    private void OnEnable()
+    /*private void OnEnable()
     {
         var thisPosition = this.transform.position;
-        
         _zDisplacement = -_mainCamera.transform.position.z + thisPosition.z;
         _pointerDisplacement = -thisPosition + MouseInWorldCoords();
-    }
+    }*/
     
     private void Update()
     {
+        _skillTargetingDelegate();
+    }
+
+    private void ShowSkillTargeting()
+    {
         var mousePos = MouseInWorldCoords();    
         var thisTransform = this.transform;
-            
         thisTransform.position = new Vector3(mousePos.x - _pointerDisplacement.x, mousePos.y - _pointerDisplacement.y, thisTransform.position.z);
-            
-        //SkillTargetCollider.SkillTargetDisplay.ShowLineArrowAndCrossHair();
+        SkillTargeting.ShowSkillTarget.ShowLineNodesArrowAndCrossHair();
     }
-    
+
+    private void NoAction()
+    {
+        
+    }
+
     private Vector3 MouseInWorldCoords()
     {
         var screenMousePos = Input.mousePosition;
-        
         screenMousePos.z = _zDisplacement;
-        
-      
         return _mainCamera.ScreenToWorldPoint(screenMousePos);
     }
         
@@ -58,6 +71,14 @@ public class Draggable : MonoBehaviour
     public void EnableDraggable()
     {
         this.enabled = true;
+        
+        //TEST
+        var thisPosition = this.transform.position;
+        _zDisplacement = -_mainCamera.transform.position.z + thisPosition.z;
+        _pointerDisplacement = -thisPosition + MouseInWorldCoords();
+        
+        //assign the delegate method called in update to showSkillTargeting
+        _skillTargetingDelegate = ShowSkillTargeting;
     }
         
     /// <summary>
@@ -66,6 +87,13 @@ public class Draggable : MonoBehaviour
     /// </summary>
     public void DisableDraggable()
     {
+        
+        //Assign the delegate method called in update to NoAction
+        _skillTargetingDelegate = NoAction;
+
         this.enabled = false;
     }
+    
+    
+    
 }

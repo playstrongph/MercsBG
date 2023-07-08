@@ -17,6 +17,9 @@ public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
    [Header("COMPONENTS")] 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IShowSkillsDisplay))] private Object showSkillsDisplay = null;
    
+   //[Header("INSPECTOR REFERENCES")]
+   //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISk))]
+   
    #endregion
 
    #region PROPERTIES

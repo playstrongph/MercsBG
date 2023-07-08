@@ -23,6 +23,9 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
 
    private void OnMouseDown()
    {
+      //TODO: Test
+      SetSelectedSkillVisual();
+      
       ShowSkillPreview();
    }
 
@@ -72,6 +75,18 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
       
       skillPreview.ShowSkillPreview.TurnOffAtMouseExit();
+   }
+   
+   /// <summary>
+   /// Sets the selected skill visual in skillVisuals
+   /// </summary>
+   private void SetSelectedSkillVisual()
+   {
+      SkillVisual.HeroSkillsDisplay.ThreeSkillVisuals.SelectedSkillVisual = SkillVisual;
+      SkillVisual.HeroSkillsDisplay.FourSkillVisuals.SelectedSkillVisual = SkillVisual;
+      
+      //TEST
+      
    }
 
 
