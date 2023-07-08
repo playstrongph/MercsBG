@@ -73,6 +73,12 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       
       skillPreview.ShowSkillPreview.TurnOffAtMouseExit();
    }
+   
+   //TEST
+   private void SelectSkill()
+   {
+      
+   }
 
 
    #endregion

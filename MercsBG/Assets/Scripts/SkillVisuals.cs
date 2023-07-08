@@ -9,8 +9,12 @@ public class SkillVisuals : MonoBehaviour, ISkillVisuals
    #region VARIABLES
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private List<Object> heroSkillVisuals = new List<Object>();
-
+   
+   [Header("Components")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelFrames))] private Object skillPanelFrames = null;
+
+   [Header("Inspector References")]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkillsDisplay = null;
    
    #endregion
 
@@ -32,6 +36,8 @@ public class SkillVisuals : MonoBehaviour, ISkillVisuals
    }
    
    public ISkillPanelFrames SkillPanelFrames => skillPanelFrames as ISkillPanelFrames;
+   
+   public IHeroSkillsDisplay HeroSkillsDisplay => heroSkillsDisplay as IHeroSkillsDisplay;
    
    
 
