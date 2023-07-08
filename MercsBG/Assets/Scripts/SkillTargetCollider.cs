@@ -43,6 +43,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    private void OnMouseUp()
    {
       HideSkillPreview();
+      
+      DeselectSkill();
    }
 
    private void OnMouseExit()
@@ -83,12 +85,30 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    private void SelectSkill()
    {
       var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
-      SkillVisual.SkillVisuals.HeroSkillsDisplay.SelectedSkillVisual = SkillVisual;
+      var skillTargeting = battleSceneManager.SkillTargeting;
+      var heroSkillsDisplay = SkillVisual.SkillVisuals.HeroSkillsDisplay;
+      
+      //Set selected skill Visual
+      heroSkillsDisplay.SelectedSkillVisual = SkillVisual;
       
       //Transfer skill targeting position
-      battleSceneManager.SkillTargeting.Transform.position = SkillVisual.Transform.position;
+      skillTargeting.Transform.position = SkillVisual.Transform.position;
       
+      //Enable Draggable
+      skillTargeting.Draggable.EnableDraggable();
+   }
+
+   private void DeselectSkill()
+   {
+      var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
+      var skillTargeting = battleSceneManager.SkillTargeting;
+      var skillTargetingOrigin = new Vector3(-327,-368,0); 
+
+      //Transfer skill targeting position
+      skillTargeting.Transform.position = skillTargetingOrigin;
       
+      //Enable Draggable
+      skillTargeting.Draggable.DisableDraggable();
    }
 
 
