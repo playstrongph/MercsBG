@@ -10,12 +10,8 @@ public class SkillVisuals : MonoBehaviour, ISkillVisuals
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private List<Object> heroSkillVisuals = new List<Object>();
 
-   [Header("COMPONENTS")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelFrames))] private Object skillPanelFrames = null;
-
-   [Header("RUNTIME")] 
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object selectedSkillVisual = null;
-
+   
    #endregion
 
    #region PROPERTIES
@@ -36,12 +32,9 @@ public class SkillVisuals : MonoBehaviour, ISkillVisuals
    }
    
    public ISkillPanelFrames SkillPanelFrames => skillPanelFrames as ISkillPanelFrames;
+   
+   
 
-   public ISkillVisual SelectedSkillVisual 
-   { 
-      get => selectedSkillVisual as ISkillVisual;
-      set => selectedSkillVisual = value as Object;
-   }
 
    public Transform Transform => transform;
 

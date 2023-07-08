@@ -1437,11 +1437,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3394557432218440462, guid: 8f340eec36786724fbd4d807f83788c2,
-        type: 3}
-      propertyPath: heroSkillsDisplay
-      value: 
-      objectReference: {fileID: 8426992109814451513}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f340eec36786724fbd4d807f83788c2, type: 3}
 --- !u!114 &5740426942483171077 stripped

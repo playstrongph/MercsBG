@@ -346,10 +346,8 @@ GameObject:
   - component: {fileID: 2076426741502584043}
   - component: {fileID: 2076426741502584042}
   - component: {fileID: 1653873427}
-  - component: {fileID: 3394557432218440462}
   - component: {fileID: 976455384}
   - component: {fileID: 4644116160495867631}
-  - component: {fileID: 2028523129181676556}
   m_Layer: 0
   m_Name: SkillTargeting
   m_TagString: Untagged
@@ -413,21 +411,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 40, y: 40, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3394557432218440462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076426741502584037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 465649d18d730cb4e97d407c45f14a35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillTargetingCollider: {fileID: 976455384}
-  draggable: {fileID: 4644116160495867631}
-  showSkillTarget: {fileID: 2028523129181676556}
 --- !u!114 &976455384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,18 +444,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillTargetingCollider: {fileID: 976455384}
---- !u!114 &2028523129181676556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076426741502584037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe9568c6c882406418b1981f9607fe1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2076426741921585346
 GameObject:
   m_ObjectHideFlags: 0

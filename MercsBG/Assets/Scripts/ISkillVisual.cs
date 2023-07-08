@@ -21,11 +21,4 @@ public interface ISkillVisual
     ISkill Skill { get; set; }
 
     IHeroSkillsDisplay HeroSkillsDisplay { get; }
-
-    ISkillTargetCollider SkillTargetCollider { get; }
-
-    ISkillVisuals SkillVisuals { get; }
-
-    Transform Transform { get; }
-    
 }
