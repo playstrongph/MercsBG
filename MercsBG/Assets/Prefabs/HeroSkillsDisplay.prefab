@@ -62,6 +62,7 @@ MonoBehaviour:
   - {fileID: 8064790207548408633}
   - {fileID: 64513802528867987}
   skillPanelFrames: {fileID: 3693188540425213710}
+  heroSkillsDisplay: {fileID: 1624916242970045263}
 --- !u!222 &3693188540425213711
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -202,6 +203,7 @@ MonoBehaviour:
   - {fileID: 3307526280121496782}
   - {fileID: 2530997184061162643}
   skillPanelFrames: {fileID: 3693188541571869387}
+  heroSkillsDisplay: {fileID: 1624916242970045263}
 --- !u!222 &3693188541571869388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -360,6 +362,7 @@ MonoBehaviour:
   threeSkills: {fileID: 4555205230501927617}
   fourSkills: {fileID: 1139021159614998364}
   showSkillsDisplay: {fileID: 471815084804590906}
+  selectedSkillVisual: {fileID: 0}
 --- !u!114 &471815084804590906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +532,11 @@ PrefabInstance:
       propertyPath: heroSkillsDisplay
       value: 
       objectReference: {fileID: 1624916242970045263}
+    - target: {fileID: 8099773362735705414, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: skillVisuals
+      value: 
+      objectReference: {fileID: 1139021159614998364}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
 --- !u!224 &4650681464935664479 stripped
@@ -710,6 +718,11 @@ PrefabInstance:
       propertyPath: heroSkillsDisplay
       value: 
       objectReference: {fileID: 1624916242970045263}
+    - target: {fileID: 8099773362735705414, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: skillVisuals
+      value: 
+      objectReference: {fileID: 1139021159614998364}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
 --- !u!224 &5345560814633924793 stripped
@@ -891,6 +904,11 @@ PrefabInstance:
       propertyPath: heroSkillsDisplay
       value: 
       objectReference: {fileID: 1624916242970045263}
+    - target: {fileID: 8099773362735705414, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: skillVisuals
+      value: 
+      objectReference: {fileID: 1139021159614998364}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
 --- !u!224 &8275223146624422493 stripped
@@ -1072,6 +1090,11 @@ PrefabInstance:
       propertyPath: heroSkillsDisplay
       value: 
       objectReference: {fileID: 1624916242970045263}
+    - target: {fileID: 8099773362735705414, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: skillVisuals
+      value: 
+      objectReference: {fileID: 4555205230501927617}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
 --- !u!224 &8937998008600333106 stripped
@@ -1248,6 +1271,11 @@ PrefabInstance:
       propertyPath: heroSkillsDisplay
       value: 
       objectReference: {fileID: 1624916242970045263}
+    - target: {fileID: 8099773362735705414, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: skillVisuals
+      value: 
+      objectReference: {fileID: 4555205230501927617}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
 --- !u!114 &2530997184061162643 stripped
@@ -1424,6 +1452,11 @@ PrefabInstance:
       propertyPath: heroSkillsDisplay
       value: 
       objectReference: {fileID: 1624916242970045263}
+    - target: {fileID: 8099773362735705414, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: skillVisuals
+      value: 
+      objectReference: {fileID: 4555205230501927617}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
 --- !u!114 &3307526280121496782 stripped
@@ -1605,6 +1638,11 @@ PrefabInstance:
       propertyPath: heroSkillsDisplay
       value: 
       objectReference: {fileID: 1624916242970045263}
+    - target: {fileID: 8099773362735705414, guid: 2156eba2a911f544eb355a98959f05f8,
+        type: 3}
+      propertyPath: skillVisuals
+      value: 
+      objectReference: {fileID: 1139021159614998364}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2156eba2a911f544eb355a98959f05f8, type: 3}
 --- !u!224 &2675681603550690579 stripped

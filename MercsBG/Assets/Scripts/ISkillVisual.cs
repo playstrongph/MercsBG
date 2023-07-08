@@ -24,6 +24,8 @@ public interface ISkillVisual
 
     ISkillTargetCollider SkillTargetCollider { get; }
     ISkillVisuals SkillVisuals { get; }
+    
+    Transform Transform { get; set; }
 
 
 }

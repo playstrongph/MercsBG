@@ -24,6 +24,9 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    private void OnMouseDown()
    {
       ShowSkillPreview();
+      
+      //TEST
+      SelectSkill();
    }
 
    private void OnMouseEnter()
@@ -77,7 +80,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    //TEST
    private void SelectSkill()
    {
-      
+      SkillVisual.SkillVisuals.HeroSkillsDisplay.SelectedSkillVisual = SkillVisual;
    }
 
 

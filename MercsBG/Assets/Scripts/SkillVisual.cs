@@ -69,6 +69,10 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    
    //Reference to the skill
    public ISkill Skill { get; set; }
+   
+   
+   //Others
+   public Transform Transform { get; set; }
 
 
    #endregion
