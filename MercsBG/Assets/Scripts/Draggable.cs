@@ -9,8 +9,6 @@ public class Draggable : MonoBehaviour, IDraggable
     //VARIABLES
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
-
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkillsDisplay = null;
     
     private Vector3 _pointerDisplacement;
     private float _zDisplacement;
@@ -19,16 +17,11 @@ public class Draggable : MonoBehaviour, IDraggable
     //Delegate Update Method
     private delegate void ShowSkillTargeting();
     private ShowSkillTargeting _skillTargeting;
-    
-    
-    
-    
-    
-    
-    
+
+
     //PROPERTIES
     private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
-    private IHeroSkillsDisplay HeroSkillsDisplay => heroSkillsDisplay as IHeroSkillsDisplay;
+    
     
     
 

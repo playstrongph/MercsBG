@@ -14,4 +14,6 @@ public interface IHeroSkillsDisplay
 
     ISkillVisual SelectedSkillVisual { get; set; }
 
+    ISkillTargeting SkillTargeting { get; }
+
 }

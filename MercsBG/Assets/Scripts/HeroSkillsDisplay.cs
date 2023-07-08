@@ -14,11 +14,16 @@ public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisuals))] private Object threeSkills = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisuals))] private Object fourSkills = null;
 
-   [Header("COMPONENTS")] 
+   [Header("Components")] 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IShowSkillsDisplay))] private Object showSkillsDisplay = null;
+   
+   [Header("Inspector References")]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
 
-   [Header("RUNTIME")] 
+   [Header("Runtime")] 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object selectedSkillVisual = null;
+   
+   
    
    #endregion
 
@@ -28,6 +33,8 @@ public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
    public ISkillVisuals ThreeSkillVisuals => threeSkills as ISkillVisuals;
    public ISkillVisuals FourSkillVisuals => fourSkills as ISkillVisuals;
+   
+   public ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
 
    public ISkillVisual SelectedSkillVisual
    {
