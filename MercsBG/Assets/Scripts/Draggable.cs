@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Debug = System.Diagnostics.Debug;
 
-public class Draggable : MonoBehaviour
+public class Draggable : MonoBehaviour, IDraggable
 {
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingCollider))] private Object skillTargetingCollider = null;

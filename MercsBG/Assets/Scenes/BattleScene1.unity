@@ -538,7 +538,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1960043377}
     m_Modifications:
     - target: {fileID: 2076426741502584037, guid: 8f340eec36786724fbd4d807f83788c2,
         type: 3}
@@ -583,7 +583,7 @@ PrefabInstance:
     - target: {fileID: 2076426741502584043, guid: 8f340eec36786724fbd4d807f83788c2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2076426741502584043, guid: 8f340eec36786724fbd4d807f83788c2,
         type: 3}
@@ -650,25 +650,14 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4644116160495867631, guid: 8f340eec36786724fbd4d807f83788c2,
-        type: 3}
-      propertyPath: skillTargetingCollider
-      value: 
-      objectReference: {fileID: 1653873428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f340eec36786724fbd4d807f83788c2, type: 3}
---- !u!114 &1653873428 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 976455384, guid: 8f340eec36786724fbd4d807f83788c2,
+--- !u!224 &1960043377 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7534960838820280441, guid: 312a4bcf351c7254cb01c4686d3833e9,
     type: 3}
-  m_PrefabInstance: {fileID: 1653873425}
+  m_PrefabInstance: {fileID: 7534960840036778893}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f51f9445c27fb4f9314c74a00e32ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7534960840036778893
 PrefabInstance:
   m_ObjectHideFlags: 0
