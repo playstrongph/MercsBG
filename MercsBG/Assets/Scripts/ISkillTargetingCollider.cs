@@ -12,4 +12,8 @@ public interface ISkillTargetingCollider
     void HideArrowAndNodes();
     void ShowCrossHair();
     void HideCrossHair();
+
+    void HideTargetNode(int index);
+        
+    void ShowTargetNode(int index);
 }

@@ -122,11 +122,10 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
       var nodeIndex = Mathf.Floor(Mathf.RoundToInt(_intDifference / distanceDivisor));
       
       
-      //Cap the Node index
-      nodeIndex = Mathf.Max(nodeIndex, 1);
-      nodeIndex = Mathf.Min(nodeIndex, _arrowNodes.Count);
+      //Clamp the Node index
+      nodeIndex = Mathf.Clamp(nodeIndex, 1, _arrowNodes.Count);
 
-
+      
       for (int k = 0; k < _arrowNodes.Count; k++)
       {
          var indexTracker = 0;
@@ -134,12 +133,10 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
          for (int i = 0; i < nodeIndex; i++)
          {
             indexTracker = i;
-            
-            //TODO: Cleanup with a method
-            _arrowNodes[i].GetComponent<Image>().enabled = true;
+
+            SkillTargeting.SkillTargetingCollider.ShowTargetNode(i);
          
-            //Don't ask.  Haha!
-            //var t = (i+ 1.5f) / ((_arrowNodes.Count - 1) + 1f);
+            //Values determined through trial and error
             var t = (i+ tFactor) / ((nodeIndex - 1) + 1f);  //Use the number of nodes enabled by the distance
 
             //Quadratic Bezier Curve
@@ -173,7 +170,7 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
 
          if (k != indexTracker)
          {
-            _arrowNodes[k].GetComponent<Image>().enabled = false;
+            SkillTargeting.SkillTargetingCollider.HideTargetNode(k);
          }
       }
 

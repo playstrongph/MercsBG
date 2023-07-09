@@ -29,6 +29,16 @@ public class SkillTargetingCollider : MonoBehaviour, ISkillTargetingCollider
       Arrow.GetComponent<Image>().enabled = true;
    }
 
+   public void HideTargetNode(int index)
+   {
+      Nodes[index].GetComponent<Image>().enabled = false;
+   }
+   
+   public void ShowTargetNode(int index)
+   {
+      Nodes[index].GetComponent<Image>().enabled = true;
+   }
+
    public void HideArrowAndNodes()
    {
       Arrow.GetComponent<Image>().enabled = false;
@@ -48,10 +58,6 @@ public class SkillTargetingCollider : MonoBehaviour, ISkillTargetingCollider
    {
       CrossHair.GetComponent<Image>().enabled = false;
    }
-
-
-
-
 
    #endregion
 }
