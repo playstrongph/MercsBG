@@ -88,7 +88,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       skillPreview.ShowSkillPreview.TurnOffAtMouseExit();
    }
    
-   //TEST
+   //TODO: TEST
    private void SelectSkill()
    {
       var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;

@@ -10,8 +10,8 @@ public class Draggable : MonoBehaviour, IDraggable
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
     
-    private Vector3 _pointerDisplacement = Vector3.zero;
-    private float _zDisplacement = 0f;
+    private readonly Vector3 _pointerDisplacement = Vector3.zero;
+    private readonly float _zDisplacement = 0f;
     private Camera _mainCamera;
     
     //Delegate Update Method
@@ -33,10 +33,6 @@ public class Draggable : MonoBehaviour, IDraggable
     
     private void OnEnable()
     {
-        
-        /*var thisPosition = this.transform.position;
-        _zDisplacement = -_mainCamera.transform.position.z + thisPosition.z;
-        _pointerDisplacement = -thisPosition + MouseInWorldCoords();*/
     }
     
     private void Update()
