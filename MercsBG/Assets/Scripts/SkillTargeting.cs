@@ -9,6 +9,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
    [Header("Components")] 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingCollider))] private Object skillTargetingCollider = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDraggable))] private Object draggable = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IShowLineAndCrossHair))] private Object showLineAndCrossHair = null;
    
    
    [Header("Inspector References")] 
@@ -22,6 +23,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
    //Components
    public ISkillTargetingCollider SkillTargetingCollider => skillTargetingCollider as ISkillTargetingCollider;
    public IDraggable Draggable => draggable as IDraggable;
+   public IShowLineAndCrossHair ShowLineAndCrossHair => showLineAndCrossHair as IShowLineAndCrossHair;
    
    //Inspector References
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;

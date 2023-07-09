@@ -236,7 +236,9 @@ GameObject:
   - component: {fileID: 2076426740706948342}
   - component: {fileID: 2076426740706948340}
   - component: {fileID: 2076426740706948343}
+  - component: {fileID: 726867319592546078}
   - component: {fileID: 3048544212149072504}
+  - component: {fileID: 8089774031907065839}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -301,6 +303,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!65 &726867319592546078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076426740706948337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3048544212149072504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +328,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe9236f3a62ad64f96820eaa3ed1b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillTargeting: {fileID: 1584508866}
+--- !u!114 &8089774031907065839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076426740706948337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b487f545835db2f41a1d988cf994cb7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceMultiplier: 40
   skillTargeting: {fileID: 1584508866}
 --- !u!1 &2076426740963062370
 GameObject:
@@ -359,7 +388,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2076426741502584043}
   - component: {fileID: 2076426741502584042}
-  - component: {fileID: 1653873427}
   - component: {fileID: 1584508866}
   - component: {fileID: 976455384}
   m_Layer: 0
@@ -412,19 +440,6 @@ Canvas:
   m_SortingLayerID: -1112490017
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!65 &1653873427
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076426741502584037}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 40, y: 40, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1584508866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillTargetingCollider: {fileID: 976455384}
   draggable: {fileID: 3048544212149072504}
+  showLineAndCrossHair: {fileID: 8089774031907065839}
   battleSceneManager: {fileID: 0}
 --- !u!114 &976455384
 MonoBehaviour:

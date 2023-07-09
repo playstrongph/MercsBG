@@ -16,9 +16,9 @@ public class SkillTargetingCollider : MonoBehaviour, ISkillTargetingCollider
 
    #region PROPERTIES
 
-   private GameObject Arrow => arrow;
-   private GameObject CrossHair => crossHair;
-   private List<GameObject> Nodes => nodes;
+   public GameObject Arrow => arrow;
+   public GameObject CrossHair => crossHair;
+   public List<GameObject> Nodes => nodes;
 
    #endregion
 
