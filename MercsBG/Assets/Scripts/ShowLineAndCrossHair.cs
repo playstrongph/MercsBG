@@ -46,9 +46,7 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
       }
       else  //if there is NO distance between skill position and mouse position
       {
-         //HideArrow();
-         
-         //SkillTargetCollider.TargetNodes.HideArrowNodes();
+         SkillTargeting.SkillTargetingCollider.HideArrowAndNodes();
       }
    }
    
@@ -56,26 +54,12 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
    {
       var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
       var arrow = SkillTargeting.SkillTargetingCollider.Arrow;
-      
-      
-      
+
       SkillTargeting.SkillTargetingCollider.ShowArrowAndNodes();
-      
-      //SkillTargetCollider.TargetArrow.SetActive(true);
-      //SkillTargetCollider.TargetArrow.GetComponent<Image>().enabled = true;
-      
-      
-      //SkillTargetCollider.TargetArrow.transform.position = transform.position - 15f * direction;
-      
-      //arrow.gameObject.transform.position = transform.position - 15f * direction;
-      arrow.gameObject.transform.position = transform.position;
 
-      //SkillTargetCollider.TargetArrow.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
+      arrow.gameObject.transform.position = transform.position - 15f * direction;
+
       arrow.gameObject.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
-
-      //Disable Hero Preview
-      //SkillTargetCollider.DisplaySkillPreview.HidePreview();  //Temp Disable
-      SkillTargeting.BattleSceneManager.SkillPreview.ShowSkillPreview.TurnOff();
    }
 
 

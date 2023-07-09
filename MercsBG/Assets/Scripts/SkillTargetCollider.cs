@@ -64,6 +64,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    {
       var skill = SkillVisual.Skill;
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
+      
       skillPreview.ShowSkillPreview.TurnOnAtMouseEnter(skill);
    }
    
