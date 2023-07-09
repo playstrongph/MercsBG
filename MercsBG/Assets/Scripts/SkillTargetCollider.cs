@@ -10,6 +10,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual = null;
 
+   private Vector3 _skillTargetingOrigin = new Vector3(); 
    
         
 
@@ -23,7 +24,12 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
         
    #region METHODS
 
-   
+   private void Awake()
+   {
+      _skillTargetingOrigin = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.Transform
+         .position;
+   }
+
 
    private void OnMouseDown()
    {
@@ -103,7 +109,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    {
       var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
       var skillTargeting = battleSceneManager.SkillTargeting;
-      var skillTargetingOrigin = new Vector3(-327,-368,0); 
+      var skillTargetingOrigin = _skillTargetingOrigin; 
 
       //Transfer skill targeting position
       skillTargeting.Transform.position = skillTargetingOrigin;

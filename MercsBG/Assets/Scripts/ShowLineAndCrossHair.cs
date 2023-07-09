@@ -68,6 +68,7 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
       {
          _arrowNodes.Add(node);
       }
+      Debug.Log("Nodes Count: "+_arrowNodes.Count);
    }
    
    private void ShowArrow(Vector3 notNormalized, Vector3 direction)
@@ -91,9 +92,6 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
       //Transform where the mouse currently is
       var mouseTransform = transform;
 
-      //Transform where the skill parent currently is
-      var skillTransform = SkillTargeting;
-           
       //P0 is where the mouse is at
       _controlPoints[0] = mouseTransform.position;
            
@@ -121,11 +119,19 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
          //Calculates rotation for each arrow node
          if (i>0)
          {
-            var euler = new Vector3(0, 0, 
+               var euler = new Vector3(0, 0, 
                Vector2.SignedAngle(Vector2.up, _arrowNodes[i].transform.position - _arrowNodes[i - 1].transform.position));
-            _arrowNodes[i].transform.rotation = Quaternion.Euler(euler);
+            
+               _arrowNodes[i].transform.rotation = Quaternion.Euler(euler);
          }
-   
+         else
+         {
+               var euler = new Vector3(0, 0, 
+               Vector2.SignedAngle(Vector2.up, _arrowNodes[i].transform.position - SkillTargeting.Transform.position));
+            
+              _arrowNodes[i].transform.rotation = Quaternion.Euler(euler);
+         }
+
          //calculates scales for each arrow node
          var scale = scaleFactor * (1f - 0.03f * (_arrowNodes.Count - 1 - i));
                
