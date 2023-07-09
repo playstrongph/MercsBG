@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 2076426740706948342}
   - component: {fileID: 2076426740706948340}
   - component: {fileID: 2076426740706948343}
+  - component: {fileID: 3048544212149072504}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -300,6 +301,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3048544212149072504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076426740706948337}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe9236f3a62ad64f96820eaa3ed1b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillTargeting: {fileID: 1584508866}
 --- !u!1 &2076426740963062370
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +362,6 @@ GameObject:
   - component: {fileID: 1653873427}
   - component: {fileID: 1584508866}
   - component: {fileID: 976455384}
-  - component: {fileID: 4644116160495867631}
   m_Layer: 0
   m_Name: SkillTargeting
   m_TagString: Untagged
@@ -408,7 +421,7 @@ BoxCollider:
   m_GameObject: {fileID: 2076426741502584037}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 40, y: 40, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -425,7 +438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillTargetingCollider: {fileID: 976455384}
-  draggable: {fileID: 4644116160495867631}
+  draggable: {fileID: 3048544212149072504}
+  battleSceneManager: {fileID: 0}
 --- !u!114 &976455384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,19 +460,6 @@ MonoBehaviour:
   - {fileID: 5144796430969129223}
   - {fileID: 866549418754034986}
   - {fileID: 4073996447820936449}
---- !u!114 &4644116160495867631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076426741502584037}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fe9236f3a62ad64f96820eaa3ed1b9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillTargeting: {fileID: 1584508866}
 --- !u!1 &2076426741921585346
 GameObject:
   m_ObjectHideFlags: 0
