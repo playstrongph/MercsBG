@@ -8,7 +8,7 @@ public interface ISkillTargetingCollider
     GameObject CrossHair { get; }
     List<GameObject> Nodes { get; }
     
-    void ShowArrowAndNodes();
+    void ShowTargetArrow();
     void HideArrowAndNodes();
     void ShowCrossHair();
     void HideCrossHair();

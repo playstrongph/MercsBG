@@ -24,16 +24,11 @@ public class SkillTargetingCollider : MonoBehaviour, ISkillTargetingCollider
 
    #region METHODS
 
-   public void ShowArrowAndNodes()
+   public void ShowTargetArrow()
    {
       Arrow.GetComponent<Image>().enabled = true;
-
-      foreach (var node in Nodes)
-      {
-         node.GetComponent<Image>().enabled = true;
-      }
    }
-   
+
    public void HideArrowAndNodes()
    {
       Arrow.GetComponent<Image>().enabled = false;
