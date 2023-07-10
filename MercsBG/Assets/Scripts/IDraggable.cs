@@ -1,4 +1,6 @@
-﻿public interface IDraggable
+﻿using UnityEngine;
+
+public interface IDraggable
 {
     /// <summary>
     /// Enables draggable script
@@ -11,4 +13,6 @@
     /// prevents the Update method from running continuously
     /// </summary>
     void DisableDraggable();
+
+    BoxCollider ArrowCollider { get; }
 }

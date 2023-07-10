@@ -9,6 +9,7 @@ public class Draggable : MonoBehaviour, IDraggable
     //VARIABLES
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
+    [SerializeField] private BoxCollider arrowCollider = null;
     
     private readonly Vector3 _pointerDisplacement = Vector3.zero;
     private readonly float _zDisplacement = 0f;
@@ -21,9 +22,9 @@ public class Draggable : MonoBehaviour, IDraggable
 
     //PROPERTIES
     private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
-    
-    
-    
+    public BoxCollider ArrowCollider => arrowCollider;
+
+
 
     private void Awake()
     {

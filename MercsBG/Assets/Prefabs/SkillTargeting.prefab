@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillTargeting: {fileID: 1584508866}
+  arrowCollider: {fileID: 726867319592546078}
 --- !u!114 &8089774031907065839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,6 +420,8 @@ MonoBehaviour:
   distanceMultiplier: 40
   skillTargeting: {fileID: 1584508866}
   scaleFactor: 1
+  distanceDivisor: 30
+  tFactor: 0.08
 --- !u!1 &2076426740963062370
 GameObject:
   m_ObjectHideFlags: 0

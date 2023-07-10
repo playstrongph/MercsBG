@@ -62,12 +62,18 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
          //SkillTargetCollider.TargetNodes.ShowArrowNodes();
          ShowArrowNodes();
          
+         //Enable Box Collider
+         SkillTargeting.Draggable.ArrowCollider.enabled = true;
+
          //TODO: Show CrossHair
          //ShowTargetCrossHair();
-         
+
       }
       else  //if there is NO distance between skill position and mouse position
       {
+         //Disable Box Collider
+         SkillTargeting.Draggable.ArrowCollider.enabled = false;
+         
          SkillTargeting.SkillTargetingCollider.HideArrowAndNodes();
       }
    }
