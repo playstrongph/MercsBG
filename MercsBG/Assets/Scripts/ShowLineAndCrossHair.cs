@@ -66,7 +66,7 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
          SkillTargeting.Draggable.ArrowCollider.enabled = true;
 
          //TODO: Show CrossHair
-         //ShowTargetCrossHair();
+         ShowTargetCrossHair();
 
       }
       else  //if there is NO distance between skill position and mouse position
@@ -75,6 +75,8 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
          SkillTargeting.Draggable.ArrowCollider.enabled = false;
          
          SkillTargeting.SkillTargetingCollider.HideArrowAndNodes();
+         
+         SkillTargeting.SkillTargetingCollider.HideCrossHair();
       }
    }
    
@@ -182,10 +184,75 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
       }
 
    }
-    
-   
-   
-   
+
+
+   private void ShowTargetCrossHair()
+   {
+      // ReSharper disable once PossibleNullReferenceException
+      var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+      //Store at most 5 ray cast hits
+      var mResults = new RaycastHit[5];
+
+      //ray traverses all layers
+      var layerMask = ~0;
+
+      //Same to RayCastAll but with no additional garbage
+      int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity, layerMask);
+
+      //Update the latest targeted hero to null
+      //_validSkillTargetHero = null;
+
+      //SkillTargetCollider.Skill.CasterHero.HeroLogic.LastHeroTargets.SetTargetedHero(_validSkillTargetHero);
+
+      //TODO: Hide target cross hair by default
+      //SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
+      SkillTargeting.SkillTargetingCollider.CrossHair.GetComponent<Image>().enabled = false;
+
+      for (int i = 0; i < hitsCount; i++)
+      {
+         if (mResults[i].transform.GetComponent<IHero>() != null)
+         {
+            var heroGameObject = mResults[i];
+            var heroTarget = heroGameObject.transform.GetComponent<IHero>();
+
+            //TODO: Get Valid Targets based on skill target (enemy or ally)
+            //var validHeroTargets = SkillTargetCollider.SkillTargets.GetValidTargets();
+
+            //TODO: Check if the targeted hero is part of the valid targets before displaying the crosshair
+            /*if (validHeroTargets.Contains(heroTarget))
+            {
+               //Display cross hair
+               SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
+                
+               //Set cross hair position to position of target hero
+               SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
+                  heroGameObject.transform.position;
+            }*/
+
+            
+            
+            
+            //TEMP
+            //TODO: Display CrossHair
+            SkillTargeting.SkillTargetingCollider.ShowCrossHair();
+
+            //TODO: Transfer Crosshair transform to target
+            SkillTargeting.SkillTargetingCollider.CrossHair.gameObject.transform.position = heroTarget.Transform.position;
+            
+            //Debug.Log("Hero: " + mResults[i].transform.GetComponent<IHero>().HeroInformation.HeroName);
+            
+
+
+         }
+         else
+         {
+            //SkillTargeting.SkillTargetingCollider.HideCrossHair();
+         }
+      }
+
+   }
+
 
 
    #endregion
