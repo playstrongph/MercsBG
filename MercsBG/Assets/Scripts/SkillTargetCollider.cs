@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
 public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
@@ -18,7 +19,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
         
    #region PROPERTIES
    
-   private ISkillVisual SkillVisual => skillVisual as ISkillVisual;
+   public ISkillVisual SkillVisual => skillVisual as ISkillVisual;
 
    #endregion
         
@@ -88,24 +89,9 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       skillPreview.ShowSkillPreview.TurnOffAtMouseExit();
    }
    
-   //TODO: TEST
-   private void SelectSkill()
-   {
-      var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
-      var skillTargeting = battleSceneManager.SkillTargeting;
-      var heroSkillsDisplay = SkillVisual.SkillVisuals.HeroSkillsDisplay;
-      
-      //Set selected skill Visual
-      heroSkillsDisplay.SelectedSkillVisual = SkillVisual;
-      
-      //Transfer skill targeting position
-      skillTargeting.Transform.position = SkillVisual.Transform.position;
-      
-      //Enable Draggable
-      skillTargeting.Draggable.EnableDraggable();
-   }
+   
 
-   private void DeselectSkill()
+   public void DeselectSkill()
    {
       var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
       var skillTargeting = battleSceneManager.SkillTargeting;
@@ -117,6 +103,47 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       //Enable Draggable
       skillTargeting.Draggable.DisableDraggable();
    }
+   
+   /// <summary>
+   /// Select skill actions after status checks
+   /// </summary>
+   private void SelectSkill()
+   {
+      var skillType = SkillVisual.Skill.SkillAttributes.SkillType;
+      
+      skillType.ManualSelectSkill(this);
+      
+   }
+   
+   
+   /// <summary>
+   /// Selects the skill if the following criteria are met:
+   /// 1) Basic or Active Skill 2) Enabled Skill 3) Skill is Ready (cooldown)
+   /// </summary>
+   public void ManualSelectSkill()
+   {
+      var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
+      var skillTargeting = battleSceneManager.SkillTargeting;
+      var heroSkillsDisplay = SkillVisual.SkillVisuals.HeroSkillsDisplay;
+      
+      //TODO: The below 3 methods should only be called for Active SKills - Enabled SKills - Ready Skills 
+      
+      //Set selected skill Visual
+      heroSkillsDisplay.SelectedSkillVisual = SkillVisual;
+      
+      //Transfer skill targeting position
+      skillTargeting.Transform.position = SkillVisual.Transform.position;
+      
+      //Enable Draggable
+      skillTargeting.Draggable.EnableDraggable();
+   }
+
+
+
+
+
+
+
 
 
    #endregion

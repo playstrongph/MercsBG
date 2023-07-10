@@ -70,6 +70,19 @@ namespace SO_Assets
             speedText.text = speed.ToString();
          }
       }
+      
+      /// <summary>
+      /// Basic and Active skills can select skills
+      /// </summary>
+      /// <param name="skillTargetCollider"></param>
+      public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      {
+         var skillEnabledStatus = skillTargetCollider.SkillVisual.Skill.SkillAttributes.SkillEnableStatusAsset;
+         
+         skillEnabledStatus.ManualSelectSkill(skillTargetCollider);
+         
+         //Debug.Log("Skill Type Check");
+      }
 
       #endregion
    }

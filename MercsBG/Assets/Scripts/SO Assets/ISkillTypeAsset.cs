@@ -14,5 +14,7 @@ namespace SO_Assets
         void SetCooldownGraphicAndText(Image image, TextMeshProUGUI cooldownText, int cooldown);
 
         void SetSpeedGraphicAndText(Image image, TextMeshProUGUI speedText, int speed);
+
+        void ManualSelectSkill(ISkillTargetCollider skillTargetCollider);
     }
 }

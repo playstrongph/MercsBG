@@ -50,6 +50,14 @@ namespace SO_Assets
          
       }
         
+      /// <summary>
+      /// Active and Basic skill select
+      /// </summary>
+      /// <param name="skillTargetCollider"></param>
+      public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      {
+         skillTargetCollider.ManualSelectSkill();
+      }
 
       #endregion
    }

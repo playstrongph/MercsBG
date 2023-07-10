@@ -92,6 +92,13 @@ namespace SO_Assets
             speedText.text = speed.ToString();
          }
       }
+      
+      public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      {
+         var skillEnabledStatus = skillTargetCollider.SkillVisual.Skill.SkillAttributes.SkillEnableStatusAsset;
+         
+         skillEnabledStatus.ManualSelectSkill(skillTargetCollider);
+      }
 
       #endregion
    }

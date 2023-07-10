@@ -49,6 +49,19 @@ namespace SO_Assets
       {
          
       }
+   
+      /// <summary>
+      /// Skill can only be selected if it is enabled
+      /// </summary>
+      /// <param name="skillTargetCollider"></param>
+      public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      {
+         var skillReadiness = skillTargetCollider.SkillVisual.Skill.SkillAttributes.SkillReadiness;
+         
+         skillReadiness.ManualSelectSkill(skillTargetCollider);
+         
+      }
+      
         
 
       #endregion

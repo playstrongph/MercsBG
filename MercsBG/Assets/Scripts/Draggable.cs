@@ -31,11 +31,7 @@ public class Draggable : MonoBehaviour, IDraggable
         _mainCamera = Camera.main;
         _skillTargeting = NoAction;
     }
-    
-    private void OnEnable()
-    {
-    }
-    
+
     private void Update()
     {
         _skillTargeting();

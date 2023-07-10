@@ -65,7 +65,7 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
          //Enable Box Collider
          SkillTargeting.Draggable.ArrowCollider.enabled = true;
 
-         //TODO: Show CrossHair
+         //Show CrossHair
          ShowTargetCrossHair();
 
       }

@@ -56,6 +56,11 @@ namespace SO_Assets
          
       }
       
+      public virtual void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      {
+         
+      }
+      
       
 
 

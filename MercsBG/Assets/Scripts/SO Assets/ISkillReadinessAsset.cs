@@ -20,5 +20,11 @@ namespace SO_Assets
         void SelectTarget(ISkill skill);
 
         void DisableTargetVisuals(ISkill skill);
+        
+        /// <summary>
+        /// Active and Basic skill select
+        /// </summary>
+        /// <param name="skillTargetCollider"></param>
+        void ManualSelectSkill(ISkillTargetCollider skillTargetCollider);
     }
 }
