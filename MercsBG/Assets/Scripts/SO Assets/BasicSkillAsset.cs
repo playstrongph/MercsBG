@@ -77,7 +77,7 @@ namespace SO_Assets
       /// <param name="skillTargetCollider"></param>
       public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
       {
-         var skillEnabledStatus = skillTargetCollider.SkillVisual.Skill.SkillAttributes.SkillEnableStatusAsset;
+         var skillEnabledStatus = skillTargetCollider.SkillVisual.Skill.SkillAttributes.SkillEnableStatus;
          
          skillEnabledStatus.ManualSelectSkill(skillTargetCollider);
          

@@ -47,7 +47,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
             heroSkills[j].SkillAttributes.SkillType = skillAssets[j].SkillType;
             heroSkills[j].SkillAttributes.SkillTarget = skillAssets[j].SkillTarget;
             heroSkills[j].SkillAttributes.SkillReadiness = skillAssets[j].SkillReadiness;
-            heroSkills[j].SkillAttributes.SkillEnableStatusAsset = skillAssets[j].SkillEnableStatusAsset;
+            heroSkills[j].SkillAttributes.SkillEnableStatus = skillAssets[j].SkillEnableStatusAsset;
          }
          
          //Set the number of in use hero skills
@@ -74,7 +74,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
             heroSkills[j].SkillAttributes.SkillType = skillAssets[j].SkillType;
             heroSkills[j].SkillAttributes.SkillTarget = skillAssets[j].SkillTarget;
             heroSkills[j].SkillAttributes.SkillReadiness = skillAssets[j].SkillReadiness;
-            heroSkills[j].SkillAttributes.SkillEnableStatusAsset = skillAssets[j].SkillEnableStatusAsset;
+            heroSkills[j].SkillAttributes.SkillEnableStatus = skillAssets[j].SkillEnableStatusAsset;
          }
          
          //Set the number of in use hero skills

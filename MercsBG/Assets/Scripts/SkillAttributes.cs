@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using SO_Assets;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SkillAttributes : MonoBehaviour, ISkillAttributes
 {
@@ -31,7 +32,7 @@ public class SkillAttributes : MonoBehaviour, ISkillAttributes
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTypeAsset))] private ScriptableObject skillType = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetAsset))] private ScriptableObject skillTarget = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillReadinessAsset))] private ScriptableObject skillReadiness = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillEnableStatusAsset))] private ScriptableObject skillEnableStatusAsset = null;
+   [FormerlySerializedAs("skillEnableStatusAsset")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillEnableStatusAsset))] private ScriptableObject skillEnableStatus = null;
 
    #endregion
         
@@ -50,7 +51,7 @@ public class SkillAttributes : MonoBehaviour, ISkillAttributes
    public ISkillTypeAsset SkillType { get => skillType as ISkillTypeAsset; set=> skillType = value as ScriptableObject;}
    public ISkillTargetAsset SkillTarget { get => skillTarget as ISkillTargetAsset; set => skillTarget = value as ScriptableObject;}
    public ISkillReadinessAsset SkillReadiness { get => skillReadiness as ISkillReadinessAsset; set => skillReadiness = value as ScriptableObject;}
-   public ISkillEnableStatusAsset SkillEnableStatusAsset { get => skillEnableStatusAsset as ISkillEnableStatusAsset; set => skillEnableStatusAsset = value as ScriptableObject;}
+   public ISkillEnableStatusAsset SkillEnableStatus { get => skillEnableStatus as ISkillEnableStatusAsset; set => skillEnableStatus = value as ScriptableObject;}
 
 
    #endregion
