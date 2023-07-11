@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3910777555636928486}
+  - component: {fileID: 3910777555636928487}
+  - component: {fileID: 2559801578124480621}
   - component: {fileID: 4711278350917139359}
   - component: {fileID: 1914603819729331316}
   - component: {fileID: 2689960912244333807}
-  - component: {fileID: 3910777555636928487}
-  - component: {fileID: 2559801578124480621}
+  - component: {fileID: 3919313831327312986}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -47,55 +48,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 700, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4711278350917139359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3910777555636928473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16bb8d5bce5a0c2478bb10e7b2cb4dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  battleSceneManager: {fileID: 0}
-  heroes: {fileID: 2689960912244333807}
-  canvas: {fileID: 2559801578124480621}
-  souls: {fileID: 1914603819729331316}
---- !u!114 &1914603819729331316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3910777555636928473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6783bed8fc461814aba7c8510e3d695c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soulCount: 0
---- !u!114 &2689960912244333807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3910777555636928473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0d73756ee20ec4fb13cc1b425c2051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHeroes:
-  - {fileID: 6688773931742297552}
-  - {fileID: 4658230534263532810}
-  - {fileID: 2691123979413954896}
-  - {fileID: 1283457991118714132}
-  - {fileID: 8184917780635296649}
-  - {fileID: 2526617635742360793}
-  - {fileID: 1907771849137377}
 --- !u!114 &3910777555636928487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +93,74 @@ Canvas:
   m_SortingLayerID: 987682575
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &4711278350917139359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910777555636928473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16bb8d5bce5a0c2478bb10e7b2cb4dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleSceneManager: {fileID: 0}
+  heroes: {fileID: 2689960912244333807}
+  heroesStatusList: {fileID: 3919313831327312986}
+  souls: {fileID: 1914603819729331316}
+  playerAlliance: {fileID: 0}
+  otherPlayer: {fileID: 0}
+  selectedHero: {fileID: 0}
+--- !u!114 &1914603819729331316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910777555636928473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6783bed8fc461814aba7c8510e3d695c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soulCount: 0
+--- !u!114 &2689960912244333807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910777555636928473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0d73756ee20ec4fb13cc1b425c2051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHeroes:
+  - {fileID: 6688773931742297552}
+  - {fileID: 4658230534263532810}
+  - {fileID: 2691123979413954896}
+  - {fileID: 1283457991118714132}
+  - {fileID: 8184917780635296649}
+  - {fileID: 2526617635742360793}
+  - {fileID: 1907771849137377}
+--- !u!114 &3919313831327312986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910777555636928473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5017a88e4c64a42abc52db5e4406d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4711278350917139359}
+  aliveHeroes: []
+  deadHeroes: []
+  extinctHeroes: []
 --- !u!1001 &481584414063530586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1487,12 +1507,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33fe049bca246143a63404be32df19a, type: 3}
---- !u!224 &1769247925306529554 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8048816148521417248, guid: d33fe049bca246143a63404be32df19a,
-    type: 3}
-  m_PrefabInstance: {fileID: 8592448323488967986}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8184917780635296649 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 479678864000175803, guid: d33fe049bca246143a63404be32df19a,
@@ -1505,3 +1519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac13ee810821124b84a5e284f7339d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1769247925306529554 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8048816148521417248, guid: d33fe049bca246143a63404be32df19a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8592448323488967986}
+  m_PrefabAsset: {fileID: 0}

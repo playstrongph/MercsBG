@@ -11,11 +11,13 @@ public class Player : MonoBehaviour, IPlayer
    #region VARIABLES
    
    [Header("Components")]
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))]private Object battleSceneManager = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroes))] private Object heroes = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroesStatusList))] private Object heroesStatusList = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISouls))] private Object souls = null;
    
+   
    [Header("Inspector References")]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))]private Object battleSceneManager = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAlliance = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayer))] private Object otherPlayer = null;
 
@@ -28,6 +30,7 @@ public class Player : MonoBehaviour, IPlayer
 
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
    public IHeroes Heroes => heroes as IHeroes;
+   public IHeroesStatusList HeroesStatusList => heroesStatusList as IHeroesStatusList;
 
    public IPlayerAllianceAsset PlayerAlliance
    {

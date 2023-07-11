@@ -7,6 +7,8 @@ public interface IPlayer
     IPlayer OtherPlayer { get;}
     IHeroes Heroes { get; }
 
+    IHeroesStatusList HeroesStatusList { get; }
+
     Canvas Canvas { get; }
     ISouls Souls { get; }
 

@@ -35,18 +35,29 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       var battleSceneSettings = BattleSceneManager.BattleScene1SettingsAsset;
       var allyHeroes = battleSceneSettings.AllyTeamHeroes.HeroAssets;
       var enemyHeroes = battleSceneSettings.EnemyTeamHeroes.HeroAssets;
+
+      var mainPlayerHeroesList = BattleSceneManager.MainPlayer.HeroesStatusList;
+      var enemyPlayerHeroesList = BattleSceneManager.EnemyPlayer.HeroesStatusList;
       
       
       //Enable main player heroes
       for (var i = 0; i < mainPlayerHeroes.Count; i++)
       {
-         mainPlayerHeroes[i].ThisGameObject.SetActive(i < allyHeroes.Count);
+         if (i < allyHeroes.Count)
+         {
+            mainPlayerHeroes[i].ThisGameObject.SetActive(true);
+            mainPlayerHeroesList.AddToAliveHeroList(mainPlayerHeroes[i]);   
+         }
       }
       
       //Enable enemy player heroes
       for (var i = 0; i < enemyPlayerHeroes.Count; i++)
       {
-         enemyPlayerHeroes[i].ThisGameObject.SetActive(i < enemyHeroes.Count);
+         if (i < allyHeroes.Count)
+         {
+            enemyPlayerHeroes[i].ThisGameObject.SetActive(true);
+            enemyPlayerHeroesList.AddToAliveHeroList(mainPlayerHeroes[i]);   
+         }
       }
    }
 
