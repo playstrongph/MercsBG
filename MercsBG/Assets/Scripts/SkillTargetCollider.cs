@@ -64,6 +64,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    {
       var skill = SkillVisual.Skill;
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
+      
       skillPreview.ShowSkillPreview.TurnOn(skill);
    }
    
@@ -116,11 +117,11 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    }
    
    
-   /// <summary>
+   /*/// <summary>
    /// Selects the skill if the following criteria are met:
    /// 1) Basic or Active Skill 2) Enabled Skill 3) Skill is Ready (cooldown)
    /// </summary>
-   public void ManualSelectSkill()
+   public void SelectedSkillActions()
    {
       var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
       var skillTargeting = battleSceneManager.SkillTargeting;
@@ -136,7 +137,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       
       //Enable Draggable
       skillTargeting.Draggable.EnableDraggable();
-   }
+   }*/
 
 
 

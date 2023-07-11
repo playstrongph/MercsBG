@@ -356,8 +356,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6173573341022000838}
-  - component: {fileID: 8099773362735705414}
   - component: {fileID: 6173573341022000837}
+  - component: {fileID: 8099773362735705414}
+  - component: {fileID: 6243075822599822488}
   m_Layer: 0
   m_Name: SkillVisual
   m_TagString: Untagged
@@ -388,31 +389,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.9, y: 153.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8099773362735705414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6173573341022000839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be1e403758f0eb746a23470006b74e86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroSkillsDisplay: {fileID: 0}
-  skillReady: {fileID: 6173573341507058984}
-  skillNotReady: {fileID: 6173573342328627377}
-  passiveSkill: {fileID: 6173573342139538863}
-  skillReadyGraphic: {fileID: 6173573340856799931}
-  skillNotReadyGraphic: {fileID: 6173573342478404097}
-  passiveSkillGraphic: {fileID: 3796955572346015203}
-  speedText: {fileID: 6173573341709001044}
-  cooldownText: {fileID: 6173573340914842550}
-  skillReadyCanvas: {fileID: 6173573341507058980}
-  skillNotReadyCanvas: {fileID: 6173573342328627375}
-  passiveSkillCanvas: {fileID: 6173573342139538861}
-  skillTargetCollider: {fileID: 9088444381844497158}
 --- !u!223 &6173573341022000837
 Canvas:
   m_ObjectHideFlags: 0
@@ -434,6 +410,46 @@ Canvas:
   m_SortingLayerID: -45612473
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!114 &8099773362735705414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6173573341022000839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1e403758f0eb746a23470006b74e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillReady: {fileID: 6173573341507058984}
+  skillNotReady: {fileID: 6173573342328627377}
+  passiveSkill: {fileID: 6173573342139538863}
+  skillReadyGraphic: {fileID: 6173573340856799931}
+  skillNotReadyGraphic: {fileID: 6173573342478404097}
+  passiveSkillGraphic: {fileID: 3796955572346015203}
+  speedText: {fileID: 6173573341709001044}
+  cooldownText: {fileID: 6173573340914842550}
+  skillReadyCanvas: {fileID: 6173573341507058980}
+  skillNotReadyCanvas: {fileID: 6173573342328627375}
+  passiveSkillCanvas: {fileID: 6173573342139538861}
+  skillTargetCollider: {fileID: 9088444381844497158}
+  playerSelectsSkill: {fileID: 6243075822599822488}
+  heroSkillsDisplay: {fileID: 0}
+  skillVisuals: {fileID: 0}
+--- !u!114 &6243075822599822488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6173573341022000839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f0c0645f437e04e9e09fa3265b7bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillVisual: {fileID: 8099773362735705414}
 --- !u!1 &6173573341284289324
 GameObject:
   m_ObjectHideFlags: 0

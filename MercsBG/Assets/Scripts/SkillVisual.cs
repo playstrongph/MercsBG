@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class SkillVisual : MonoBehaviour, ISkillVisual
 {
    #region VARIABLES
-
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkillsDisplay = null;
    
    [Header("Skill GameObjects")]
    [SerializeField] private GameObject skillReady = null;   
@@ -31,17 +29,16 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    
    [Header("Components")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetCollider))] private Object skillTargetCollider = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerSelectsSkill))] private Object playerSelectsSkill = null;
    
    [Header("Inspector References")]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkillsDisplay = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisuals))] private Object skillVisuals = null;
 
    #endregion
 
    #region PROPERTIES
-   
-   
-   public IHeroSkillsDisplay HeroSkillsDisplay => heroSkillsDisplay as IHeroSkillsDisplay;
-   
+
    //GameObjects
    public GameObject SkillReady => skillReady;
    public GameObject SkillNotReady => skillNotReady;
@@ -63,8 +60,10 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    
    //Components
    public ISkillTargetCollider SkillTargetCollider => skillTargetCollider as ISkillTargetCollider;
+   public IPlayerSelectsSkill PlayerSelectsSkill => playerSelectsSkill as IPlayerSelectsSkill;
    
    //Inspector References
+   public IHeroSkillsDisplay HeroSkillsDisplay => heroSkillsDisplay as IHeroSkillsDisplay;
    public ISkillVisuals SkillVisuals => skillVisuals as ISkillVisuals;
    
    //Reference to the skill

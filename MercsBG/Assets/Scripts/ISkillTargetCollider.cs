@@ -1,7 +1,7 @@
 public interface ISkillTargetCollider
 {
 
-    void ManualSelectSkill();
+    //void SelectedSkillActions();
 
     void DeselectSkill();
 

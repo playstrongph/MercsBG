@@ -20,6 +20,8 @@ public interface ISkillVisual
     
     ISkill Skill { get; set; }
 
+    IPlayerSelectsSkill PlayerSelectsSkill { get; }
+
     IHeroSkillsDisplay HeroSkillsDisplay { get; }
 
     ISkillTargetCollider SkillTargetCollider { get; }

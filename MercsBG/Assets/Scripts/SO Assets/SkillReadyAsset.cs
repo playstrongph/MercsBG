@@ -56,7 +56,9 @@ namespace SO_Assets
       /// <param name="skillTargetCollider"></param>
       public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
       {
-         skillTargetCollider.ManualSelectSkill();
+         var playerSelectsSkill = skillTargetCollider.SkillVisual.PlayerSelectsSkill;
+         
+         playerSelectsSkill.SelectedSkillActions();
       }
 
       #endregion
