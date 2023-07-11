@@ -9,23 +9,18 @@ using Object = UnityEngine.Object;
 public class Player : MonoBehaviour, IPlayer
 {
    #region VARIABLES
-
+   
+   [Header("Components")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))]private Object battleSceneManager = null;
-
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroes))] private Object heroes = null;
-   
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAlliance = null;
-   
-   [Header("COMPONENTS")]
-
-   [SerializeField] private Canvas canvas = null;
-
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISouls))] private Object souls = null;
-
-   [Header("RUNTIME")] 
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))] private Object selectedHero = null;
    
+   [Header("Inspector References")]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAlliance = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayer))] private Object otherPlayer = null;
 
+   [Header("Runtime")] 
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))] private Object selectedHero = null;
 
    #endregion
 
@@ -39,8 +34,8 @@ public class Player : MonoBehaviour, IPlayer
       get => playerAlliance as IPlayerAllianceAsset;
       set => playerAlliance = value as ScriptableObject;
    }
-   public IPlayer OtherPlayer { get; set; }
-   public Canvas Canvas => canvas;
+   public IPlayer OtherPlayer => otherPlayer as IPlayer;
+   public Canvas Canvas { get; private set; } = null;
 
    public ISouls Souls => souls as ISouls;
 
@@ -52,7 +47,7 @@ public class Player : MonoBehaviour, IPlayer
 
    private void Awake()
    {
-      
+      Canvas = GetComponent<Canvas>();
    }
 
    #endregion

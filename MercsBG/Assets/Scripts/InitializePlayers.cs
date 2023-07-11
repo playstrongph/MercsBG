@@ -21,21 +21,9 @@ public class InitializePlayers : MonoBehaviour, IInitializePlayers
 
    public void StartAction()
    {
-      var mainPlayer = BattleSceneManager.MainPlayer;
-      var enemyPlayer = BattleSceneManager.EnemyPlayer;
+    
       
       
-      //Set References
-      mainPlayer.OtherPlayer = enemyPlayer;
-      enemyPlayer.OtherPlayer = mainPlayer;
-      
-      //Enable Player Canvas
-      mainPlayer.Canvas.enabled = true;
-      enemyPlayer.Canvas.enabled = true;
-      
-      //Set Player Alliance
-      mainPlayer.PlayerAlliance = BattleSceneManager.BattleScene1SettingsAsset.AllyTeamHeroes.PlayerAlliance;
-      enemyPlayer.PlayerAlliance = BattleSceneManager.BattleScene1SettingsAsset.EnemyTeamHeroes.PlayerAlliance;
 
    }
 

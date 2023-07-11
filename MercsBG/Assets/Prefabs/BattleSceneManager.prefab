@@ -2311,6 +2311,17 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 401307732}
+    - target: {fileID: 4711278350917139359, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 2530951147387883852}
+    - target: {fileID: 4711278350917139359, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: playerAlliance
+      value: 
+      objectReference: {fileID: 11400000, guid: 126268ad973d8e1448bcf08b0f0166a6,
+        type: 2}
     - target: {fileID: 5495449028121630153, guid: cf2583de8a8b3b34c8c0598416249747,
         type: 3}
       propertyPath: m_IsActive
@@ -2721,6 +2732,17 @@ PrefabInstance:
       propertyPath: battleSceneManager
       value: 
       objectReference: {fileID: 552241100}
+    - target: {fileID: 4711278350917139359, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 2530951147300237695}
+    - target: {fileID: 4711278350917139359, guid: cf2583de8a8b3b34c8c0598416249747,
+        type: 3}
+      propertyPath: playerAlliance
+      value: 
+      objectReference: {fileID: 11400000, guid: ba2f9ba3759a58c4bb3030d42c065ba5,
+        type: 2}
     - target: {fileID: 5495449028121630153, guid: cf2583de8a8b3b34c8c0598416249747,
         type: 3}
       propertyPath: m_IsActive
