@@ -26,16 +26,11 @@ public class HeroGlows : MonoBehaviour, IHeroGlows
 
    public void ShowHeroGlow()
    {
-      Debug.Log("Show Hero Glow");
-      
       HeroGlow.enabled = true;
    }
    
    public void HideHeroGlow()
    {
-      
-      Debug.Log("Hide Hero Glow");
-      
       HeroGlow.enabled = false;
    }
    
