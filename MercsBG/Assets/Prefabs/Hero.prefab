@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroSkills: {fileID: 6039862950908708011}
   skillAttributes: {fileID: 1621358490670554582}
+  casterHero: {fileID: 479678864000175803}
 --- !u!114 &1621358490670554582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +71,7 @@ MonoBehaviour:
   skillType: {fileID: 0}
   skillTarget: {fileID: 0}
   skillReadiness: {fileID: 0}
-  skillEnableStatusAsset: {fileID: 0}
+  skillEnableStatus: {fileID: 0}
 --- !u!1 &3934053691380523153
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroSkills: {fileID: 6039862950908708011}
   skillAttributes: {fileID: 6329891841149869107}
+  casterHero: {fileID: 479678864000175803}
 --- !u!114 &6329891841149869107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +143,7 @@ MonoBehaviour:
   skillType: {fileID: 0}
   skillTarget: {fileID: 0}
   skillReadiness: {fileID: 0}
-  skillEnableStatusAsset: {fileID: 0}
+  skillEnableStatus: {fileID: 0}
 --- !u!1 &4133311879122560851
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroSkills: {fileID: 6039862950908708011}
   skillAttributes: {fileID: 30019326685038327}
+  casterHero: {fileID: 479678864000175803}
 --- !u!114 &30019326685038327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +269,7 @@ MonoBehaviour:
   skillType: {fileID: 0}
   skillTarget: {fileID: 0}
   skillReadiness: {fileID: 0}
-  skillEnableStatusAsset: {fileID: 0}
+  skillEnableStatus: {fileID: 0}
 --- !u!1 &7316504669276076116
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroSkills: {fileID: 6039862950908708011}
   skillAttributes: {fileID: 969033528098201541}
+  casterHero: {fileID: 479678864000175803}
 --- !u!114 &969033528098201541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +341,7 @@ MonoBehaviour:
   skillType: {fileID: 0}
   skillTarget: {fileID: 0}
   skillReadiness: {fileID: 0}
-  skillEnableStatusAsset: {fileID: 0}
+  skillEnableStatus: {fileID: 0}
 --- !u!1 &8048816148506494398
 GameObject:
   m_ObjectHideFlags: 0

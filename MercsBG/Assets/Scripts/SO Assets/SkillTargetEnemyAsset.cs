@@ -27,6 +27,8 @@ namespace SO_Assets
          //enemy heroes
          //None (empty list)
 
+         var enemyHeroes = hero.Player.OtherPlayer.HeroesStatusList.AliveHeroesList;
+
          return new List<IHero>();
       }
       

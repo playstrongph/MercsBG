@@ -27,13 +27,6 @@ public class Heroes : MonoBehaviour, IHeroes
       }
    }
 
-   public List<IHero> AliveHeroes { get; set; } = new List<IHero>();
-   
-   public List<IHero> DeadHeroes { get; set; } = new List<IHero>();
-   
-   public List<IHero> ExtinctHeroes { get; set; } = new List<IHero>();
-
-
    #endregion
         
    #region METHODS
