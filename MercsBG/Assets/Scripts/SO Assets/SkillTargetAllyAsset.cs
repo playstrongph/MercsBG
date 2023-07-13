@@ -23,11 +23,7 @@ namespace SO_Assets
       public override List<IHero> GetHeroTargets(IHero hero)
       {
          //Ally heroes
-         //All Other ally heroes
-         //enemy heroes
-         //None (empty list)
-
-         return new List<IHero>();
+         return hero.Player.HeroesStatusList.AliveHeroesList;
       }
       
       /// <summary>
@@ -35,7 +31,11 @@ namespace SO_Assets
       /// </summary>
       public override void ShowTargetsGlow(IHero hero)
       {
+         //Set glow to red 
+         hero.HeroVisual.HeroGlows.SetColorGreen();
          
+         //show hero glow
+         hero.HeroVisual.HeroGlows.ShowHeroGlow();
       }
       
       /// <summary>
@@ -43,7 +43,8 @@ namespace SO_Assets
       /// </summary>
       public override void HideTargetsGlow(IHero hero)
       {
-         
+         //hide hero glow
+         hero.HeroVisual.HeroGlows.HideHeroGlow();
       }
 
       /// <summary>

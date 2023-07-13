@@ -30,6 +30,7 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    [Header("Components")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetCollider))] private Object skillTargetCollider = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerSelectsSkill))] private Object playerSelectsSkill = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargets))] private Object skillTargets = null;
    
    [Header("Inspector References")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkillsDisplay = null;
@@ -61,6 +62,7 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    //Components
    public ISkillTargetCollider SkillTargetCollider => skillTargetCollider as ISkillTargetCollider;
    public IPlayerSelectsSkill PlayerSelectsSkill => playerSelectsSkill as IPlayerSelectsSkill;
+   public ISkillTargets SkillTargets=> skillTargets as ISkillTargets;
    
    //Inspector References
    public IHeroSkillsDisplay HeroSkillsDisplay => heroSkillsDisplay as IHeroSkillsDisplay;

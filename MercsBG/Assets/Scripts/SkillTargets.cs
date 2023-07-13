@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillTargets : MonoBehaviour
+public class SkillTargets : MonoBehaviour, ISkillTargets
 {
    #region VARIABLES
    
@@ -44,7 +44,7 @@ public class SkillTargets : MonoBehaviour
       var validHeroTargets = skill.SkillAttributes.SkillTarget.GetHeroTargets(skill.CasterHero);
 
       validTargets.Clear();
-      
+
       foreach (var hero in validHeroTargets)
       {
          validTargets.Add(hero as Object);
@@ -65,8 +65,41 @@ public class SkillTargets : MonoBehaviour
       ValidTargets.Clear();
    }
    
+   /// <summary>
+   /// Called by SkillTargetCollider On Mouse Down
+   /// Color of glow determined by skill Target Type
+   /// </summary>
+   public void ShowValidTargetsGlow()
+   {
+      
+      //TODO: Should pass by Skill Readiness and Skill Enabled Status
+      
+
+      var heroes = GetValidTargets();
+
+      var skill = SkillVisual.Skill;
+
+      foreach (var hero in heroes)
+      {
+         skill.SkillAttributes.SkillTarget.ShowTargetsGlow(hero);
+      }
+      
+   }
    
-  
+   /// <summary>
+   /// Called by SkillTargetCollider On Mouse Down
+   /// Color of glow determined by skill Target Type
+   /// </summary>
+   public void HideValidTargetsGlow()
+   {
+      var heroes = GetValidTargets();
+      var skill = SkillVisual.Skill;
+      
+      foreach (var hero in heroes)
+      {
+         skill.SkillAttributes.SkillTarget.HideTargetsGlow(hero);
+      }
+   }
 
    #endregion
 }

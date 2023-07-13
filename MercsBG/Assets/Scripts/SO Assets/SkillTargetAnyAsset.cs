@@ -26,8 +26,15 @@ namespace SO_Assets
          //All Other ally heroes
          //enemy heroes
          //None (empty list)
-
-         return new List<IHero>();
+         var allAliveHeroes = new List<IHero>();
+         
+         //Add all living enemies
+         allAliveHeroes.AddRange( hero.Player.OtherPlayer.HeroesStatusList.AliveHeroesList);
+         
+         //Add all living allies
+         allAliveHeroes.AddRange(hero.Player.HeroesStatusList.AliveHeroesList);
+       
+         return allAliveHeroes;
       }
       
       /// <summary>
@@ -35,7 +42,11 @@ namespace SO_Assets
       /// </summary>
       public override void ShowTargetsGlow(IHero hero)
       {
+         //Set glow to red 
+         hero.HeroVisual.HeroGlows.SetColorYellow();
          
+         //show hero glow
+         hero.HeroVisual.HeroGlows.ShowHeroGlow();
       }
       
       /// <summary>
@@ -43,7 +54,8 @@ namespace SO_Assets
       /// </summary>
       public override void HideTargetsGlow(IHero hero)
       {
-         
+         //hide hero glow
+         hero.HeroVisual.HeroGlows.HideHeroGlow();
       }
 
       /// <summary>

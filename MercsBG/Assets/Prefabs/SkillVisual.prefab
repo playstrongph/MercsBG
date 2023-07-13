@@ -436,6 +436,7 @@ MonoBehaviour:
   passiveSkillCanvas: {fileID: 6173573342139538861}
   skillTargetCollider: {fileID: 9088444381844497158}
   playerSelectsSkill: {fileID: 6243075822599822488}
+  skillTargets: {fileID: 64504665797855245}
   heroSkillsDisplay: {fileID: 0}
   skillVisuals: {fileID: 0}
 --- !u!114 &6243075822599822488
@@ -464,6 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillVisual: {fileID: 8099773362735705414}
+  validTargets: []
 --- !u!1 &6173573341284289324
 GameObject:
   m_ObjectHideFlags: 0

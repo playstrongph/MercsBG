@@ -25,6 +25,8 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       LoadHeroInformationAndAttributes();
       
       LoadHeroVisuals();
+      
+      LoadToHeroStatusLists();
    }
 
    private void EnableHeroes()
@@ -36,29 +38,25 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       var allyHeroes = battleSceneSettings.AllyTeamHeroes.HeroAssets;
       var enemyHeroes = battleSceneSettings.EnemyTeamHeroes.HeroAssets;
 
-      var mainPlayerHeroesList = BattleSceneManager.MainPlayer.HeroesStatusList;
-      var enemyPlayerHeroesList = BattleSceneManager.EnemyPlayer.HeroesStatusList;
-      
-      
       //Enable main player heroes
       for (var i = 0; i < mainPlayerHeroes.Count; i++)
       {
          if (i < allyHeroes.Count)
          {
             mainPlayerHeroes[i].ThisGameObject.SetActive(true);
-            mainPlayerHeroesList.AddToAliveHeroList(mainPlayerHeroes[i]);   
          }
       }
-      
+
       //Enable enemy player heroes
       for (var i = 0; i < enemyPlayerHeroes.Count; i++)
       {
-         if (i < allyHeroes.Count)
+         if (i < enemyHeroes.Count)
          {
             enemyPlayerHeroes[i].ThisGameObject.SetActive(true);
-            enemyPlayerHeroesList.AddToAliveHeroList(mainPlayerHeroes[i]);   
          }
       }
+      
+     
    }
 
    private void LoadHeroInformationAndAttributes()
@@ -177,9 +175,29 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          heroVisual.Armor.enabled = heroVisual.Hero.HeroAttributes.Armor > 0;
          heroVisual.ArmorText.enabled = heroVisual.Hero.HeroAttributes.Armor > 0;
       }
+
+   }
+
+   private void LoadToHeroStatusLists()
+   {
+      var allyTeamAsset = BattleSceneManager.BattleScene1SettingsAsset.AllyTeamHeroes.HeroAssets;
+      var enemyTeamAsset = BattleSceneManager.BattleScene1SettingsAsset.EnemyTeamHeroes.HeroAssets;
       
-      
-      
+      var mainPlayerHeroes = BattleSceneManager.MainPlayer.Heroes.PlayerHeroes;
+      var enemyPlayerHeroes = BattleSceneManager.EnemyPlayer.Heroes.PlayerHeroes;
+
+      var mainPlayerHeroStatusList = BattleSceneManager.MainPlayer.HeroesStatusList;
+      var enemyPlayerHeroStatusList = BattleSceneManager.EnemyPlayer.HeroesStatusList;
+
+      for (int i = 0; i < allyTeamAsset.Count; i++)
+      {
+         mainPlayerHeroStatusList.AddToAliveHeroList(mainPlayerHeroes[i]);
+      }
+
+      for (int i = 0; i < enemyTeamAsset.Count; i++)
+      {
+         enemyPlayerHeroStatusList.AddToAliveHeroList(enemyPlayerHeroes[i]);
+      }
    }
 
    #endregion

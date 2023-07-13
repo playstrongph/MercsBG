@@ -28,11 +28,11 @@ public class HeroesStatusList : MonoBehaviour, IHeroesStatusList
 
    private IPlayer Player => player as IPlayer;
 
-   public List<IHero> AliveHeroesList => new List<IHero>();
+   public List<IHero> AliveHeroesList { get; private set; }
+
+   public List<IHero> DeadHeroesList { get; private set; }
    
-   public List<IHero> DeadHeroesList => new List<IHero>();
-   
-   public List<IHero> ExtinctHeroesList => new List<IHero>();
+   public List<IHero> ExtinctHeroesList { get; private set; }
 
    #endregion
         
@@ -40,14 +40,22 @@ public class HeroesStatusList : MonoBehaviour, IHeroesStatusList
    
    private void Awake()
    {
+      AliveHeroesList = new List<IHero>();
+      DeadHeroesList = new List<IHero>();
+      ExtinctHeroesList = new List<IHero>();
    }
    
    public void AddToAliveHeroList(IHero hero)
    {
+      //Debug.Log("Add Hero: " +hero.HeroInformation.HeroName);
+      
       AliveHeroesList.Add(hero);
       
       //Inspector display purposes only
       aliveHeroes.Add(hero as Object);
+      
+      
+      
    }
    
    public void RemoveFromAliveHeroList(IHero hero)
@@ -93,7 +101,6 @@ public class HeroesStatusList : MonoBehaviour, IHeroesStatusList
       
       //Inspector display purposes only
       extinctHeroes.Remove(hero as Object);
-
    }
    
    #endregion

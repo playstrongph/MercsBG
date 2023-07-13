@@ -50,6 +50,9 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
       
       //Enable Draggable
       skillTargeting.Draggable.DisableDraggable();
+      
+      //TODO: Test - hide valid targets glow
+      SkillVisual.SkillTargets.HideValidTargetsGlow();
    }
    
    /// <summary>
@@ -72,6 +75,9 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
       
       //Enable Draggable
       skillTargeting.Draggable.EnableDraggable();
+      
+      //TODO: TEST - show valid targets glow
+      SkillVisual.SkillTargets.ShowValidTargetsGlow();
    }
    
    
