@@ -43,7 +43,10 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
       
       var validHeroTargets = skill.SkillAttributes.SkillTarget.GetHeroTargets(skill.CasterHero);
 
-      validTargets.Clear();
+      //validTargets.Clear();
+      
+      //TEST
+      ClearValidTargets();
 
       foreach (var hero in validHeroTargets)
       {
