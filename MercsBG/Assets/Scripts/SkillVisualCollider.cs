@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
+public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
 {
    #region VARIABLES
 
@@ -24,30 +24,40 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
 
    private void OnMouseDown()
    {
-      
       var skill = SkillVisual.Skill;
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
+      var playerSelectsSkill = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting
+         .PlayerSelectsSkill;
+      
+      //TODO: Test
+      //Set SkillVisual
+      SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.SkillVisual = SkillVisual;
+      
       
       //Shows skill preview
       skillPreview.ShowSkillPreview.TurnOn(skill);
       
-      //Player selects skill
-      SkillVisual.PlayerSelectsSkill.SelectedSkillChecks();
+      //TODO: Change References Player selects skill
+      playerSelectsSkill.SelectedSkillChecks();
       
       //TODO:
       //Check if HeroSkills.SelectedSkill and Current Selected skill are the same.  If they are, deselect the Heroes.SelectedSkill
       
+      
+
    }
 
    private void OnMouseUp()
    {
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
+      var playerSelectsSkill = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting
+         .PlayerSelectsSkill;
       
       //Hide Skill Preview
       skillPreview.ShowSkillPreview.TurnOff();
       
       //Player Deselects skill
-      SkillVisual.PlayerSelectsSkill.DeselectSkillActions();
+      playerSelectsSkill.DeselectSkillActions();
       
       //TODO: 
       //1) Set Selected Skill And Target @HeroSkills

@@ -1,4 +1,4 @@
-public interface ISkillTargetCollider
+public interface ISkillVisualCollider
 {
     ISkillVisual SkillVisual { get; }
 }

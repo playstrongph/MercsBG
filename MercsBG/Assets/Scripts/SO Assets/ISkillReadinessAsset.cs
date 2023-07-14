@@ -10,8 +10,8 @@ namespace SO_Assets
         /// Enable skill targeting when skill is NOT disabled and skill is ready
         /// </summary>
         /// <param name="transform"></param>
-        /// <param name="skillTargetCollider"></param>
-        void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider);
+        /// <param name="skillVisualCollider"></param>
+        void EnableTargetVisuals(Transform transform, ISkillVisualCollider skillVisualCollider);
 
         /// <summary>
         /// Used in verifying if skill is ready and enabled
@@ -24,7 +24,7 @@ namespace SO_Assets
         /// <summary>
         /// Active and Basic skill select
         /// </summary>
-        /// <param name="skillTargetCollider"></param>
-        void ManualSelectSkill(ISkillTargetCollider skillTargetCollider);
+        /// <param name="skillVisualCollider"></param>
+        void ManualSelectSkill(ISkillVisualCollider skillVisualCollider);
     }
 }

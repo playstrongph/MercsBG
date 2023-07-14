@@ -56,7 +56,7 @@ namespace SO_Assets
          
       }
       
-      public virtual void SelectSkillActions(ISkillTargetCollider skillTargetCollider)
+      public virtual void SelectSkillActions(ISkillVisualCollider skillVisualCollider)
       {
          
       }

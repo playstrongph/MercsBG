@@ -28,8 +28,8 @@ namespace SO_Assets
       /// Enable skill targeting when skill is NOT disabled and skill is ready
       /// </summary>
       /// <param name="transform"></param>
-      /// <param name="skillTargetCollider"></param>
-      public override void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider)
+      /// <param name="skillVisualCollider"></param>
+      public override void EnableTargetVisuals(Transform transform, ISkillVisualCollider skillVisualCollider)
       {
          //var skill = skillTargetCollider.Skill;
          //skill.SkillAttributes.SkillEnableStatus.EnableTargetVisuals(transform,skillTargetCollider);
@@ -53,10 +53,12 @@ namespace SO_Assets
       /// <summary>
       /// Active and Basic skill select
       /// </summary>
-      /// <param name="skillTargetCollider"></param>
-      public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      /// <param name="skillVisualCollider"></param>
+      public override void ManualSelectSkill(ISkillVisualCollider skillVisualCollider)
       {
-         var playerSelectsSkill = skillTargetCollider.SkillVisual.PlayerSelectsSkill;
+         
+         
+         var playerSelectsSkill = skillVisualCollider.SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.PlayerSelectsSkill;
          
          playerSelectsSkill.SelectSkillActions();
       }

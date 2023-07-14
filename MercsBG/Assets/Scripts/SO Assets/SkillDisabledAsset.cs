@@ -19,7 +19,7 @@ namespace SO_Assets
         
       #region METHODS
 
-      public override void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider)
+      public override void EnableTargetVisuals(Transform transform, ISkillVisualCollider skillVisualCollider)
       {
          
         

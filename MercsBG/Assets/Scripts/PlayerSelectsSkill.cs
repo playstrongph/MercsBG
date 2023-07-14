@@ -5,17 +5,24 @@ using UnityEngine;
 public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
 {
    #region VARIABLES
+   
+   [Header(("Inspector References"))]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
 
-   [Header("Components")]
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual = null;
+   /*[Header("Components")]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual = null;*/
+   
+  
 
    private Vector3 _skillTargetingOrigin = new Vector3(); 
 
    #endregion
         
    #region PROPERTIES
+   
+   private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
 
-   private ISkillVisual SkillVisual => skillVisual as ISkillVisual; 
+   //private ISkillVisual SkillVisual => skillVisual as ISkillVisual; 
         
 
    #endregion
@@ -24,8 +31,7 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
    
    private void Awake()
    {
-      _skillTargetingOrigin = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.Transform
-         .position;
+      _skillTargetingOrigin = SkillTargeting.Transform.position;
    }
 
    /// <summary>
@@ -33,29 +39,28 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
    /// </summary>
    public void SelectedSkillChecks()
    {
-      var skillType = SkillVisual.Skill.SkillAttributes.SkillType;
-      var skillTargetCollider = SkillVisual.SkillTargetCollider;
+      var skillType = SkillTargeting.SkillVisual.Skill.SkillAttributes.SkillType;
+      var skillVisualCollider = SkillTargeting.SkillVisual.SkillVisualCollider;
       
-      skillType.SelectSkillActions(skillTargetCollider);
+      skillType.SelectSkillActions(skillVisualCollider);
    }
    
    public void DeselectSkillActions()
    {
-      var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
-      var skillTargeting = battleSceneManager.SkillTargeting;
+      var battleSceneManager = SkillTargeting.BattleSceneManager;
       var skillTargetingOrigin = _skillTargetingOrigin; 
 
-      //Transfer skill targeting position
-      skillTargeting.Transform.position = skillTargetingOrigin;
+      //Reset skillTargeting Transform to it's initial position
+      SkillTargeting.Transform.position = skillTargetingOrigin;
       
       //Enable Draggable
-      skillTargeting.Draggable.DisableDraggable();
+      SkillTargeting.Draggable.DisableDraggable();
       
       //Hide Valid Targets Glow
-      SkillVisual.SkillTargets.HideValidTargetsGlow();
+      SkillTargeting.SkillTargets.HideValidTargetsGlow();
       
       //TODO: Test - Clear valid targets
-      SkillVisual.SkillTargets.ClearValidTargets();
+      SkillTargeting.SkillTargets.ClearValidTargets();
    }
    
    /// <summary>
@@ -64,23 +69,21 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
    /// </summary>
    public void SelectSkillActions()
    {
-      var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
-      var skillTargeting = battleSceneManager.SkillTargeting;
-      var heroSkillsDisplay = SkillVisual.SkillVisuals.HeroSkillsDisplay;
+      var heroSkillsDisplay = SkillTargeting.SkillVisual.SkillVisuals.HeroSkillsDisplay;
       
       //TODO: The below 3 methods should only be called for Active SKills - Enabled SKills - Ready Skills 
       
       //Set selected skill Visual
-      heroSkillsDisplay.SelectedSkillVisual = SkillVisual;
+      heroSkillsDisplay.SelectedSkillVisual = SkillTargeting.SkillVisual;
       
       //Transfer skill targeting position
-      skillTargeting.Transform.position = SkillVisual.Transform.position;
+      SkillTargeting.Transform.position = SkillTargeting.SkillVisual.Transform.position;
       
       //Enable Draggable
-      skillTargeting.Draggable.EnableDraggable();
+      SkillTargeting.Draggable.EnableDraggable();
       
       //Show valid targets glow
-      SkillVisual.SkillTargets.ShowValidTargetsGlow();
+      SkillTargeting.SkillTargets.ShowValidTargetsGlow();
    }
    
    

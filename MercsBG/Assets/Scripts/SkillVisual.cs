@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SkillVisual : MonoBehaviour, ISkillVisual
@@ -27,10 +28,11 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    [SerializeField] private Canvas skillNotReadyCanvas = null;
    [SerializeField] private Canvas passiveSkillCanvas = null;
    
+   [FormerlySerializedAs("skillTargetCollider")]
    [Header("Components")]
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetCollider))] private Object skillTargetCollider = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerSelectsSkill))] private Object playerSelectsSkill = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargets))] private Object skillTargets = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisualCollider))] private Object skillVisualCollider = null;
+   //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerSelectsSkill))] private Object playerSelectsSkill = null;
+   //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargets))] private Object skillTargets = null;
    
    [Header("Inspector References")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillsDisplay))] private Object heroSkillsDisplay = null;
@@ -60,9 +62,9 @@ public class SkillVisual : MonoBehaviour, ISkillVisual
    public Canvas PassiveSkillCanvas => passiveSkillCanvas;
    
    //Components
-   public ISkillTargetCollider SkillTargetCollider => skillTargetCollider as ISkillTargetCollider;
-   public IPlayerSelectsSkill PlayerSelectsSkill => playerSelectsSkill as IPlayerSelectsSkill;
-   public ISkillTargets SkillTargets=> skillTargets as ISkillTargets;
+   public ISkillVisualCollider SkillVisualCollider => skillVisualCollider as ISkillVisualCollider;
+   //public IPlayerSelectsSkill PlayerSelectsSkill => playerSelectsSkill as IPlayerSelectsSkill;
+   //public ISkillTargets SkillTargets=> skillTargets as ISkillTargets;
    
    //Inspector References
    public IHeroSkillsDisplay HeroSkillsDisplay => heroSkillsDisplay as IHeroSkillsDisplay;

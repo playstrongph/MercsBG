@@ -19,7 +19,7 @@ namespace SO_Assets
         
       #region METHODS
 
-      public virtual void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider)
+      public virtual void EnableTargetVisuals(Transform transform, ISkillVisualCollider skillVisualCollider)
       {
          
         
@@ -50,7 +50,7 @@ namespace SO_Assets
          
       }
       
-      public virtual void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      public virtual void ManualSelectSkill(ISkillVisualCollider skillVisualCollider)
       {
          
       }

@@ -28,8 +28,8 @@ namespace SO_Assets
       /// Enable skill targeting when skill is NOT disabled and skill is ready
       /// </summary>
       /// <param name="transform"></param>
-      /// <param name="skillTargetCollider"></param>
-      public override void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider)
+      /// <param name="skillVisualCollider"></param>
+      public override void EnableTargetVisuals(Transform transform, ISkillVisualCollider skillVisualCollider)
       {
          //var skill = skillTargetCollider.Skill;
          //skill.SkillAttributes.SkillEnableStatus.EnableTargetVisuals(transform,skillTargetCollider);

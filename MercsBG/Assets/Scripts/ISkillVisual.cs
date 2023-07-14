@@ -20,14 +20,14 @@ public interface ISkillVisual
     
     ISkill Skill { get; set; }
 
-    IPlayerSelectsSkill PlayerSelectsSkill { get; }
+    //IPlayerSelectsSkill PlayerSelectsSkill { get; }
 
     IHeroSkillsDisplay HeroSkillsDisplay { get; }
 
-    ISkillTargetCollider SkillTargetCollider { get; }
+    ISkillVisualCollider SkillVisualCollider { get; }
     ISkillVisuals SkillVisuals { get; }
 
-    ISkillTargets SkillTargets { get; }
+    //ISkillTargets SkillTargets { get; }
 
     Transform Transform { get; set; }
 

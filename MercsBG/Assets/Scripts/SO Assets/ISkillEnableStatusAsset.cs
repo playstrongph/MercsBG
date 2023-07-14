@@ -4,7 +4,7 @@ namespace SO_Assets
 {
     public interface ISkillEnableStatusAsset
     {
-        void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider);
+        void EnableTargetVisuals(Transform transform, ISkillVisualCollider skillVisualCollider);
 
         /// <summary>
         /// Verification that skill is enabled before setting the valid target hero
@@ -24,7 +24,7 @@ namespace SO_Assets
         /// <summary>
         /// Select skill for active and basic skills
         /// </summary>
-        /// <param name="skillTargetCollider"></param>
-        void ManualSelectSkill(ISkillTargetCollider skillTargetCollider);
+        /// <param name="skillVisualCollider"></param>
+        void ManualSelectSkill(ISkillVisualCollider skillVisualCollider);
     }
 }

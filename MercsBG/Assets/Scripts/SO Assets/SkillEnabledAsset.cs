@@ -19,7 +19,7 @@ namespace SO_Assets
         
       #region METHODS
 
-      public override void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider)
+      public override void EnableTargetVisuals(Transform transform, ISkillVisualCollider skillVisualCollider)
       {
          
         
@@ -53,12 +53,12 @@ namespace SO_Assets
       /// <summary>
       /// Skill can only be selected if it is enabled
       /// </summary>
-      /// <param name="skillTargetCollider"></param>
-      public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      /// <param name="skillVisualCollider"></param>
+      public override void ManualSelectSkill(ISkillVisualCollider skillVisualCollider)
       {
-         var skillReadiness = skillTargetCollider.SkillVisual.Skill.SkillAttributes.SkillReadiness;
+         var skillReadiness = skillVisualCollider.SkillVisual.Skill.SkillAttributes.SkillReadiness;
          
-         skillReadiness.ManualSelectSkill(skillTargetCollider);
+         skillReadiness.ManualSelectSkill(skillVisualCollider);
          
       }
       

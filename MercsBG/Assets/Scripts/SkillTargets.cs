@@ -7,7 +7,10 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
    #region VARIABLES
    
    [Header("Components")]
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
+   
+   //TODO: For Cleanup
+   //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual = null;
    
    [Header("Runtime")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))] private List<Object> validTargets = new List<Object>();
@@ -16,7 +19,10 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
 
    #region PROPERTIES
    
-   private ISkillVisual SkillVisual => skillVisual as ISkillVisual;
+   private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
+   
+   //TODO: For Cleanup
+  // private ISkillVisual SkillVisual => skillVisual as ISkillVisual;
    
    private List<IHero> ValidTargets
    {
@@ -39,7 +45,7 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
    
    public List<IHero> GetValidTargets()
    {
-      var skill = SkillVisual.Skill;
+      var skill = SkillTargeting.SkillVisual.Skill;
       
       var validHeroTargets = skill.SkillAttributes.SkillTarget.GetHeroTargets(skill.CasterHero);
 
@@ -80,7 +86,7 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
 
       var heroes = GetValidTargets();
 
-      var skill = SkillVisual.Skill;
+      var skill = SkillTargeting.SkillVisual.Skill;
 
       foreach (var hero in heroes)
       {
@@ -96,7 +102,7 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
    public void HideValidTargetsGlow()
    {
       var heroes = GetValidTargets();
-      var skill = SkillVisual.Skill;
+      var skill = SkillTargeting.SkillVisual.Skill;
       
       foreach (var hero in heroes)
       {

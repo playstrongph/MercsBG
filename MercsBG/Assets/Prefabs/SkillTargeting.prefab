@@ -474,6 +474,8 @@ GameObject:
   - component: {fileID: 2076426741502584042}
   - component: {fileID: 1584508866}
   - component: {fileID: 976455384}
+  - component: {fileID: 2151126182035326002}
+  - component: {fileID: 295692308924305267}
   m_Layer: 0
   m_Name: SkillTargeting
   m_TagString: Untagged
@@ -539,6 +541,8 @@ MonoBehaviour:
   skillTargetingCollider: {fileID: 976455384}
   draggable: {fileID: 3048544212149072504}
   showLineAndCrossHair: {fileID: 8089774031907065839}
+  skillTargets: {fileID: 2151126182035326002}
+  playerSelectsSkill: {fileID: 295692308924305267}
   battleSceneManager: {fileID: 0}
 --- !u!114 &976455384
 MonoBehaviour:
@@ -565,6 +569,35 @@ MonoBehaviour:
   - {fileID: 1233992908680680880}
   - {fileID: 4612254779047308508}
   - {fileID: 8054132918141881993}
+--- !u!114 &2151126182035326002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076426741502584037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05330c933f1bc384fad10874515a9eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillTargeting: {fileID: 1584508866}
+  skillVisual: {fileID: 0}
+  validTargets: []
+--- !u!114 &295692308924305267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076426741502584037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f0c0645f437e04e9e09fa3265b7bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillTargeting: {fileID: 1584508866}
+  skillVisual: {fileID: 0}
 --- !u!1 &2076426741921585346
 GameObject:
   m_ObjectHideFlags: 0
