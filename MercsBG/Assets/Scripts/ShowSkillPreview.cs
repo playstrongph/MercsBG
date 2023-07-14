@@ -77,7 +77,7 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
 
    private void UpdateSkillPreview(ISkill skill)
    {
-      var heroClass = skill.HeroSkills.Hero.HeroInformation.HeroClass;
+      var heroClass = skill.HeroSkills.CasterHero.HeroInformation.HeroClass;
       var skillCooldown = skill.SkillAttributes.SkillCooldown;
       var skillSpeed = skill.SkillAttributes.SkillSpeed;
       

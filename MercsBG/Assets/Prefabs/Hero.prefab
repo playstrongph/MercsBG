@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42419ad8329650749b6ff9cbb118239a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 479678864000175803}
+  casterHero: {fileID: 479678864000175803}
   allSkills:
   - {fileID: 6547167083037604991}
   - {fileID: 9038877533517483200}

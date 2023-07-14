@@ -44,6 +44,10 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       
       //Player Deselects skill
       SkillVisual.PlayerSelectsSkill.DeselectAction();
+      
+      //TODO: 
+      //1) Set Selected Skill And Target @HeroSkills
+      //2) ShowSkillTargeting @ DisplaySkillTargeting
    }
    
    private void OnMouseEnter()

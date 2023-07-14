@@ -64,6 +64,8 @@ public class HeroCollider : MonoBehaviour, IHeroCollider
       
       Hero.Player.PlayerAlliance.DisplayHeroSkills(Hero);
       playerAlliance.ScaleUpHero(Hero.Player.SelectedHero);
+      
+      
    }
 
 
