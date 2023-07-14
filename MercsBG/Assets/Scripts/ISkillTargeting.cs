@@ -2,7 +2,7 @@
 
 public interface ISkillTargeting
 {
-    ISkillTargetingCollider SkillTargetingCollider { get; }
+    ISkillTargetingGameObjects SkillTargetingGameObjects { get; }
     IDraggable Draggable { get; }
     Transform Transform { get; }
 

@@ -7,7 +7,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
    #region VARIABLES
 
    [Header("Components")]
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingCollider))] private Object skillTargetingCollider = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingGameObjects))] private Object skillTargetingCollider = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDraggable))] private Object draggable = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IShowLineAndCrossHair))] private Object showLineAndCrossHair = null;
 
@@ -26,7 +26,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
    
    //Components
    
-   public ISkillTargetingCollider SkillTargetingCollider => skillTargetingCollider as ISkillTargetingCollider;
+   public ISkillTargetingGameObjects SkillTargetingGameObjects => skillTargetingCollider as ISkillTargetingGameObjects;
    public IDraggable Draggable => draggable as IDraggable;
    public IShowLineAndCrossHair ShowLineAndCrossHair => showLineAndCrossHair as IShowLineAndCrossHair;
    public ISkillTargets SkillTargets => skillTargets as ISkillTargets;

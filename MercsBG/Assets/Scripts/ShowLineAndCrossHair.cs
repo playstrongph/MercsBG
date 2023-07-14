@@ -74,9 +74,9 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
          //Disable Box Collider
          SkillTargeting.Draggable.ArrowCollider.enabled = false;
          
-         SkillTargeting.SkillTargetingCollider.HideArrowAndNodes();
+         SkillTargeting.SkillTargetingGameObjects.HideArrowAndNodes();
          
-         SkillTargeting.SkillTargetingCollider.HideCrossHair();
+         SkillTargeting.SkillTargetingGameObjects.HideCrossHair();
       }
    }
    
@@ -88,7 +88,7 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
          _controlPoints.Add(Vector3.zero);
       }
 
-      foreach (var node in SkillTargeting.SkillTargetingCollider.Nodes)
+      foreach (var node in SkillTargeting.SkillTargetingGameObjects.Nodes)
       {
          _arrowNodes.Add(node);
       }
@@ -98,10 +98,10 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
    private void ShowArrow(Vector3 notNormalized, Vector3 direction)
    {
       var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
-      var arrow = SkillTargeting.SkillTargetingCollider.Arrow;
+      var arrow = SkillTargeting.SkillTargetingGameObjects.Arrow;
       
       //Show arrow and nodes
-      SkillTargeting.SkillTargetingCollider.ShowTargetArrow();
+      SkillTargeting.SkillTargetingGameObjects.ShowTargetArrow();
       
       //Set the arrow position to the current mouse position
       arrow.gameObject.transform.position = transform.position - 15f * direction;
@@ -143,7 +143,7 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
          {
             indexTracker = i;
 
-            SkillTargeting.SkillTargetingCollider.ShowTargetNode(i);
+            SkillTargeting.SkillTargetingGameObjects.ShowTargetNode(i);
          
             //Values determined through trial and error
             var t = (i+ tFactor) / ((nodeIndex - 1) + 1f);  //Use the number of nodes enabled by the distance
@@ -179,7 +179,7 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
 
          if (k != indexTracker)
          {
-            SkillTargeting.SkillTargetingCollider.HideTargetNode(k);
+            SkillTargeting.SkillTargetingGameObjects.HideTargetNode(k);
          }
       }
 
@@ -207,7 +207,7 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
 
       //TODO: Hide target cross hair by default
       //SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
-      SkillTargeting.SkillTargetingCollider.CrossHair.GetComponent<Image>().enabled = false;
+      SkillTargeting.SkillTargetingGameObjects.CrossHair.GetComponent<Image>().enabled = false;
 
       for (int i = 0; i < hitsCount; i++)
       {
@@ -235,10 +235,10 @@ public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
             
             //TEMP
             //TODO: Display CrossHair
-            SkillTargeting.SkillTargetingCollider.ShowCrossHair();
+            SkillTargeting.SkillTargetingGameObjects.ShowCrossHair();
 
             //TODO: Transfer Crosshair transform to target
-            SkillTargeting.SkillTargetingCollider.CrossHair.gameObject.transform.position = heroTarget.Transform.position;
+            SkillTargeting.SkillTargetingGameObjects.CrossHair.gameObject.transform.position = heroTarget.Transform.position;
             
             //Debug.Log("Hero: " + mResults[i].transform.GetComponent<IHero>().HeroInformation.HeroName);
             
