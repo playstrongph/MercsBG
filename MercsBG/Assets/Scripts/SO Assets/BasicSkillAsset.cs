@@ -75,7 +75,7 @@ namespace SO_Assets
       /// Basic and Active skills can select skills
       /// </summary>
       /// <param name="skillTargetCollider"></param>
-      public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      public override void SelectSkillActions(ISkillTargetCollider skillTargetCollider)
       {
          var skillEnabledStatus = skillTargetCollider.SkillVisual.Skill.SkillAttributes.SkillEnableStatus;
          

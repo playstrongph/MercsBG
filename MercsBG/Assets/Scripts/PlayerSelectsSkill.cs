@@ -36,10 +36,10 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
       var skillType = SkillVisual.Skill.SkillAttributes.SkillType;
       var skillTargetCollider = SkillVisual.SkillTargetCollider;
       
-      skillType.ManualSelectSkill(skillTargetCollider);
+      skillType.SelectSkillActions(skillTargetCollider);
    }
    
-   public void DeselectAction()
+   public void DeselectSkillActions()
    {
       var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
       var skillTargeting = battleSceneManager.SkillTargeting;
@@ -62,7 +62,7 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
    /// Selects the skill if the following criteria are met:
    /// 1) Basic or Active Skill 2) Enabled Skill 3) Skill is Ready (cooldown)
    /// </summary>
-   public void SelectedSkillActions()
+   public void SelectSkillActions()
    {
       var battleSceneManager = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager;
       var skillTargeting = battleSceneManager.SkillTargeting;
@@ -79,7 +79,7 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
       //Enable Draggable
       skillTargeting.Draggable.EnableDraggable();
       
-      //TODO: TEST - show valid targets glow
+      //Show valid targets glow
       SkillVisual.SkillTargets.ShowValidTargetsGlow();
    }
    

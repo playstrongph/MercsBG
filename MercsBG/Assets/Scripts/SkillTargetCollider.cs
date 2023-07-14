@@ -33,6 +33,10 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       
       //Player selects skill
       SkillVisual.PlayerSelectsSkill.SelectedSkillChecks();
+      
+      //TODO:
+      //Check if HeroSkills.SelectedSkill and Current Selected skill are the same.  If they are, deselect the Heroes.SelectedSkill
+      
    }
 
    private void OnMouseUp()
@@ -43,7 +47,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
       skillPreview.ShowSkillPreview.TurnOff();
       
       //Player Deselects skill
-      SkillVisual.PlayerSelectsSkill.DeselectAction();
+      SkillVisual.PlayerSelectsSkill.DeselectSkillActions();
       
       //TODO: 
       //1) Set Selected Skill And Target @HeroSkills

@@ -5,11 +5,11 @@
     /// </summary>
     void SelectedSkillChecks();
 
-    void DeselectAction();
+    void DeselectSkillActions();
 
     /// <summary>
     /// Selects the skill if the following criteria are met:
     /// 1) Basic or Active Skill 2) Enabled Skill 3) Skill is Ready (cooldown)
     /// </summary>
-    void SelectedSkillActions();
+    void SelectSkillActions();
 }

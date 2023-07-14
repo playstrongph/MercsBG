@@ -60,12 +60,16 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
       set => selectedCastingSkill = value as Object;
    }
 
-   public int InUseHeroSkills { get=>inUseHeroSkills; set => inUseHeroSkills = value; } 
+   public int InUseHeroSkills { get=>inUseHeroSkills; set => inUseHeroSkills = value; }
 
    #endregion
 
    #region METHODS
 
+   public void SetSelectedHero(IHero hero)
+   {
+      
+   }
 
 
    #endregion

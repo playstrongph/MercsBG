@@ -93,7 +93,7 @@ namespace SO_Assets
          }
       }
       
-      public override void ManualSelectSkill(ISkillTargetCollider skillTargetCollider)
+      public override void SelectSkillActions(ISkillTargetCollider skillTargetCollider)
       {
          var skillEnabledStatus = skillTargetCollider.SkillVisual.Skill.SkillAttributes.SkillEnableStatus;
          

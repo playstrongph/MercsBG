@@ -58,7 +58,7 @@ namespace SO_Assets
       {
          var playerSelectsSkill = skillTargetCollider.SkillVisual.PlayerSelectsSkill;
          
-         playerSelectsSkill.SelectedSkillActions();
+         playerSelectsSkill.SelectSkillActions();
       }
 
       #endregion
