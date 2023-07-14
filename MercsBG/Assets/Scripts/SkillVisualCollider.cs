@@ -31,7 +31,7 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
       
       //TODO: Test
       //Set SkillVisual
-      SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.SkillVisual = SkillVisual;
+      SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.SetSkillVisual(SkillVisual);
       
       
       //Shows skill preview

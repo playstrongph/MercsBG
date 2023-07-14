@@ -14,6 +14,7 @@ public interface ISkillTargeting
 
     IBattleSceneManager BattleSceneManager { get; }
 
-    ISkillVisual SkillVisual { get; set; }
+    ISkillVisual SkillVisual { get; }
+    void SetSkillVisual(ISkillVisual skillVisual);
 
 }

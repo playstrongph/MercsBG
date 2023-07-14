@@ -35,7 +35,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
    //Inspector References
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
 
-   public ISkillVisual SkillVisual
+   private ISkillVisual SkillVisual
    {
       get => skillVisual as ISkillVisual;
       set => skillVisual = value as Object;
@@ -47,9 +47,13 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
    #endregion
 
    #region METHODS
-   
-   
-   
+
+   public void SetSkillVisual(ISkillVisual skillVisual)
+   {
+      SkillVisual = skillVisual;
+   }
+
+
 
    #endregion
 }
