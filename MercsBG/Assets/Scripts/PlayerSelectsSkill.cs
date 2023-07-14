@@ -9,11 +9,6 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
    [Header(("Inspector References"))]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
 
-   /*[Header("Components")]
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual = null;*/
-   
-  
-
    private Vector3 _skillTargetingOrigin = new Vector3(); 
 
    #endregion
@@ -21,9 +16,6 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
    #region PROPERTIES
    
    private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
-
-   //private ISkillVisual SkillVisual => skillVisual as ISkillVisual; 
-        
 
    #endregion
         
@@ -47,7 +39,6 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
    
    public void DeselectSkillActions()
    {
-      var battleSceneManager = SkillTargeting.BattleSceneManager;
       var skillTargetingOrigin = _skillTargetingOrigin; 
 
       //Reset skillTargeting Transform to it's initial position
@@ -70,9 +61,7 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
    public void SelectSkillActions()
    {
       var heroSkillsDisplay = SkillTargeting.SkillVisual.SkillVisuals.HeroSkillsDisplay;
-      
-      //TODO: The below 3 methods should only be called for Active SKills - Enabled SKills - Ready Skills 
-      
+
       //Set selected skill Visual
       heroSkillsDisplay.SelectedSkillVisual = SkillTargeting.SkillVisual;
       

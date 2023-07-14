@@ -29,15 +29,14 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
       var playerSelectsSkill = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting
          .PlayerSelectsSkill;
       
-      //TODO: Test
-      //Set SkillVisual
-      SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.SetSkillVisual(SkillVisual);
+      //Set SkillTargeting SkillVisual Reference
+      SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.SetSkillVisualReference(SkillVisual);
       
       
       //Shows skill preview
       skillPreview.ShowSkillPreview.TurnOn(skill);
       
-      //TODO: Change References Player selects skill
+      //Check if skill is active, enabled, and ready
       playerSelectsSkill.SelectedSkillChecks();
       
       //TODO:

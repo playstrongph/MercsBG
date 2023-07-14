@@ -8,10 +8,7 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
    
    [Header("Components")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
-   
-   //TODO: For Cleanup
-   //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual = null;
-   
+
    [Header("Runtime")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))] private List<Object> validTargets = new List<Object>();
 
@@ -19,11 +16,9 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
 
    #region PROPERTIES
    
+   
    private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
-   
-   //TODO: For Cleanup
-  // private ISkillVisual SkillVisual => skillVisual as ISkillVisual;
-   
+
    private List<IHero> ValidTargets
    {
       get

@@ -48,9 +48,9 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
 
    #region METHODS
 
-   public void SetSkillVisual(ISkillVisual skillVisual)
+   public void SetSkillVisualReference(ISkillVisual skillVisualReference)
    {
-      SkillVisual = skillVisual;
+      SkillVisual = skillVisualReference;
    }
 
 
