@@ -13,7 +13,6 @@ public interface IDisplaySkillTargeting
     
     //Runtime
     ISkillVisual SkillVisual { get; set; }
-    
     //Methods
     void SetSkillVisualReference(ISkillVisual skillVisualReference);
 }

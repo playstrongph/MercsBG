@@ -12,7 +12,7 @@ public interface IBattleSceneManager
     ICombatButton CombatButton { get; }
     ISkillTargeting SkillTargeting { get; }
 
-    ISkillTargeting DisplaySkillTargeting { get; }
+    IDisplaySkillTargeting DisplaySkillTargeting { get; }
 
     IHeroPreview HeroPreview { get; }
 

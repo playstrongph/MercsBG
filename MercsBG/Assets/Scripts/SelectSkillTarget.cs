@@ -47,6 +47,8 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
       var layerMask = ~0;
       //Get the current list of valid targets
       var validTargets = SkillTargeting.SkillTargets.GetValidTargets();
+      //TODO: Test
+      var displaySkillTargeting = SkillTargeting.BattleSceneManager.DisplaySkillTargeting;
       
       //RayCast
       int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity,layerMask);
@@ -66,6 +68,10 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
             
             //Set the casting skill
             heroSkills.SelectedCastingSkill = validTargets.Contains(targetHero) ?castingSkill : null;
+            
+            //TODO: TEST
+            //2) ShowSkillTargeting @ DisplaySkillTargeting
+            displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOn();
          }
       } 
 

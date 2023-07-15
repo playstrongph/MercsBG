@@ -32,6 +32,8 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
       //Set SkillTargeting SkillVisual Reference
       SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.SetSkillVisualReference(SkillVisual);
       
+      //Set DisplaySkillTargeting SkillVisual Reference
+      SkillVisual.HeroSkillsDisplay.BattleSceneManager.DisplaySkillTargeting.SetSkillVisualReference(SkillVisual);
       
       //Shows skill preview
       skillPreview.ShowSkillPreview.TurnOn(skill);
@@ -51,7 +53,6 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
       var skillTargeting = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting;
 
-
       //Hide Skill Preview
       skillPreview.ShowSkillPreview.TurnOff();
       
@@ -62,7 +63,8 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
       //1) Set Selected Skill And Target @HeroSkills
       skillTargeting.SelectSkillTarget.SelectTarget();
 
-      //2) ShowSkillTargeting @ DisplaySkillTargeting
+     
+      
    }
    
    private void OnMouseEnter()

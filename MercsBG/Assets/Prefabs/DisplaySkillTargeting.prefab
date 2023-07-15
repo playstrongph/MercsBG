@@ -705,7 +705,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9055164177067476336}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47000003, y: 0.47000003}
   m_AnchorMax: {x: 0.5303069, y: 0.53000003}
@@ -781,7 +781,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9055164177067476336}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4798993, y: 0.4804147}
   m_AnchorMax: {x: 0.5211315, y: 0.5201007}
@@ -910,8 +910,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9055164176252835181}
   - {fileID: 9055164176058009235}
+  - {fileID: 9055164176252835181}
   - {fileID: 9055164176525726712}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -935,7 +935,7 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
@@ -956,11 +956,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillTargetingCollider: {fileID: 7024090160914671427}
   showDisplayArrowLineAndCrossHair: {fileID: 6815581368772256503}
-  draggable: {fileID: 0}
-  showLineAndCrossHair: {fileID: 0}
-  skillTargets: {fileID: 0}
-  playerSelectsSkill: {fileID: 0}
-  selectSkillTarget: {fileID: 0}
   battleSceneManager: {fileID: 0}
   skillVisual: {fileID: 0}
 --- !u!114 &7024090160914671427
