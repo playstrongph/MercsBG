@@ -476,6 +476,7 @@ GameObject:
   - component: {fileID: 976455384}
   - component: {fileID: 2151126182035326002}
   - component: {fileID: 295692308924305267}
+  - component: {fileID: 8561414143585166624}
   m_Layer: 0
   m_Name: SkillTargeting
   m_TagString: Untagged
@@ -543,7 +544,9 @@ MonoBehaviour:
   showLineAndCrossHair: {fileID: 8089774031907065839}
   skillTargets: {fileID: 2151126182035326002}
   playerSelectsSkill: {fileID: 295692308924305267}
+  selectSkillTarget: {fileID: 8561414143585166624}
   battleSceneManager: {fileID: 0}
+  skillVisual: {fileID: 0}
 --- !u!114 &976455384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,7 +585,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillTargeting: {fileID: 1584508866}
-  skillVisual: {fileID: 0}
   validTargets: []
 --- !u!114 &295692308924305267
 MonoBehaviour:
@@ -597,7 +599,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillTargeting: {fileID: 1584508866}
-  skillVisual: {fileID: 0}
+--- !u!114 &8561414143585166624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076426741502584037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546dd1aee6ad56c4e8c061442bcfdbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillTargeting: {fileID: 1584508866}
 --- !u!1 &2076426741921585346
 GameObject:
   m_ObjectHideFlags: 0

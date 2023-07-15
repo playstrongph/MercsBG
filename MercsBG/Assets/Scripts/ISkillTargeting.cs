@@ -2,19 +2,22 @@
 
 public interface ISkillTargeting
 {
+    //Components
     ISkillTargetingGameObjects SkillTargetingGameObjects { get; }
     IDraggable Draggable { get; }
     Transform Transform { get; }
-
     ISkillTargets SkillTargets { get; }
     IPlayerSelectsSkill PlayerSelectsSkill { get; }
-
-
-    IShowLineAndCrossHair ShowLineAndCrossHair { get; }
-
+    ISelectSkillTarget SelectSkillTarget { get; }
+    
+    //Inspector References
     IBattleSceneManager BattleSceneManager { get; }
-
+    
+    //Runtime
     ISkillVisual SkillVisual { get; }
+    
+    //Public Methods
+    IShowLineAndCrossHair ShowLineAndCrossHair { get; }
     void SetSkillVisualReference(ISkillVisual skillVisual);
 
 }
