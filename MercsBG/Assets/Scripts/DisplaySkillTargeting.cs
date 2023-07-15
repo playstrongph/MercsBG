@@ -8,14 +8,9 @@ public class DisplaySkillTargeting : MonoBehaviour, IDisplaySkillTargeting
 
    [Header("Components")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetingGameObjects))] private Object skillTargetingCollider = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDraggable))] private Object draggable = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IShowArrowLineAndCrossHair))] private Object showLineAndCrossHair = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargets))] private Object skillTargets = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerSelectsSkill))] private Object playerSelectsSkill = null;
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISelectSkillTarget))] private Object selectSkillTarget = null;
-   
-   
-   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IShowDisplayArrowLineAndCrossHair))] private Object showDisplayArrowLineAndCrossHair = null;
+
+
    [Header("Inspector References")] 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneManager))] private Object battleSceneManager = null;
    
@@ -30,12 +25,9 @@ public class DisplaySkillTargeting : MonoBehaviour, IDisplaySkillTargeting
    //Components
    
    public ISkillTargetingGameObjects SkillTargetingGameObjects => skillTargetingCollider as ISkillTargetingGameObjects;
-   public IDraggable Draggable => draggable as IDraggable;
-   public IShowArrowLineAndCrossHair ShowArrowLineAndCrossHair => showLineAndCrossHair as IShowArrowLineAndCrossHair;
-   public ISkillTargets SkillTargets => skillTargets as ISkillTargets;
-   public IPlayerSelectsSkill PlayerSelectsSkill => playerSelectsSkill as IPlayerSelectsSkill;
-   public ISelectSkillTarget SelectSkillTarget => selectSkillTarget as ISelectSkillTarget;
-   
+   public IShowDisplayArrowLineAndCrossHair ShowDisplayArrowLineAndCrossHair => showDisplayArrowLineAndCrossHair as IShowDisplayArrowLineAndCrossHair;
+
+
    //Inspector References
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
 

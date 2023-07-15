@@ -44,13 +44,18 @@ public class ShowArrowLineAndCrossHair : MonoBehaviour, IShowArrowLineAndCrossHa
 
    public void TurnOn()
    {
+      //where the mouse currently is
       var thisTransform = transform;
       
+      //SkillTargeting position is the skill visual's position
       var notNormalized = thisTransform.position - SkillTargeting.Transform.position;
       
       var direction = notNormalized.normalized;
+      
       var distanceFromHero = (direction*distanceMultiplier).magnitude;
+      
       var difference = notNormalized.magnitude - distanceFromHero;
+      
       var distanceLimit = 0f;  //default value is zero
       
       _intDifference = Mathf.RoundToInt(difference);

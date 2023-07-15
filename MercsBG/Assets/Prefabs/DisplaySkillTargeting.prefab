@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 9055164177067476337}
   - component: {fileID: 7975289903375013924}
   - component: {fileID: 7024090160914671427}
-  - component: {fileID: 4970489133437830118}
+  - component: {fileID: 6815581368772256503}
   m_Layer: 0
   m_Name: DisplaySkillTargeting
   m_TagString: Untagged
@@ -955,6 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillTargetingCollider: {fileID: 7024090160914671427}
+  showDisplayArrowLineAndCrossHair: {fileID: 6815581368772256503}
   draggable: {fileID: 0}
   showLineAndCrossHair: {fileID: 0}
   skillTargets: {fileID: 0}
@@ -987,7 +988,7 @@ MonoBehaviour:
   - {fileID: 8095944677319144491}
   - {fileID: 2411837587504713031}
   - {fileID: 1061886332930993938}
---- !u!114 &4970489133437830118
+--- !u!114 &6815581368772256503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -996,10 +997,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9055164177067476350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9585b90072345854088cac4d341ac1b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 55469564ba9f64a4e913b2d4ae8eac92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   displaySkillTargeting: {fileID: 7975289903375013924}
+  scaleFactor: 1
+  distanceDivisor: 30
+  tFactor: 0.08
 --- !u!1 &9055164177517820249
 GameObject:
   m_ObjectHideFlags: 0

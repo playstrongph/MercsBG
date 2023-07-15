@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
+public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrowLineAndCrossHair
 {
    #region VARIABLES
 
    [Header("Components")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDisplaySkillTargeting))] private Object displaySkillTargeting = null;
-    
-   
-   private readonly List<Vector3> _controlPoints = new List<Vector3>();
-   private readonly List<GameObject> _arrowNodes = new List<GameObject>();
-   
+
+   [Header("Factors")]
    //This determines the scale of the nodes
    [SerializeField] private float scaleFactor = 1f;
    
@@ -23,8 +20,11 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
    //This is a factor used in the bezier Curve calculations
    [SerializeField] private float tFactor = 0.08f;
    
+   
    //Integer difference between current mouse position and the skill visual position
    private readonly int _intDifference = 0;
+   private readonly List<Vector3> _controlPoints = new List<Vector3>();
+   private readonly List<GameObject> _arrowNodes = new List<GameObject>();
    
    
    
@@ -41,7 +41,15 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
 
    public void TurnOn()
    {
-      
+      ShowArrow();
+      ShowArrowNodes();
+      ShowTargetCrossHair();
+   }
+
+   public void TurnOff()
+   {
+      DisplaySkillTargeting.SkillTargetingGameObjects.HideArrowAndNodes();
+      DisplaySkillTargeting.SkillTargetingGameObjects.HideCrossHair();
    }
 
 
@@ -60,10 +68,15 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
       
    }
    
-   private void ShowArrow(Vector3 notNormalized, Vector3 direction)
+   private void ShowArrow()
    {
       //TODO: mouseTransform to be replaced by hero target's transform
+      
       var selectedTargetHero = DisplaySkillTargeting.SkillVisual.Skill.HeroSkills.SelectedTargetHero;
+   
+      //TODO - Test
+      var notNormalized = selectedTargetHero.Transform.position - DisplaySkillTargeting.Transform.position;
+      var direction = notNormalized.normalized;
 
       var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
       var arrow = DisplaySkillTargeting.SkillTargetingGameObjects.Arrow;
