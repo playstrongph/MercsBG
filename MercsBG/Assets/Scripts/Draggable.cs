@@ -71,7 +71,7 @@ public class Draggable : MonoBehaviour, IDraggable
             
         thisTransform.position = new Vector3(mousePos.x - _pointerDisplacement.x, mousePos.y - _pointerDisplacement.y, thisTransform.position.z);
             
-        SkillTargeting.ShowLineAndCrossHair.TurnOn();
+        SkillTargeting.ShowArrowLineAndCrossHair.TurnOn();
     }
 
     private void NoAction()

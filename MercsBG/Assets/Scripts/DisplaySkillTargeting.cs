@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillTargeting : MonoBehaviour, ISkillTargeting
+public class DisplaySkillTargeting : MonoBehaviour, IDisplaySkillTargeting
 {
    #region VARIABLES
 

@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -762,8 +762,6 @@ GameObject:
   - component: {fileID: 9055164176252835183}
   - component: {fileID: 9055164176252835180}
   - component: {fileID: 7740787469254545029}
-  - component: {fileID: 5418971671013282787}
-  - component: {fileID: 1242485900077772404}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -811,7 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35671544, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -841,37 +839,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 40, y: 40, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5418971671013282787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9055164176252835178}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fe9236f3a62ad64f96820eaa3ed1b9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillTargeting: {fileID: 7024090161388490329}
-  arrowCollider: {fileID: 7740787469254545029}
---- !u!114 &1242485900077772404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9055164176252835178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b487f545835db2f41a1d988cf994cb7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceMultiplier: 40
-  skillTargeting: {fileID: 7024090161388490329}
-  scaleFactor: 1
-  distanceDivisor: 30
-  tFactor: 0.08
 --- !u!1 &9055164176525726713
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,8 +889,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9055164177067476336}
   - component: {fileID: 9055164177067476337}
-  - component: {fileID: 7024090161388490329}
+  - component: {fileID: 7975289903375013924}
   - component: {fileID: 7024090160914671427}
+  - component: {fileID: 4970489133437830118}
   m_Layer: 0
   m_Name: DisplaySkillTargeting
   m_TagString: Untagged
@@ -974,7 +942,7 @@ Canvas:
   m_SortingLayerID: -1112490017
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &7024090161388490329
+--- !u!114 &7975289903375013924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -983,13 +951,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 9055164177067476350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 465649d18d730cb4e97d407c45f14a35, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d36d0a601ca1f640b93edc91e2ccb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skillTargetingCollider: {fileID: 7024090160914671427}
-  draggable: {fileID: 5418971671013282787}
-  showLineAndCrossHair: {fileID: 1242485900077772404}
+  draggable: {fileID: 0}
+  showLineAndCrossHair: {fileID: 0}
+  skillTargets: {fileID: 0}
+  playerSelectsSkill: {fileID: 0}
+  selectSkillTarget: {fileID: 0}
   battleSceneManager: {fileID: 0}
+  skillVisual: {fileID: 0}
 --- !u!114 &7024090160914671427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,6 +987,19 @@ MonoBehaviour:
   - {fileID: 8095944677319144491}
   - {fileID: 2411837587504713031}
   - {fileID: 1061886332930993938}
+--- !u!114 &4970489133437830118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9055164177067476350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9585b90072345854088cac4d341ac1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displaySkillTargeting: {fileID: 7975289903375013924}
 --- !u!1 &9055164177517820249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.35686275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

@@ -25,7 +25,9 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
 
    public void SelectTarget()
    {
-      SetSelectedTargetHeroAndCastingSkill();
+      SetSelectedTargetHeroAndCastingSkill();  //Logic
+      
+      //TODO - ShowDisplaySkillTargeting @ DisplaySkillTargeting
    }
    
    

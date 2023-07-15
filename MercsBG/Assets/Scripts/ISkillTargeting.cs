@@ -17,7 +17,7 @@ public interface ISkillTargeting
     ISkillVisual SkillVisual { get; }
     
     //Public Methods
-    IShowLineAndCrossHair ShowLineAndCrossHair { get; }
+    IShowArrowLineAndCrossHair ShowArrowLineAndCrossHair { get; }
     void SetSkillVisualReference(ISkillVisual skillVisual);
 
 }

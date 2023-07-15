@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowLineAndCrossHair : MonoBehaviour, IShowLineAndCrossHair
+public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
 {
    #region VARIABLES
    
