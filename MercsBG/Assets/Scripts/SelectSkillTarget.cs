@@ -71,7 +71,8 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
             
             //TODO: TEST
             //2) ShowSkillTargeting @ DisplaySkillTargeting
-            displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOn();
+            if(validTargets.Contains(targetHero))
+               displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOn();
          }
       } 
 

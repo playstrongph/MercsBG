@@ -11,6 +11,7 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDisplaySkillTargeting))] private Object displaySkillTargeting = null;
 
    [Header("Factors")]
+   [SerializeField] private float distanceMultiplier = 40f;
    //This determines the scale of the nodes
    [SerializeField] private float scaleFactor = 1f;
    
@@ -22,7 +23,8 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
    
    
    //Integer difference between current mouse position and the skill visual position
-   private readonly int _intDifference = 0;
+   private int _intDifference = 0;
+   
    private readonly List<Vector3> _controlPoints = new List<Vector3>();
    private readonly List<GameObject> _arrowNodes = new List<GameObject>();
    
@@ -77,6 +79,15 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
       //TODO - Test
       var notNormalized = selectedTargetHero.Transform.position - DisplaySkillTargeting.Transform.position;
       var direction = notNormalized.normalized;
+      var distanceFromHero = (direction*distanceMultiplier).magnitude;
+      
+      var difference = notNormalized.magnitude - distanceFromHero;
+      
+      //var distanceLimit = 0f;  //default value is zero
+      
+      _intDifference = Mathf.RoundToInt(difference);
+      
+      
 
       var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
       var arrow = DisplaySkillTargeting.SkillTargetingGameObjects.Arrow;
@@ -104,7 +115,9 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
       _controlPoints[2] = heroTargetTransform.position;
            
       //P2 is where the source (skill parent) is at
-      _controlPoints[0] = DisplaySkillTargeting.Transform.position;
+      //_controlPoints[0] = DisplaySkillTargeting.Transform.position;
+      //TEST
+      _controlPoints[0] = DisplaySkillTargeting.SkillVisual.Transform.position;
 
       //Halfway between P0 and P2, with a height of Z
       _controlPoints[1] =
