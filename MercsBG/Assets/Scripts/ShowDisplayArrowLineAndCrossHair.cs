@@ -6,12 +6,9 @@ using UnityEngine.UI;
 public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
 {
    #region VARIABLES
-   
-   
-   [SerializeField] private float distanceMultiplier = 40f;
-   
+
    [Header("Components")]
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargeting))] private Object skillTargeting = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IDisplaySkillTargeting))] private Object displaySkillTargeting = null;
     
    
    private readonly List<Vector3> _controlPoints = new List<Vector3>();
@@ -27,7 +24,7 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
    [SerializeField] private float tFactor = 0.08f;
    
    //Integer difference between current mouse position and the skill visual position
-   private int _intDifference = 0;
+   private readonly int _intDifference = 0;
    
    
    
@@ -36,50 +33,18 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
         
    #region PROPERTIES
 
-   private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;     
+   private IDisplaySkillTargeting DisplaySkillTargeting => displaySkillTargeting as IDisplaySkillTargeting;     
 
    #endregion
-        
+      
    #region METHODS
 
    public void TurnOn()
    {
-      var thisTransform = transform;
       
-      var notNormalized = thisTransform.position - SkillTargeting.Transform.position;
-      
-      var direction = notNormalized.normalized;
-      var distanceFromHero = (direction*distanceMultiplier).magnitude;
-      var difference = notNormalized.magnitude - distanceFromHero;
-      var distanceLimit = 0f;  //default value is zero
-      
-      _intDifference = Mathf.RoundToInt(difference);
-
-      if (_intDifference > distanceLimit)  //if there is some distance between skill position and mouse position
-      {
-         ShowArrow(notNormalized,direction);
-            
-         //SkillTargetCollider.TargetNodes.ShowArrowNodes();
-         ShowArrowNodes();
-         
-         //Enable Box Collider
-         SkillTargeting.Draggable.ArrowCollider.enabled = true;
-
-         //Show CrossHair
-         ShowTargetCrossHair();
-
-      }
-      else  //if there is NO distance between skill position and mouse position
-      {
-         //Disable Box Collider
-         SkillTargeting.Draggable.ArrowCollider.enabled = false;
-         
-         SkillTargeting.SkillTargetingGameObjects.HideArrowAndNodes();
-         
-         SkillTargeting.SkillTargetingGameObjects.HideCrossHair();
-      }
    }
-   
+
+
    private void Awake()
    {
       //Create Bezier Curve control points - P0,P1, and P2
@@ -88,7 +53,7 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
          _controlPoints.Add(Vector3.zero);
       }
 
-      foreach (var node in SkillTargeting.SkillTargetingGameObjects.Nodes)
+      foreach (var node in DisplaySkillTargeting.SkillTargetingGameObjects.Nodes)
       {
          _arrowNodes.Add(node);
       }
@@ -97,14 +62,17 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
    
    private void ShowArrow(Vector3 notNormalized, Vector3 direction)
    {
+      //TODO: mouseTransform to be replaced by hero target's transform
+      var selectedTargetHero = DisplaySkillTargeting.SkillVisual.Skill.HeroSkills.SelectedTargetHero;
+
       var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
-      var arrow = SkillTargeting.SkillTargetingGameObjects.Arrow;
+      var arrow = DisplaySkillTargeting.SkillTargetingGameObjects.Arrow;
       
       //Show arrow and nodes
-      SkillTargeting.SkillTargetingGameObjects.ShowTargetArrow();
+      DisplaySkillTargeting.SkillTargetingGameObjects.ShowTargetArrow();
       
-      //Set the arrow position to the current mouse position
-      arrow.gameObject.transform.position = transform.position - 15f * direction;
+      //Set the arrow position to the selected target hero position
+      arrow.gameObject.transform.position = selectedTargetHero.Transform.position - 15f * direction;
       
       //Set the arrow rotation to the direction of the target from the origin
       arrow.gameObject.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
@@ -113,14 +81,17 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
        
    private void ShowArrowNodes()
    {
+      //TODO: mouseTransform to be replaced by hero target's transform
+      var selectedTargetHero = DisplaySkillTargeting.SkillVisual.Skill.HeroSkills.SelectedTargetHero;
+      
       //Transform where the mouse currently is
-      var mouseTransform = transform;
+      var heroTargetTransform = selectedTargetHero.Transform;
 
       //P0 is where the mouse is at
-      _controlPoints[2] = mouseTransform.position;
+      _controlPoints[2] = heroTargetTransform.position;
            
       //P2 is where the source (skill parent) is at
-      _controlPoints[0] = SkillTargeting.Transform.position;
+      _controlPoints[0] = DisplaySkillTargeting.Transform.position;
 
       //Halfway between P0 and P2, with a height of Z
       _controlPoints[1] =
@@ -143,7 +114,7 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
          {
             indexTracker = i;
 
-            SkillTargeting.SkillTargetingGameObjects.ShowTargetNode(i);
+            DisplaySkillTargeting.SkillTargetingGameObjects.ShowTargetNode(i);
          
             //Values determined through trial and error
             var t = (i+ tFactor) / ((nodeIndex - 1) + 1f);  //Use the number of nodes enabled by the distance
@@ -166,7 +137,7 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
             else
             {
                var euler = new Vector3(0, 0, 
-                  Vector2.SignedAngle(Vector2.up, _arrowNodes[i].transform.position - SkillTargeting.Transform.position));
+                  Vector2.SignedAngle(Vector2.up, _arrowNodes[i].transform.position - DisplaySkillTargeting.Transform.position));
             
                _arrowNodes[i].transform.rotation = Quaternion.Euler(euler);
             }
@@ -179,7 +150,7 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
 
          if (k != indexTracker)
          {
-            SkillTargeting.SkillTargetingGameObjects.HideTargetNode(k);
+            DisplaySkillTargeting.SkillTargetingGameObjects.HideTargetNode(k);
          }
       }
 
@@ -188,69 +159,14 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour
 
    private void ShowTargetCrossHair()
    {
-      // ReSharper disable once PossibleNullReferenceException
-      var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+      //TODO: mouseTransform to be replaced by hero target's transform
+      var selectedTargetHero = DisplaySkillTargeting.SkillVisual.Skill.HeroSkills.SelectedTargetHero;
+      
+      //Display CrossHair
+      DisplaySkillTargeting.SkillTargetingGameObjects.ShowCrossHair();
 
-      //Store at most 5 ray cast hits
-      var mResults = new RaycastHit[5];
-
-      //ray traverses all layers
-      var layerMask = ~0;
-
-      //Same to RayCastAll but with no additional garbage
-      int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity, layerMask);
-
-      //Update the latest targeted hero to null
-      //_validSkillTargetHero = null;
-
-      //SkillTargetCollider.Skill.CasterHero.HeroLogic.LastHeroTargets.SetTargetedHero(_validSkillTargetHero);
-
-      //TODO: Hide target cross hair by default
-      //SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
-      SkillTargeting.SkillTargetingGameObjects.CrossHair.GetComponent<Image>().enabled = false;
-
-      for (int i = 0; i < hitsCount; i++)
-      {
-         if (mResults[i].transform.GetComponent<IHero>() != null)
-         {
-            var heroGameObject = mResults[i];
-            var heroTarget = heroGameObject.transform.GetComponent<IHero>();
-
-            //TODO: Get Valid Targets based on skill target (enemy or ally)
-            //var validHeroTargets = SkillTargetCollider.SkillTargets.GetValidTargets();
-
-            //TODO: Check if the targeted hero is part of the valid targets before displaying the crosshair
-            /*if (validHeroTargets.Contains(heroTarget))
-            {
-               //Display cross hair
-               SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
-                
-               //Set cross hair position to position of target hero
-               SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
-                  heroGameObject.transform.position;
-            }*/
-
-            
-            
-            
-            //TEMP
-            //TODO: Display CrossHair
-            SkillTargeting.SkillTargetingGameObjects.ShowCrossHair();
-
-            //TODO: Transfer Crosshair transform to target
-            SkillTargeting.SkillTargetingGameObjects.CrossHair.gameObject.transform.position = heroTarget.Transform.position;
-            
-            //Debug.Log("Hero: " + mResults[i].transform.GetComponent<IHero>().HeroInformation.HeroName);
-            
-
-
-         }
-         else
-         {
-            //SkillTargeting.SkillTargetingCollider.HideCrossHair();
-         }
-      }
-
+      //Transfer CrossHair transform to target
+      DisplaySkillTargeting.SkillTargetingGameObjects.CrossHair.gameObject.transform.position = selectedTargetHero.Transform.position;
    }
 
 
