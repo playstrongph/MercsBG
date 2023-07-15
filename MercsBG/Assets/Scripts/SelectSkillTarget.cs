@@ -25,14 +25,15 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
 
    public void SelectTarget()
    {
-      SetSelectedTargetHero();
+      SetSelectedTargetHeroAndCastingSkill();
    }
    
    
    /// <summary>
-   /// Set the heroSkills selected target hero
+   /// Set and update the selected target hero and the selected casting skill
+   /// when a skill selects a valid target
    /// </summary>
-   private void SetSelectedTargetHero()
+   private void SetSelectedTargetHeroAndCastingSkill()
    {
       var castingSkill = SkillTargeting.SkillVisual.Skill;
       var heroSkills = castingSkill.CasterHero.HeroSkills;
@@ -53,13 +54,16 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
       
       for (var i = 0; i < hitsCount; i++)
       {
-         //If raycast finds a hero
+         //If raycast finds a valid hero target
          if (mResults[i].transform.GetComponent<IHero>() != null)
          {
             var targetHero = mResults[i].transform.GetComponent<IHero>();
             
             //Set the local skill selected target hero to the hero found if it belongs to the list of valid targets, else set it to null
             heroSkills.SelectedTargetHero = validTargets.Contains(targetHero) ?targetHero : null;
+            
+            //Set the casting skill
+            heroSkills.SelectedCastingSkill = validTargets.Contains(targetHero) ?castingSkill : null;
          }
       } 
 

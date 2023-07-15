@@ -49,17 +49,19 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
    private void OnMouseUp()
    {
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
-      var playerSelectsSkill = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting
-         .PlayerSelectsSkill;
-      
+      var skillTargeting = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting;
+
+
       //Hide Skill Preview
       skillPreview.ShowSkillPreview.TurnOff();
       
       //Player Deselects skill
-      playerSelectsSkill.DeselectSkillActions();
+      skillTargeting.PlayerSelectsSkill.DeselectSkillActions();
       
       //TODO: 
       //1) Set Selected Skill And Target @HeroSkills
+      skillTargeting.SelectSkillTarget.SelectTarget();
+
       //2) ShowSkillTargeting @ DisplaySkillTargeting
    }
    
