@@ -98,8 +98,15 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
       //Set the arrow position to the selected target hero position
       arrow.gameObject.transform.position = selectedTargetHero.Transform.position - 15f * direction;
       
-      //Set the arrow rotation to the direction of the target from the origin
+      //TEST
+      var heroTargetTransform = selectedTargetHero.Transform;
+      var euler = new Vector3(0, 0, 
+         Vector2.SignedAngle(Vector2.up,  heroTargetTransform.position));
+      
       arrow.gameObject.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
+      
+      //Set the arrow rotation to the direction of the target from the origin
+      //arrow.gameObject.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
    }
    
        
@@ -113,21 +120,24 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
 
       //P0 is where the mouse is at
       _controlPoints[2] = heroTargetTransform.position;
+      
+      Debug.Log("HeroTarget Point 2 Position" + _controlPoints[2]);
            
       //P2 is where the source (skill parent) is at
       //_controlPoints[0] = DisplaySkillTargeting.Transform.position;
       //TEST
       _controlPoints[0] = DisplaySkillTargeting.SkillVisual.Transform.position;
+      Debug.Log("SkillVisual Point 0 Position" + _controlPoints[0]);
 
       //Halfway between P0 and P2, with a height of Z
       _controlPoints[1] =
          _controlPoints[0] + ((_controlPoints[2] - _controlPoints[0])/2) + new Vector3(0, 0, 100);
       
       
-      //Varying index based on _arrowNodes count and distance
-      var nodeIndex = Mathf.Floor(Mathf.RoundToInt(_intDifference / distanceDivisor));
-      
-      
+      //skill and target distance
+      var pointsDistance = Mathf.RoundToInt((_controlPoints[2] - _controlPoints[1]).magnitude);
+      var nodeIndex = Mathf.Floor(Mathf.RoundToInt(pointsDistance / distanceDivisor));
+
       //Clamp the Node index
       nodeIndex = Mathf.Clamp(nodeIndex, 1, _arrowNodes.Count);
 
@@ -163,7 +173,7 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
             else
             {
                var euler = new Vector3(0, 0, 
-                  Vector2.SignedAngle(Vector2.up, _arrowNodes[i].transform.position - DisplaySkillTargeting.Transform.position));
+                  Vector2.SignedAngle(Vector2.up,  _arrowNodes[i].transform.position - heroTargetTransform.position));
             
                _arrowNodes[i].transform.rotation = Quaternion.Euler(euler);
             }
