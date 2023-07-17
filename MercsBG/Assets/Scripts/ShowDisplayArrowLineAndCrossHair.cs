@@ -75,49 +75,34 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
    
    private void ShowArrow()
    {
-      //TODO: mouseTransform to be replaced by hero target's transform
-      
       var selectedTargetHero = DisplaySkillTargeting.SkillVisual.Skill.HeroSkills.SelectedTargetHero;
-   
-      //TODO - Test
-      var notNormalized = selectedTargetHero.Transform.position - DisplaySkillTargeting.Transform.position;
+      var selectedTargetHeroPosition = selectedTargetHero.Transform.position;
+      var skillVisualPosition = DisplaySkillTargeting.SkillVisual.Transform.position;
+      var notNormalized = selectedTargetHeroPosition - skillVisualPosition;
       var direction = notNormalized.normalized;
       var distanceFromHero = (direction*distanceMultiplier).magnitude;
-      
       var difference = notNormalized.magnitude - distanceFromHero;
-      
-      //var distanceLimit = 0f;  //default value is zero
+      var arrow = DisplaySkillTargeting.SkillTargetingGameObjects.Arrow;
+      var arrowRotation = new Vector3(0, 0, 
+         Vector2.SignedAngle(Vector2.up,  selectedTargetHeroPosition - skillVisualPosition ));
+      var arrowOffset = 20f;
       
       _intDifference = Mathf.RoundToInt(difference);
-      
-      
 
-      var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
-      var arrow = DisplaySkillTargeting.SkillTargetingGameObjects.Arrow;
-      
       //Show arrow and nodes
       DisplaySkillTargeting.SkillTargetingGameObjects.ShowTargetArrow();
       
       //Set the arrow position to the selected target hero position
-      //arrow.gameObject.transform.position = selectedTargetHero.Transform.position - 15f * direction;
+      arrow.gameObject.transform.position = selectedTargetHeroPosition - arrowOffset * direction;
       
-      var heroTargetTransform = selectedTargetHero.Transform;
-      
-      arrow.gameObject.transform.position = heroTargetTransform.position;
-
-      var euler = new Vector3(0, 0, 
-         Vector2.SignedAngle(Vector2.up,   _controlPoints[2]));
-      
-      arrow.gameObject.transform.rotation = Quaternion.Euler(_arrowEuler);
-      
-      //Set the arrow rotation to the direction of the target from the origin
-      //arrow.gameObject.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
+      //Set the arrow rotation
+      arrow.gameObject.transform.rotation = Quaternion.Euler(arrowRotation);
    }
    
        
    private void ShowArrowNodes()
    {
-      //TODO: mouseTransform to be replaced by hero target's transform
+      //Hero target's transform
       var selectedTargetHero = DisplaySkillTargeting.SkillVisual.Skill.HeroSkills.SelectedTargetHero;
       
       //Transform where the mouse currently is
@@ -125,14 +110,9 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
 
       //P0 is where the mouse is at
       _controlPoints[2] = heroTargetTransform.position;
-      
-      Debug.Log("HeroTarget Point 2 Position" + _controlPoints[2]);
-           
+
       //P2 is where the source (skill parent) is at
-      //_controlPoints[0] = DisplaySkillTargeting.Transform.position;
-      //TEST
       _controlPoints[0] = DisplaySkillTargeting.SkillVisual.Transform.position;
-      Debug.Log("SkillVisual Point 0 Position" + _controlPoints[0]);
 
       //Halfway between P0 and P2, with a height of Z
       _controlPoints[1] =
