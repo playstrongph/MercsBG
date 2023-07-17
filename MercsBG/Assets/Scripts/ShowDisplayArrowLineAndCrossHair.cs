@@ -28,6 +28,9 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
    private readonly List<Vector3> _controlPoints = new List<Vector3>();
    private readonly List<GameObject> _arrowNodes = new List<GameObject>();
    
+   //TEST
+   private Vector3 _arrowEuler = new Vector3();
+   
    
    
    
@@ -43,8 +46,8 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
 
    public void TurnOn()
    {
-      ShowArrow();
       ShowArrowNodes();
+      ShowArrow();
       ShowTargetCrossHair();
    }
 
@@ -96,14 +99,16 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
       DisplaySkillTargeting.SkillTargetingGameObjects.ShowTargetArrow();
       
       //Set the arrow position to the selected target hero position
-      arrow.gameObject.transform.position = selectedTargetHero.Transform.position - 15f * direction;
+      //arrow.gameObject.transform.position = selectedTargetHero.Transform.position - 15f * direction;
       
-      //TEST
       var heroTargetTransform = selectedTargetHero.Transform;
-      var euler = new Vector3(0, 0, 
-         Vector2.SignedAngle(Vector2.up,  heroTargetTransform.position));
       
-      arrow.gameObject.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
+      arrow.gameObject.transform.position = heroTargetTransform.position;
+
+      var euler = new Vector3(0, 0, 
+         Vector2.SignedAngle(Vector2.up,   _controlPoints[2]));
+      
+      arrow.gameObject.transform.rotation = Quaternion.Euler(_arrowEuler);
       
       //Set the arrow rotation to the direction of the target from the origin
       //arrow.gameObject.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
@@ -169,6 +174,9 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
                   Vector2.SignedAngle(Vector2.up, _arrowNodes[i].transform.position - _arrowNodes[i - 1].transform.position));
             
                _arrowNodes[i].transform.rotation = Quaternion.Euler(euler);
+               
+               //TEST
+               _arrowEuler = euler;
             }
             else
             {
@@ -176,6 +184,9 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
                   Vector2.SignedAngle(Vector2.up,  _arrowNodes[i].transform.position - heroTargetTransform.position));
             
                _arrowNodes[i].transform.rotation = Quaternion.Euler(euler);
+               
+               //TEST
+               _arrowEuler = euler;
             }
 
             //calculates scales for each arrow node
