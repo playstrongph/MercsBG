@@ -1,4 +1,4 @@
 ﻿public interface IUnselectSkillAndTarget
 {
-    void UnselectSkill();
+    void CancelSelectedSkill();
 }

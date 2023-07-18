@@ -20,18 +20,12 @@ public class UnselectSkillAndTarget : MonoBehaviour, IUnselectSkillAndTarget
    #endregion
         
    #region METHODS
-
-   public void UnselectSkill()
-   {
-      Unselect();
-   }
-   
    
    /// <summary>
    /// Set and update the selected target hero and the selected casting skill
    /// when a skill selects a valid target
    /// </summary>
-   private void Unselect()
+   public void CancelSelectedSkill()
    {
       //This is the current skill being cast
       var castingSkill = SkillTargeting.SkillVisual.Skill;
@@ -54,7 +48,6 @@ public class UnselectSkillAndTarget : MonoBehaviour, IUnselectSkillAndTarget
          displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOff();
       }
    }
-
 
 
 
