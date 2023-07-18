@@ -37,7 +37,7 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
       skillType.SelectSkillActions(skillVisualCollider);
    }
    
-   public void DeselectSkillActions()
+   public void UnselectSkillActions()
    {
       var skillTargetingOrigin = _skillTargetingOrigin; 
 

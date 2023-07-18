@@ -5,7 +5,7 @@
     /// </summary>
     void SelectedSkillChecks();
 
-    void DeselectSkillActions();
+    void UnselectSkillActions();
 
     /// <summary>
     /// Selects the skill if the following criteria are met:

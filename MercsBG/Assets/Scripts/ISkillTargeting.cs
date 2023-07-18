@@ -9,7 +9,9 @@ public interface ISkillTargeting
     ISkillTargets SkillTargets { get; }
     IPlayerSelectsSkill PlayerSelectsSkill { get; }
     ISelectSkillTarget SelectSkillTarget { get; }
-    
+    IUnselectSkillAndTarget UnselectSkillAndTarget { get; }
+
+
     //Inspector References
     IBattleSceneManager BattleSceneManager { get; }
     

@@ -31,18 +31,15 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
       
       //Set SkillTargeting SkillVisual Reference
       SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.SetSkillVisualReference(SkillVisual);
-      
-      //Set DisplaySkillTargeting SkillVisual Reference
-      SkillVisual.HeroSkillsDisplay.BattleSceneManager.DisplaySkillTargeting.SetSkillVisualReference(SkillVisual);
-      
+
       //Shows skill preview
       skillPreview.ShowSkillPreview.TurnOn(skill);
       
       //Check if skill is active, enabled, and ready
       playerSelectsSkill.SelectedSkillChecks();
       
-      //TODO:
-      //Check if HeroSkills.SelectedSkill and Current Selected skill are the same.  If they are, deselect the Heroes.SelectedSkill
+      //TODO: TEST  - Unselect skill
+      SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillTargeting.UnselectSkillAndTarget.UnselectSkill();
       
       
 
@@ -57,7 +54,7 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
       skillPreview.ShowSkillPreview.TurnOff();
       
       //Player Deselects skill
-      skillTargeting.PlayerSelectsSkill.DeselectSkillActions();
+      skillTargeting.PlayerSelectsSkill.UnselectSkillActions();
       
       //TODO: 
       //1) Set Selected Skill And Target @HeroSkills

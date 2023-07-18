@@ -28,6 +28,7 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
       SetSelectedTargetHeroAndCastingSkill();  //Logic
       
       //TODO - ShowDisplaySkillTargeting @ DisplaySkillTargeting
+      ShowDisplaySkillTargeting();
    }
    
    
@@ -69,13 +70,26 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
             //Set the casting skill
             heroSkills.SelectedCastingSkill = validTargets.Contains(targetHero) ?castingSkill : null;
             
-            //TODO: TEST
-            //2) ShowSkillTargeting @ DisplaySkillTargeting
+            //Set display skill targeting skill visual reference
             if(validTargets.Contains(targetHero))
-               displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOn();
+               displaySkillTargeting.SetSkillVisualReference(SkillTargeting.SkillVisual);
          }
       } 
 
+   }
+   
+   
+   /// <summary>
+   /// If there's a valid target
+   /// </summary>
+   private void ShowDisplaySkillTargeting()
+   {
+      var heroSkills = SkillTargeting.SkillVisual.Skill.CasterHero.HeroSkills;
+      var selectedTarget = heroSkills.SelectedTargetHero;
+      var displaySkillTargeting = SkillTargeting.BattleSceneManager.DisplaySkillTargeting;
+      
+      if (selectedTarget != null)
+         displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOn();
    }
 
 

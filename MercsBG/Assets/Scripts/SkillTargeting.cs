@@ -13,6 +13,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargets))] private Object skillTargets = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerSelectsSkill))] private Object playerSelectsSkill = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISelectSkillTarget))] private Object selectSkillTarget = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IUnselectSkillAndTarget))] private Object unselectSkillAndTarget = null;
    
    
    
@@ -35,6 +36,8 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
    public ISkillTargets SkillTargets => skillTargets as ISkillTargets;
    public IPlayerSelectsSkill PlayerSelectsSkill => playerSelectsSkill as IPlayerSelectsSkill;
    public ISelectSkillTarget SelectSkillTarget => selectSkillTarget as ISelectSkillTarget;
+   
+   public IUnselectSkillAndTarget UnselectSkillAndTarget => unselectSkillAndTarget as IUnselectSkillAndTarget;
    
    //Inspector References
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
