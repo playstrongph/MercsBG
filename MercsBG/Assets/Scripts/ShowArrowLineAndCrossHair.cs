@@ -70,7 +70,7 @@ public class ShowArrowLineAndCrossHair : MonoBehaviour, IShowArrowLineAndCrossHa
          //Enable Box Collider
          SkillTargeting.Draggable.ArrowCollider.enabled = true;
 
-         //Show CrossHair
+         //Show cross hair for valid targets
          ShowTargetCrossHair();
 
       }
@@ -222,33 +222,26 @@ public class ShowArrowLineAndCrossHair : MonoBehaviour, IShowArrowLineAndCrossHa
             var heroTarget = heroGameObject.transform.GetComponent<IHero>();
 
             //TODO: Get Valid Targets based on skill target (enemy or ally)
-            //var validHeroTargets = SkillTargetCollider.SkillTargets.GetValidTargets();
+            var validHeroTargets = SkillTargeting.SkillTargets.GetValidTargets();
 
             //TODO: Check if the targeted hero is part of the valid targets before displaying the crosshair
-            /*if (validHeroTargets.Contains(heroTarget))
+            if (validHeroTargets.Contains(heroTarget))
             {
                //Display cross hair
-               SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
+               SkillTargeting.SkillTargetingGameObjects.ShowCrossHair();
                 
                //Set cross hair position to position of target hero
-               SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
-                  heroGameObject.transform.position;
-            }*/
+               SkillTargeting.SkillTargetingGameObjects.CrossHair.gameObject.transform.position = heroTarget.Transform.position;
+            }
 
-            
-            
-            
-            //TEMP
+            /*//TEMP
             //TODO: Display CrossHair
             SkillTargeting.SkillTargetingGameObjects.ShowCrossHair();
 
             //TODO: Transfer Crosshair transform to target
-            SkillTargeting.SkillTargetingGameObjects.CrossHair.gameObject.transform.position = heroTarget.Transform.position;
+            SkillTargeting.SkillTargetingGameObjects.CrossHair.gameObject.transform.position = heroTarget.Transform.position;*/
             
-            //Debug.Log("Hero: " + mResults[i].transform.GetComponent<IHero>().HeroInformation.HeroName);
-            
-
-
+           
          }
          else
          {
