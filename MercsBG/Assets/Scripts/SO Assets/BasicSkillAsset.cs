@@ -83,6 +83,13 @@ namespace SO_Assets
          
          //Debug.Log("Skill Type Check");
       }
+      
+      public override void SelectSkillTarget(ISelectSkillTarget selectSkillTarget)
+      {
+         var skillReadiness = selectSkillTarget.SkillTargeting.SkillVisual.Skill.SkillAttributes.SkillEnableStatus;
+
+         skillReadiness.SelectSkillTarget(selectSkillTarget);
+      }
 
       #endregion
    }

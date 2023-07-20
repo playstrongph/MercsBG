@@ -12,7 +12,7 @@ public interface IDisplaySkillTargeting
     IBattleSceneManager BattleSceneManager { get; }
     
     //Runtime
-    ISkillVisual SkillVisual { get; set; }
+    ISkillVisual SkillVisual { get;}
     //Methods
     void SetSkillVisualReference(ISkillVisual skillVisualReference);
 }

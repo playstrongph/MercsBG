@@ -16,5 +16,7 @@ namespace SO_Assets
         void SetSpeedGraphicAndText(Image image, TextMeshProUGUI speedText, int speed);
 
         void SelectSkillActions(ISkillVisualCollider skillVisualCollider);
+
+        void SelectSkillTarget(ISelectSkillTarget selectSkillTarget);
     }
 }

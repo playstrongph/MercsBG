@@ -34,7 +34,7 @@ public class DisplaySkillTargeting : MonoBehaviour, IDisplaySkillTargeting
    public ISkillVisual SkillVisual
    {
       get => skillVisual as ISkillVisual;
-      set => skillVisual = value as Object;
+      private set => skillVisual = value as Object;
    }
 
    //Generic Properties

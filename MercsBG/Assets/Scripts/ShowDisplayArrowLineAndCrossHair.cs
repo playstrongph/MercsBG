@@ -46,6 +46,8 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
 
    public void TurnOn()
    {
+      if (DisplaySkillTargeting.SkillVisual == null) return;
+      
       ShowArrowNodes();
       ShowArrow();
       ShowTargetCrossHair();

@@ -62,6 +62,15 @@ namespace SO_Assets
          
          playerSelectsSkill.SelectSkillActions();
       }
+      
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="selectSkillTarget"></param>
+      public override void SelectSkillTarget(ISelectSkillTarget selectSkillTarget)
+      {
+         selectSkillTarget.SelectTarget();
+      }
 
       #endregion
    }

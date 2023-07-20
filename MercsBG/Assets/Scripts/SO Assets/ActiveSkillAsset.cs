@@ -99,6 +99,13 @@ namespace SO_Assets
          
          skillEnabledStatus.ManualSelectSkill(skillVisualCollider);
       }
+      
+      public override void SelectSkillTarget(ISelectSkillTarget selectSkillTarget)
+      {
+         var skillReadiness = selectSkillTarget.SkillTargeting.SkillVisual.Skill.SkillAttributes.SkillEnableStatus;
+
+         skillReadiness.SelectSkillTarget(selectSkillTarget);
+      }
 
       #endregion
    }

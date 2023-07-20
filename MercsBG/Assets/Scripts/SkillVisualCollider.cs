@@ -44,7 +44,7 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
       skillTargeting.UnselectSkillAndTarget.CancelSelectedSkill();
       
       //Hide Display SKill Targeting while choosing a skill target
-      displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOff();
+      //displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOff();
 
    }
 
@@ -52,6 +52,7 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
    {
       var skillPreview = SkillVisual.HeroSkillsDisplay.BattleSceneManager.SkillPreview;
       var skillTargeting = SkillVisual.SkillVisuals.HeroSkillsDisplay.BattleSceneManager.SkillTargeting;
+      var skillType = SkillVisual.Skill.SkillAttributes.SkillType;
 
       //Hide Skill Preview
       skillPreview.ShowSkillPreview.TurnOff();
@@ -59,9 +60,10 @@ public class SkillVisualCollider : MonoBehaviour, ISkillVisualCollider
       //Player Deselects skill
       skillTargeting.PlayerSelectsSkill.UnselectSkillActions();
       
-      //TODO: 
-      //1) Set Selected Skill And Target @HeroSkills
-      skillTargeting.SelectSkillTarget.SelectTarget();
+      
+      //Set Selected Skill And Selected Target after permissive checks for
+      //Skill type, enabled type, and readiness type
+      skillType.SelectSkillTarget(skillTargeting.SelectSkillTarget);
 
      
       

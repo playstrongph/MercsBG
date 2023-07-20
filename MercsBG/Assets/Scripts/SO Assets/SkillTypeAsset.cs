@@ -61,6 +61,13 @@ namespace SO_Assets
          
       }
       
+      public virtual void SelectSkillTarget(ISelectSkillTarget selectSkillTarget)
+      {
+         
+      }
+      
+      
+      
       
 
 

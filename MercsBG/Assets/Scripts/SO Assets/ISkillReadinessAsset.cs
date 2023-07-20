@@ -26,5 +26,7 @@ namespace SO_Assets
         /// </summary>
         /// <param name="skillVisualCollider"></param>
         void ManualSelectSkill(ISkillVisualCollider skillVisualCollider);
+
+        void SelectSkillTarget(ISelectSkillTarget selectSkillTarget);
     }
 }

@@ -16,25 +16,27 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
         
    #region PROPERTIES
    
-   private ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
+   public ISkillTargeting SkillTargeting => skillTargeting as ISkillTargeting;
         
 
    #endregion
         
    #region METHODS
-
+   /// <summary>
+   /// This should be called by skill readiness for status checks
+   /// </summary>
    public void SelectTarget()
    {
-      SetSelectedTargetHeroAndCastingSkill();  //Logic
-      
-      //TODO - ShowDisplaySkillTargeting @ DisplaySkillTargeting
-      ShowDisplaySkillTargeting();
+      SetSelectedTargetHeroAndCastingSkill();
+
+      ShowDisplaySkillTargetingVisual();
    }
    
    
    /// <summary>
    /// Set and update the selected target hero and the selected casting skill
-   /// when a skill selects a valid target
+   /// when a skill selects a valid target.
+   /// Also sets the skill visual reference for display skill targeting
    /// </summary>
    private void SetSelectedTargetHeroAndCastingSkill()
    {
@@ -71,26 +73,20 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
             heroSkills.SelectedCastingSkill = validTargets.Contains(targetHero) ?castingSkill : null;
             
             //Set display skill targeting skill visual reference
-            if(validTargets.Contains(targetHero))
-               displaySkillTargeting.SetSkillVisualReference(SkillTargeting.SkillVisual);
+            displaySkillTargeting.SetSkillVisualReference(validTargets.Contains(targetHero)
+               ? SkillTargeting.SkillVisual
+               : null);
          }
-      } 
-
+      }
    }
-   
-   
-   /// <summary>
-   /// If there's a valid target
-   /// </summary>
-   private void ShowDisplaySkillTargeting()
+
+   private void ShowDisplaySkillTargetingVisual()
    {
-      var heroSkills = SkillTargeting.SkillVisual.Skill.CasterHero.HeroSkills;
-      var selectedTarget = heroSkills.SelectedTargetHero;
       var displaySkillTargeting = SkillTargeting.BattleSceneManager.DisplaySkillTargeting;
       
-      if (selectedTarget != null)
-         displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOn();
+      displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOn();
    }
+
 
 
 

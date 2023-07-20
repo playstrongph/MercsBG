@@ -62,6 +62,13 @@ namespace SO_Assets
          
       }
       
+      public override void SelectSkillTarget(ISelectSkillTarget selectSkillTarget)
+      {
+         var skillReadiness = selectSkillTarget.SkillTargeting.SkillVisual.Skill.SkillAttributes.SkillReadiness;
+
+         skillReadiness.SelectSkillTarget(selectSkillTarget);
+      }
+      
         
 
       #endregion
