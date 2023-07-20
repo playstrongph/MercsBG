@@ -105,7 +105,7 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
       
       //TODO: Test
       displaySkillTargeting.SetSkillVisualReference(selectedSkillVisual);
-      HeroSkillsDisplay.SelectedSkillVisual = selectedSkillVisual;
+      
    }
 
 

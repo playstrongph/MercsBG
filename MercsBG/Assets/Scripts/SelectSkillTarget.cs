@@ -79,10 +79,7 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
             displaySkillTargeting.SetSkillVisualReference(validTargets.Contains(targetHero)
                ? SkillTargeting.SkillVisual
                : null);
-            
-            //TODO:TEST
-            heroSkillsDisplay.SelectedSkillVisual = validTargets.Contains(targetHero) ?SkillTargeting.SkillVisual : null;
-            
+
             //TODO:Test
             heroSkills.SetSelectedSkillVisual(validTargets.Contains(targetHero)
                ? SkillTargeting.SkillVisual

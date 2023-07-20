@@ -49,9 +49,7 @@ public class UnselectSkillAndTarget : MonoBehaviour, IUnselectSkillAndTarget
          
          //TODO:Test
          displaySkillTargeting.SetSkillVisualReference(null);
-         heroSkillsDisplay.SelectedSkillVisual = null;
-         
-         
+
          //Turn off skill targeting display
          displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOff();
       }

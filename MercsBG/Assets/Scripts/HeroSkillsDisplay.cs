@@ -17,11 +17,7 @@ public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
    [Header("Components")] 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IShowSkillsDisplay))] private Object showSkillsDisplay = null;
 
-   [Header("Runtime")] 
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object selectedSkillVisual = null;
-   
-   
-   
+
    #endregion
 
    #region PROPERTIES
@@ -30,12 +26,6 @@ public class HeroSkillsDisplay : MonoBehaviour, IHeroSkillsDisplay
    public IBattleSceneManager BattleSceneManager => battleSceneManager as IBattleSceneManager;
    public ISkillVisuals ThreeSkillVisuals => threeSkills as ISkillVisuals;
    public ISkillVisuals FourSkillVisuals => fourSkills as ISkillVisuals;
-
-   public ISkillVisual SelectedSkillVisual
-   {
-      get => selectedSkillVisual as ISkillVisual;
-      set => selectedSkillVisual = value as Object;
-   }
 
    //COMPONENTS
    public IShowSkillsDisplay ShowSkillsDisplay => showSkillsDisplay as IShowSkillsDisplay;
