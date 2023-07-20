@@ -99,13 +99,13 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
    private void UpdateSkillVisualReferences(IHero hero)
    {
       var heroSkills = hero.HeroSkills;
-      var selectedTarget = heroSkills.SelectedTargetHero;
-      var selectedSkill = heroSkills.SelectedCastingSkill;
       var selectedSkillVisual = heroSkills.SelectedSkillVisual;
 
       var displaySkillTargeting = HeroSkillsDisplay.BattleSceneManager.DisplaySkillTargeting;
       
+      //TODO: Test
       displaySkillTargeting.SetSkillVisualReference(selectedSkillVisual);
+      HeroSkillsDisplay.SelectedSkillVisual = selectedSkillVisual;
    }
 
 

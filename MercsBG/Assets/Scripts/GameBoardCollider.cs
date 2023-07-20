@@ -22,15 +22,12 @@ public class GameBoardCollider : MonoBehaviour, IGameBoardCollider
 
    private void OnMouseDown()
    {
-       var heroSkillsDisplay = GameBoard.BattleSceneManager.HeroSkillsDisplay;
-       
-       
-       DeselectHero();
-       
+       UnselectHero();
 
+       HideDisplaySkillTargeting();
    }
 
-   private void DeselectHero()
+   private void UnselectHero()
    {
        var heroSkillsDisplay = GameBoard.BattleSceneManager.HeroSkillsDisplay;
        var selectedHero = GameBoard.BattleSceneManager.MainPlayer.SelectedHero;
@@ -43,6 +40,13 @@ public class GameBoardCollider : MonoBehaviour, IGameBoardCollider
        {
            selectedHero.Player.PlayerAlliance.ScaleDownHero(selectedHero);
        }
+   }
+
+   private void HideDisplaySkillTargeting()
+   {
+       var displaySkillTargeting = GameBoard.BattleSceneManager.DisplaySkillTargeting;
+       
+       displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOff();
    }
 
    #endregion

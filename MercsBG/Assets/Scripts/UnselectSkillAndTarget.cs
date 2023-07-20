@@ -34,7 +34,7 @@ public class UnselectSkillAndTarget : MonoBehaviour, IUnselectSkillAndTarget
       var selectedSkill = castingSkill.HeroSkills.SelectedCastingSkill;
       
       var displaySkillTargeting = SkillTargeting.BattleSceneManager.DisplaySkillTargeting;
-      
+      var heroSkillsDisplay = SkillTargeting.BattleSceneManager.HeroSkillsDisplay;
 
       if (castingSkill == selectedSkill)
       {
@@ -46,7 +46,11 @@ public class UnselectSkillAndTarget : MonoBehaviour, IUnselectSkillAndTarget
          
          //Set the skill visual references to null
          castingSkill.HeroSkills.SetSelectedSkillVisual(null);
+         
+         //TODO:Test
          displaySkillTargeting.SetSkillVisualReference(null);
+         heroSkillsDisplay.SelectedSkillVisual = null;
+         
          
          //Turn off skill targeting display
          displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOff();

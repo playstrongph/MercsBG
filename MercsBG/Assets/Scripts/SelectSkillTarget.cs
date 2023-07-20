@@ -43,6 +43,7 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
    {
       var castingSkill = SkillTargeting.SkillVisual.Skill;
       var heroSkills = castingSkill.CasterHero.HeroSkills;
+      
       // ReSharper disable once PossibleNullReferenceException
       var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
       //Store at most 5 ray cast hits
@@ -53,6 +54,7 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
       var validTargets = SkillTargeting.SkillTargets.GetValidTargets();
       //TODO: Test
       var displaySkillTargeting = SkillTargeting.BattleSceneManager.DisplaySkillTargeting;
+      var heroSkillsDisplay = SkillTargeting.BattleSceneManager.HeroSkillsDisplay;
       
       //RayCast
       int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity,layerMask);
@@ -77,6 +79,9 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
             displaySkillTargeting.SetSkillVisualReference(validTargets.Contains(targetHero)
                ? SkillTargeting.SkillVisual
                : null);
+            
+            //TODO:TEST
+            heroSkillsDisplay.SelectedSkillVisual = validTargets.Contains(targetHero) ?SkillTargeting.SkillVisual : null;
             
             //TODO:Test
             heroSkills.SetSelectedSkillVisual(validTargets.Contains(targetHero)

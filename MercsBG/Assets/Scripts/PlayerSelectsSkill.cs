@@ -63,7 +63,7 @@ public class PlayerSelectsSkill : MonoBehaviour, IPlayerSelectsSkill
       var heroSkillsDisplay = SkillTargeting.SkillVisual.SkillVisuals.HeroSkillsDisplay;
 
       //Set selected skill Visual
-      heroSkillsDisplay.SelectedSkillVisual = SkillTargeting.SkillVisual;
+      //heroSkillsDisplay.SelectedSkillVisual = SkillTargeting.SkillVisual;
       
       //Transfer skill targeting position
       SkillTargeting.Transform.position = SkillTargeting.SkillVisual.Transform.position;
