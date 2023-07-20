@@ -44,6 +44,10 @@ public class UnselectSkillAndTarget : MonoBehaviour, IUnselectSkillAndTarget
          castingSkill.HeroSkills.SelectedTargetHero = null;
          castingSkill.HeroSkills.SelectedCastingSkill = null;
          
+         //Set the skill visual references to null
+         castingSkill.HeroSkills.SetSelectedSkillVisual(null);
+         displaySkillTargeting.SetSkillVisualReference(null);
+         
          //Turn off skill targeting display
          displaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOff();
       }

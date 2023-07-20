@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
@@ -74,6 +75,11 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
             
             //Set display skill targeting skill visual reference
             displaySkillTargeting.SetSkillVisualReference(validTargets.Contains(targetHero)
+               ? SkillTargeting.SkillVisual
+               : null);
+            
+            //TODO:Test
+            heroSkills.SetSelectedSkillVisual(validTargets.Contains(targetHero)
                ? SkillTargeting.SkillVisual
                : null);
          }

@@ -19,6 +19,9 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private Object selectedCastingSkill = null;
    
+   //TODO:TEST
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object selectedSkillVisual = null;
+   
    //Current number of skills hero has, default is three
    [SerializeField] private int inUseHeroSkills = 3;
    
@@ -60,15 +63,22 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
       set => selectedCastingSkill = value as Object;
    }
 
+   public ISkillVisual SelectedSkillVisual
+   {
+      get => selectedSkillVisual as ISkillVisual;
+      private set => selectedSkillVisual = value as Object;
+   }
+
+
    public int InUseHeroSkills { get=>inUseHeroSkills; set => inUseHeroSkills = value; }
 
    #endregion
 
    #region METHODS
 
-   public void SetSelectedHero(IHero hero)
+   public void SetSelectedSkillVisual(ISkillVisual skillVisual)
    {
-      
+      SelectedSkillVisual = skillVisual;
    }
 
 

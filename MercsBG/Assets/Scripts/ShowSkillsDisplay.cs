@@ -27,6 +27,12 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
       HeroSkillsDisplay.Canvas.enabled = true;
       
       UpdateDisplayInformation(hero);
+      
+      //TEST
+      UpdateSkillVisualReferences(hero);
+      
+      //TEST
+      HeroSkillsDisplay.BattleSceneManager.DisplaySkillTargeting.ShowDisplayArrowLineAndCrossHair.TurnOn();
    }
 
    public void DisplayOff(IHero hero)
@@ -86,13 +92,20 @@ public class ShowSkillsDisplay : MonoBehaviour, IShowSkillsDisplay
          
          //If there will be no individual skill speed, disable in the game object
          skillVisual.SpeedText.enabled = heroSkill.SkillAttributes.SkillSpeed > 0;
-         
-         
-
       }
-      
-      
 
+   }
+
+   private void UpdateSkillVisualReferences(IHero hero)
+   {
+      var heroSkills = hero.HeroSkills;
+      var selectedTarget = heroSkills.SelectedTargetHero;
+      var selectedSkill = heroSkills.SelectedCastingSkill;
+      var selectedSkillVisual = heroSkills.SelectedSkillVisual;
+
+      var displaySkillTargeting = HeroSkillsDisplay.BattleSceneManager.DisplaySkillTargeting;
+      
+      displaySkillTargeting.SetSkillVisualReference(selectedSkillVisual);
    }
 
 

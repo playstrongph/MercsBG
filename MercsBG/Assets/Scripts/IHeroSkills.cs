@@ -10,4 +10,9 @@ public interface IHeroSkills
     IHero SelectedTargetHero { get; set; }
 
     ISkill SelectedCastingSkill { get; set; }
+    
+    //TODO: Test
+    void SetSelectedSkillVisual(ISkillVisual skillVisual);
+    ISkillVisual SelectedSkillVisual { get; }
+
 }
