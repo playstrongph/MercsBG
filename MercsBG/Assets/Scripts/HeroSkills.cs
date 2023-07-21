@@ -50,13 +50,18 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
    }
    
    //Runtime
-
+   
+   /// <summary>
+   /// Used by display skill targeting
+   /// </summary>
    public IHero SelectedTargetHero
    {
       get => selectedTargetHero as IHero;
       set => selectedTargetHero = value as Object;
    }
-   
+   /// <summary>
+   /// Used by cancel selected skill
+   /// </summary>
    public ISkill SelectedCastingSkill
    {
       get => selectedCastingSkill as ISkill;

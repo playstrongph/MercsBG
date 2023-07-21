@@ -54,7 +54,7 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
       var validTargets = SkillTargeting.SkillTargets.GetValidTargets();
       //TODO: Test
       var displaySkillTargeting = SkillTargeting.BattleSceneManager.DisplaySkillTargeting;
-      var heroSkillsDisplay = SkillTargeting.BattleSceneManager.HeroSkillsDisplay;
+      
       
       //RayCast
       int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity,layerMask);
@@ -69,10 +69,12 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
          {
             var targetHero = mResults[i].transform.GetComponent<IHero>();
             
-            //Set the local skill selected target hero to the hero found if it belongs to the list of valid targets, else set it to null
+            //Set the target hero - valid target or null
+            //selected target hero is used by the bezier curve control points
             heroSkills.SelectedTargetHero = validTargets.Contains(targetHero) ?targetHero : null;
             
-            //Set the casting skill
+            //Set the casting skill - valid target or null
+            //selected target hero is used by the bezier curve control points
             heroSkills.SelectedCastingSkill = validTargets.Contains(targetHero) ?castingSkill : null;
             
             //Set display skill targeting skill visual reference
@@ -80,7 +82,7 @@ public class SelectSkillTarget : MonoBehaviour, ISelectSkillTarget
                ? SkillTargeting.SkillVisual
                : null);
 
-            //TODO:Test
+            //Sets the skill visual reference
             heroSkills.SetSelectedSkillVisual(validTargets.Contains(targetHero)
                ? SkillTargeting.SkillVisual
                : null);

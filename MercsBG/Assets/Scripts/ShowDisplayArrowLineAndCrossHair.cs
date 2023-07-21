@@ -86,7 +86,7 @@ public class ShowDisplayArrowLineAndCrossHair : MonoBehaviour, IShowDisplayArrow
    {
       var selectedTargetHero = DisplaySkillTargeting.SkillVisual.Skill.HeroSkills.SelectedTargetHero;
       var selectedTargetHeroPosition = selectedTargetHero.Transform.position;
-      var selectedSkill = DisplaySkillTargeting.SkillVisual.Skill.HeroSkills.SelectedCastingSkill;
+     
       
       
       var skillVisualPosition = DisplaySkillTargeting.SkillVisual.Transform.position;
